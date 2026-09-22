@@ -1,9 +1,12 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Test de Redes - Unidad 1</title>
+
+    <title>Test de ASIR - Unidad 1</title>
+
     <link rel="stylesheet" href="style.css">
 </head>
 
@@ -11,24 +14,40 @@
 
     <main class="contenedor">
 
-        <!-- PANTALLA PARA ELEGIR MODO -->
+        <!-- SELECCIÓN DEL MODO -->
         <section id="seleccionModo" class="panel seleccion-modo">
 
-            <h1>🌐 Test de Redes</h1>
-            <p>Unidad 1 - Introducción a las redes</p>
+            <h1>💻 Test de ASIR</h1>
 
-            <h2>Elige el modo del test</h2>
+            <p>
+                Unidad 1 - Introducción a las redes
+            </p>
+
+            <h2>
+                Elige el modo del test
+            </h2>
 
             <div class="botones-modo">
 
                 <button id="modoNormal" class="boton modo">
+
                     📋 Modo normal
-                    <span>Preguntas en orden</span>
+
+                    <span>
+                        Preguntas en orden
+                    </span>
+
                 </button>
 
+
                 <button id="modoAleatorio" class="boton modo">
+
                     🎲 Modo aleatorio
-                    <span>Preguntas mezcladas</span>
+
+                    <span>
+                        Preguntas mezcladas
+                    </span>
+
                 </button>
 
             </div>
@@ -40,20 +59,45 @@
         <section id="test" class="panel oculto">
 
             <div class="informacion">
-                <span id="numeroPregunta">Pregunta 1 de 40</span>
-                <span id="puntuacion">Puntos: 0</span>
+
+                <span id="numeroPregunta">
+                    Pregunta 1 de 40
+                </span>
+
+                <span id="contador">
+                    ⏱️ 00:00
+                </span>
+
+                <span id="puntuacion">
+                    Puntos: 0
+                </span>
+
             </div>
 
+
+            <!-- BARRA DE PROGRESO -->
             <div class="barra-contenedor">
+
                 <div id="barra-progreso"></div>
+
             </div>
 
-            <h2 id="pregunta">Cargando pregunta...</h2>
 
+            <!-- PREGUNTA -->
+            <h2 id="pregunta">
+                Cargando pregunta...
+            </h2>
+
+
+            <!-- RESPUESTAS -->
             <div id="opciones" class="opciones"></div>
 
+
+            <!-- BOTÓN SIGUIENTE -->
             <button id="botonSiguiente" class="boton" disabled>
+
                 Siguiente →
+
             </button>
 
         </section>
@@ -62,23 +106,39 @@
         <!-- RESULTADO -->
         <section id="resultado" class="resultado oculto">
 
-            <h2>🎉 Test terminado</h2>
+            <h2>
+                🎉 Test terminado
+            </h2>
+
 
             <div class="nota" id="nota">
                 0/10
             </div>
 
-            <p id="mensajeResultado"></p>
+
+            <p id="mensajeResultado">
+            </p>
+
+
+            <p id="tiempoFinal">
+            </p>
+
 
             <button id="botonReiniciar" class="boton">
+
                 🔄 Volver a hacer el test
+
             </button>
 
         </section>
 
     </main>
 
+
+    <!-- JAVASCRIPT -->
+
     <script src="unidad_1.js"></script>
 
 </body>
+
 </html>
