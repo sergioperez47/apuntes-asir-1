@@ -1,359 +1,226 @@
 * {
     box-sizing: border-box;
-    margin: 0;
-    padding: 0;
 }
-
 
 body {
-
+    margin: 0;
     font-family: Arial, sans-serif;
-
-    background: linear-gradient(
-        135deg,
-        #141e30,
-        #243b55
-    );
-
+    background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
     min-height: 100vh;
-
-    color: #222;
-
     display: flex;
-
     justify-content: center;
-
     align-items: center;
-
-    padding: 30px;
+    padding: 20px;
 }
-
 
 .contenedor {
-
     width: 100%;
-
-    max-width: 850px;
-
+    max-width: 800px;
 }
 
+/* PANEL PRINCIPAL */
 
-/* =========================
-   CABECERA
-========================= */
-
-header {
-
-    text-align: center;
-
-    color: white;
-
-    margin-bottom: 25px;
-
-}
-
-
-header h1 {
-
-    font-size: 40px;
-
-    margin-bottom: 10px;
-
-}
-
-
-header p {
-
-    font-size: 17px;
-
-    opacity: 0.9;
-
-}
-
-
-/* =========================
-   PANEL DEL TEST
-========================= */
-
-.panel,
-.resultado {
-
-    background-color: white;
-
-    border-radius: 18px;
-
+.panel {
+    background: white;
+    border-radius: 15px;
     padding: 30px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+}
 
-    box-shadow:
-        0 10px 30px
-        rgba(0, 0, 0, 0.25);
+.panel h1 {
+    text-align: center;
+    margin-top: 0;
+    color: #203a43;
+}
 
+.panel > p {
+    text-align: center;
+    color: #666;
 }
 
 
-/* =========================
-   INFORMACIÓN
-========================= */
+/* SELECCIÓN DE MODO */
+
+.seleccion-modo {
+    text-align: center;
+}
+
+.seleccion-modo h2 {
+    margin-top: 30px;
+    color: #333;
+}
+
+.botones-modo {
+    display: flex;
+    gap: 20px;
+    margin-top: 30px;
+}
+
+.modo {
+    flex: 1;
+    min-height: 120px;
+    font-size: 18px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 10px;
+}
+
+.modo span {
+    font-size: 14px;
+    font-weight: normal;
+    opacity: 0.8;
+}
+
+
+/* INFORMACIÓN DEL TEST */
 
 .informacion {
-
     display: flex;
-
     justify-content: space-between;
-
-    font-weight: bold;
-
-    color: #555;
-
     margin-bottom: 15px;
-
+    font-weight: bold;
+    color: #444;
 }
 
 
-/* =========================
-   BARRA DE PROGRESO
-========================= */
+/* BARRA DE PROGRESO */
 
 .barra-contenedor {
-
     width: 100%;
-
     height: 10px;
-
-    background-color: #ddd;
-
+    background: #ddd;
     border-radius: 10px;
-
     overflow: hidden;
-
     margin-bottom: 30px;
-
 }
-
 
 #barra-progreso {
-
-    height: 100%;
-
     width: 0%;
-
-    background-color: #3498db;
-
-    transition:
-        width 0.3s ease;
-
+    height: 100%;
+    background: #2c5364;
+    transition: width 0.3s;
 }
 
 
-/* =========================
-   PREGUNTA
-========================= */
+/* PREGUNTA */
 
 #pregunta {
-
-    font-size: 25px;
-
+    color: #222;
     margin-bottom: 25px;
-
 }
 
 
-/* =========================
-   OPCIONES
-========================= */
+/* OPCIONES */
 
 .opciones {
-
     display: flex;
-
     flex-direction: column;
-
     gap: 12px;
-
 }
-
 
 .opcion {
-
     width: 100%;
-
-    padding: 16px;
-
+    padding: 15px;
     border: 2px solid #ddd;
-
     border-radius: 10px;
-
-    background-color: white;
-
-    text-align: left;
-
-    font-size: 16px;
-
+    background: white;
     cursor: pointer;
-
+    text-align: left;
+    font-size: 16px;
     transition: 0.2s;
-
 }
-
 
 .opcion:hover {
-
-    border-color: #3498db;
-
-    background-color: #f4faff;
-
+    border-color: #2c5364;
+    background: #f2f7f9;
 }
-
-
-/* RESPUESTA CORRECTA */
 
 .opcion.correcta {
-
-    background-color: #d4edda;
-
-    border-color: #28a745;
-
-    color: #155724;
-
+    background: #c8e6c9;
+    border-color: #2e7d32;
 }
-
-
-/* RESPUESTA INCORRECTA */
 
 .opcion.incorrecta {
-
-    background-color: #f8d7da;
-
-    border-color: #dc3545;
-
-    color: #721c24;
-
+    background: #ffcdd2;
+    border-color: #c62828;
 }
 
 
-/* =========================
-   BOTONES
-========================= */
+/* BOTONES */
 
 .boton {
-
-    margin-top: 25px;
-
-    width: 100%;
-
-    padding: 15px;
-
     border: none;
-
-    border-radius: 10px;
-
-    background-color: #3498db;
-
+    background: #203a43;
     color: white;
-
-    font-size: 17px;
-
-    font-weight: bold;
-
+    padding: 14px 25px;
+    border-radius: 10px;
     cursor: pointer;
-
+    font-size: 16px;
+    font-weight: bold;
+    margin-top: 25px;
     transition: 0.2s;
-
 }
-
 
 .boton:hover {
-
-    background-color: #2980b9;
-
+    background: #2c5364;
+    transform: translateY(-2px);
 }
-
 
 .boton:disabled {
-
-    background-color: #aaa;
-
+    background: #999;
     cursor: not-allowed;
-
+    transform: none;
 }
 
 
-/* =========================
-   RESULTADO
-========================= */
+/* RESULTADO */
 
 .resultado {
-
+    background: white;
+    border-radius: 15px;
+    padding: 40px;
     text-align: center;
-
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
 }
-
 
 .nota {
-
-    font-size: 60px;
-
+    font-size: 50px;
     font-weight: bold;
-
-    margin: 25px 0;
-
-    color: #3498db;
-
+    color: #203a43;
+    margin: 20px 0;
 }
 
 
-#mensajeResultado {
-
-    font-size: 18px;
-
-    margin-bottom: 15px;
-
-}
-
-
-/* =========================
-   OCULTAR ELEMENTOS
-========================= */
+/* OCULTAR */
 
 .oculto {
-
     display: none;
-
 }
 
 
-/* =========================
-   MÓVILES
-========================= */
+/* MÓVIL */
 
 @media (max-width: 600px) {
 
-    body {
-
-        padding: 15px;
-
-    }
-
-
-    header h1 {
-
-        font-size: 30px;
-
-    }
-
-
-    .panel,
-    .resultado {
-
+    .panel {
         padding: 20px;
-
     }
 
+    .botones-modo {
+        flex-direction: column;
+    }
+
+    .informacion {
+        flex-direction: column;
+        gap: 8px;
+    }
 
     #pregunta {
-
-        font-size: 21px;
-
+        font-size: 20px;
     }
 
+    .opcion {
+        font-size: 15px;
+    }
 }
