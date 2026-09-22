@@ -1,1 +1,119 @@
+<!DOCTYPE html>
+<html lang="es">
 
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Test de Redes - Unidad 1</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <main class="contenedor">
+
+        <header>
+            <h1>🌐 Test de Redes</h1>
+            <p>Unidad 1 - Introducción a las redes</p>
+        </header>
+
+
+        <!-- TEST -->
+
+        <section class="panel">
+
+            <div class="informacion">
+
+                <span id="numeroPregunta">
+                    Pregunta 1 de 30
+                </span>
+
+                <span id="puntuacion">
+                    Puntos: 0
+                </span>
+
+            </div>
+
+
+            <!-- BARRA DE PROGRESO -->
+
+            <div class="barra-contenedor">
+
+                <div id="barra-progreso"></div>
+
+            </div>
+
+
+            <!-- PREGUNTA -->
+
+            <h2 id="pregunta">
+                Cargando pregunta...
+            </h2>
+
+
+            <!-- RESPUESTAS -->
+
+            <div id="opciones" class="opciones">
+
+            </div>
+
+
+            <!-- BOTÓN SIGUIENTE -->
+
+            <button
+                id="botonSiguiente"
+                class="boton"
+                disabled>
+
+                Siguiente →
+
+            </button>
+
+        </section>
+
+
+        <!-- RESULTADO -->
+
+        <section
+            id="resultado"
+            class="resultado oculto">
+
+            <h2>
+                🎉 Test terminado
+            </h2>
+
+
+            <div
+                class="nota"
+                id="nota">
+
+                0/10
+
+            </div>
+
+
+            <p id="mensajeResultado"></p>
+
+
+            <button
+                id="botonReiniciar"
+                class="boton">
+
+                🔄 Volver a hacer el test
+
+            </button>
+
+        </section>
+
+    </main>
+
+
+    <!-- JAVASCRIPT -->
+
+    <script src="unidad_1.js"></script>
+
+</body>
+
+</html>
