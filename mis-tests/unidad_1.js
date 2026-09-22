@@ -11,6 +11,7 @@ const preguntas = [
         correcta: 0
     },
 
+
     {
         pregunta: "¿Cuáles son algunos elementos necesarios para que exista una comunicación?",
         opciones: [
@@ -21,6 +22,7 @@ const preguntas = [
         ],
         correcta: 0
     },
+
 
     {
         pregunta: "¿Qué es un protocolo de comunicación?",
@@ -33,6 +35,7 @@ const preguntas = [
         correcta: 0
     },
 
+
     {
         pregunta: "¿Cuál es un medio de transmisión guiado?",
         opciones: [
@@ -43,6 +46,7 @@ const preguntas = [
         ],
         correcta: 0
     },
+
 
     {
         pregunta: "¿Cuál es un medio de transmisión no guiado?",
@@ -55,6 +59,7 @@ const preguntas = [
         correcta: 2
     },
 
+
     {
         pregunta: "¿Qué significa que una red sea escalable?",
         opciones: [
@@ -65,6 +70,7 @@ const preguntas = [
         ],
         correcta: 0
     },
+
 
     {
         pregunta: "¿Qué caracteriza a una transmisión simplex?",
@@ -77,6 +83,7 @@ const preguntas = [
         correcta: 1
     },
 
+
     {
         pregunta: "¿Qué caracteriza a una transmisión semidúplex?",
         opciones: [
@@ -87,6 +94,7 @@ const preguntas = [
         ],
         correcta: 2
     },
+
 
     {
         pregunta: "¿Qué caracteriza a una transmisión dúplex?",
@@ -99,6 +107,7 @@ const preguntas = [
         correcta: 0
     },
 
+
     {
         pregunta: "¿Qué ocurre en la conmutación de circuitos?",
         opciones: [
@@ -109,6 +118,7 @@ const preguntas = [
         ],
         correcta: 0
     },
+
 
     {
         pregunta: "¿Qué ocurre en la conmutación de paquetes?",
@@ -121,6 +131,7 @@ const preguntas = [
         correcta: 0
     },
 
+
     {
         pregunta: "¿Qué significa P2P?",
         opciones: [
@@ -131,6 +142,7 @@ const preguntas = [
         ],
         correcta: 0
     },
+
 
     {
         pregunta: "¿Qué caracteriza a una red P2P?",
@@ -143,6 +155,7 @@ const preguntas = [
         correcta: 0
     },
 
+
     {
         pregunta: "¿Qué significa PAN?",
         opciones: [
@@ -153,6 +166,7 @@ const preguntas = [
         ],
         correcta: 0
     },
+
 
     {
         pregunta: "¿Qué significa LAN?",
@@ -165,6 +179,7 @@ const preguntas = [
         correcta: 0
     },
 
+
     {
         pregunta: "¿Qué significa MAN?",
         opciones: [
@@ -175,6 +190,7 @@ const preguntas = [
         ],
         correcta: 0
     },
+
 
     {
         pregunta: "¿Qué significa WAN?",
@@ -187,6 +203,7 @@ const preguntas = [
         correcta: 0
     },
 
+
     {
         pregunta: "¿Qué es la topología de una red?",
         opciones: [
@@ -197,6 +214,7 @@ const preguntas = [
         ],
         correcta: 0
     },
+
 
     {
         pregunta: "¿Qué describe una topología física?",
@@ -209,6 +227,7 @@ const preguntas = [
         correcta: 0
     },
 
+
     {
         pregunta: "¿Qué caracteriza a una topología en bus?",
         opciones: [
@@ -219,6 +238,7 @@ const preguntas = [
         ],
         correcta: 0
     },
+
 
     {
         pregunta: "¿Qué característica tiene una topología en anillo?",
@@ -231,6 +251,7 @@ const preguntas = [
         correcta: 0
     },
 
+
     {
         pregunta: "¿Qué ventaja puede ofrecer un doble anillo?",
         opciones: [
@@ -241,6 +262,7 @@ const preguntas = [
         ],
         correcta: 0
     },
+
 
     {
         pregunta: "¿Qué caracteriza a una topología en estrella?",
@@ -253,6 +275,7 @@ const preguntas = [
         correcta: 0
     },
 
+
     {
         pregunta: "¿Qué caracteriza a una topología en malla?",
         opciones: [
@@ -263,6 +286,7 @@ const preguntas = [
         ],
         correcta: 0
     },
+
 
     {
         pregunta: "¿Cuántas capas tiene el modelo OSI?",
@@ -275,6 +299,7 @@ const preguntas = [
         correcta: 2
     },
 
+
     {
         pregunta: "¿Qué significa OSI?",
         opciones: [
@@ -285,6 +310,7 @@ const preguntas = [
         ],
         correcta: 0
     },
+
 
     {
         pregunta: "¿Qué función tiene la capa de Aplicación del modelo OSI?",
@@ -297,6 +323,7 @@ const preguntas = [
         correcta: 0
     },
 
+
     {
         pregunta: "¿Qué función tiene la capa de Presentación?",
         opciones: [
@@ -307,6 +334,7 @@ const preguntas = [
         ],
         correcta: 0
     },
+
 
     {
         pregunta: "¿Qué función tiene la capa de Transporte?",
@@ -319,6 +347,7 @@ const preguntas = [
         correcta: 0
     },
 
+
     {
         pregunta: "¿Qué función tiene la capa de Red?",
         opciones: [
@@ -329,6 +358,7 @@ const preguntas = [
         ],
         correcta: 0
     },
+
 
     {
         pregunta: "¿Qué dirección utiliza la capa de Enlace para identificar físicamente los dispositivos?",
@@ -341,6 +371,7 @@ const preguntas = [
         correcta: 0
     },
 
+
     {
         pregunta: "¿Qué dispositivo trabaja principalmente con direcciones MAC?",
         opciones: [
@@ -351,6 +382,7 @@ const preguntas = [
         ],
         correcta: 0
     },
+
 
     {
         pregunta: "¿Qué dispositivo se utiliza para realizar el encaminamiento entre redes?",
@@ -363,6 +395,7 @@ const preguntas = [
         correcta: 0
     },
 
+
     {
         pregunta: "¿Cómo se llama la unidad de datos de la capa de Enlace?",
         opciones: [
@@ -373,6 +406,7 @@ const preguntas = [
         ],
         correcta: 0
     },
+
 
     {
         pregunta: "¿Qué es la encapsulación?",
@@ -385,6 +419,7 @@ const preguntas = [
         correcta: 0
     },
 
+
     {
         pregunta: "¿Qué es el payload?",
         opciones: [
@@ -395,6 +430,7 @@ const preguntas = [
         ],
         correcta: 0
     },
+
 
     {
         pregunta: "¿Qué es la desencapsulación?",
@@ -407,6 +443,7 @@ const preguntas = [
         correcta: 0
     },
 
+
     {
         pregunta: "¿Qué es la multiplexación?",
         opciones: [
@@ -417,6 +454,7 @@ const preguntas = [
         ],
         correcta: 0
     },
+
 
     {
         pregunta: "¿Para qué sirve el identificador o clave de multiplexación?",
@@ -432,247 +470,488 @@ const preguntas = [
 ];
 
 
-// --------------------------------------------------
-// VARIABLES DEL TEST
-// --------------------------------------------------
+// ==================================================
+// VARIABLES
+// ==================================================
 
 let preguntasTest = [];
+
 let preguntaActual = 0;
+
 let puntos = 0;
+
 let respuestaSeleccionada = false;
+
 let modoAleatorio = false;
 
+let tiempo = 0;
 
-// --------------------------------------------------
+let intervalo = null;
+
+
+// ==================================================
 // ELEMENTOS HTML
-// --------------------------------------------------
+// ==================================================
 
-const seleccionModo = document.getElementById("seleccionModo");
-const test = document.getElementById("test");
-const resultado = document.getElementById("resultado");
+const seleccionModo =
+    document.getElementById("seleccionModo");
 
-const modoNormal = document.getElementById("modoNormal");
-const modoAleatorioBoton = document.getElementById("modoAleatorio");
+const test =
+    document.getElementById("test");
 
-const numeroPregunta = document.getElementById("numeroPregunta");
-const puntuacion = document.getElementById("puntuacion");
-const barraProgreso = document.getElementById("barra-progreso");
-
-const pregunta = document.getElementById("pregunta");
-const opciones = document.getElementById("opciones");
-
-const botonSiguiente = document.getElementById("botonSiguiente");
-const botonReiniciar = document.getElementById("botonReiniciar");
-
-const nota = document.getElementById("nota");
-const mensajeResultado = document.getElementById("mensajeResultado");
+const resultado =
+    document.getElementById("resultado");
 
 
-// --------------------------------------------------
+const modoNormal =
+    document.getElementById("modoNormal");
+
+const modoAleatorioBoton =
+    document.getElementById("modoAleatorio");
+
+
+const numeroPregunta =
+    document.getElementById("numeroPregunta");
+
+const contador =
+    document.getElementById("contador");
+
+const puntuacion =
+    document.getElementById("puntuacion");
+
+const barraProgreso =
+    document.getElementById("barra-progreso");
+
+
+const pregunta =
+    document.getElementById("pregunta");
+
+const opciones =
+    document.getElementById("opciones");
+
+
+const botonSiguiente =
+    document.getElementById("botonSiguiente");
+
+const botonReiniciar =
+    document.getElementById("botonReiniciar");
+
+
+const nota =
+    document.getElementById("nota");
+
+const mensajeResultado =
+    document.getElementById("mensajeResultado");
+
+const tiempoFinal =
+    document.getElementById("tiempoFinal");
+
+
+// ==================================================
 // MEZCLAR PREGUNTAS
-// --------------------------------------------------
+// ==================================================
 
 function mezclarPreguntas(array) {
 
     let copia = [...array];
 
+
     for (let i = copia.length - 1; i > 0; i--) {
 
-        let posicion = Math.floor(Math.random() * (i + 1));
+        let posicion =
+            Math.floor(Math.random() * (i + 1));
+
 
         let temporal = copia[i];
 
-        copia[i] = copia[posicion];
 
-        copia[posicion] = temporal;
+        copia[i] =
+            copia[posicion];
+
+
+        copia[posicion] =
+            temporal;
+
     }
+
 
     return copia;
 }
 
 
-// --------------------------------------------------
+// ==================================================
 // INICIAR TEST
-// --------------------------------------------------
+// ==================================================
 
 function iniciarTest(aleatorio) {
 
     modoAleatorio = aleatorio;
 
+
     preguntaActual = 0;
+
     puntos = 0;
 
+
+    // Reiniciar contador
+
+    tiempo = 0;
+
+
+    clearInterval(intervalo);
+
+
+    contador.textContent =
+        "⏱️ 00:00";
+
+
+    // Elegir orden
+
     if (modoAleatorio) {
-        preguntasTest = mezclarPreguntas(preguntas);
+
+        preguntasTest =
+            mezclarPreguntas(preguntas);
+
     } else {
-        preguntasTest = [...preguntas];
+
+        preguntasTest =
+            [...preguntas];
+
     }
 
+
+    // Mostrar test
+
     seleccionModo.classList.add("oculto");
+
     resultado.classList.add("oculto");
+
     test.classList.remove("oculto");
 
-    puntuacion.textContent = "Puntos: 0";
+
+    puntuacion.textContent =
+        "Puntos: 0";
+
+
+    // Iniciar contador
+
+    intervalo = setInterval(function () {
+
+        tiempo++;
+
+
+        let minutos =
+            Math.floor(tiempo / 60);
+
+
+        let segundos =
+            tiempo % 60;
+
+
+        let minutosTexto =
+            minutos.toString().padStart(2, "0");
+
+
+        let segundosTexto =
+            segundos.toString().padStart(2, "0");
+
+
+        contador.textContent =
+            `⏱️ ${minutosTexto}:${segundosTexto}`;
+
+
+    }, 1000);
+
 
     mostrarPregunta();
+
 }
 
 
-// --------------------------------------------------
+// ==================================================
 // MOSTRAR PREGUNTA
-// --------------------------------------------------
+// ==================================================
 
 function mostrarPregunta() {
 
     respuestaSeleccionada = false;
 
+
     botonSiguiente.disabled = true;
 
-    let preguntaActualObjeto = preguntasTest[preguntaActual];
+
+    let preguntaActualObjeto =
+        preguntasTest[preguntaActual];
+
 
     numeroPregunta.textContent =
         `Pregunta ${preguntaActual + 1} de ${preguntasTest.length}`;
 
-    pregunta.textContent = preguntaActualObjeto.pregunta;
+
+    pregunta.textContent =
+        preguntaActualObjeto.pregunta;
+
 
     opciones.innerHTML = "";
 
-    preguntaActualObjeto.opciones.forEach((opcion, indice) => {
 
-        const boton = document.createElement("button");
+    preguntaActualObjeto.opciones.forEach(
+        (opcion, indice) => {
 
-        boton.classList.add("opcion");
+            const boton =
+                document.createElement("button");
 
-        boton.textContent = opcion;
 
-        boton.addEventListener("click", function () {
+            boton.classList.add("opcion");
 
-            seleccionarRespuesta(indice, boton);
 
-        });
+            boton.textContent =
+                opcion;
 
-        opciones.appendChild(boton);
-    });
+
+            boton.addEventListener(
+                "click",
+                function () {
+
+                    seleccionarRespuesta(
+                        indice,
+                        boton
+                    );
+
+                }
+            );
+
+
+            opciones.appendChild(boton);
+
+        }
+    );
 
 
     let progreso =
-        ((preguntaActual + 1) / preguntasTest.length) * 100;
+        ((preguntaActual + 1)
+        / preguntasTest.length) * 100;
 
-    barraProgreso.style.width = progreso + "%";
+
+    barraProgreso.style.width =
+        progreso + "%";
+
 }
 
 
-// --------------------------------------------------
+// ==================================================
 // SELECCIONAR RESPUESTA
-// --------------------------------------------------
+// ==================================================
 
-function seleccionarRespuesta(indice, botonSeleccionado) {
+function seleccionarRespuesta(
+    indice,
+    botonSeleccionado
+) {
 
     if (respuestaSeleccionada) {
+
         return;
+
     }
+
 
     respuestaSeleccionada = true;
 
-    let preguntaActualObjeto = preguntasTest[preguntaActual];
 
-    const botones = document.querySelectorAll(".opcion");
+    let preguntaActualObjeto =
+        preguntasTest[preguntaActual];
 
-    botones.forEach((boton, posicion) => {
 
-        if (posicion === preguntaActualObjeto.correcta) {
+    const botones =
+        document.querySelectorAll(".opcion");
 
-            boton.classList.add("correcta");
+
+    botones.forEach(
+        (boton, posicion) => {
+
+            if (
+                posicion ===
+                preguntaActualObjeto.correcta
+            ) {
+
+                boton.classList.add(
+                    "correcta"
+                );
+
+            }
 
         }
+    );
 
-    });
 
-
-    if (indice === preguntaActualObjeto.correcta) {
+    if (
+        indice ===
+        preguntaActualObjeto.correcta
+    ) {
 
         puntos++;
 
-        puntuacion.textContent = `Puntos: ${puntos}`;
+
+        puntuacion.textContent =
+            `Puntos: ${puntos}`;
 
     } else {
 
-        botonSeleccionado.classList.add("incorrecta");
+        botonSeleccionado.classList.add(
+            "incorrecta"
+        );
 
     }
 
-    botonSiguiente.disabled = false;
+
+    botonSiguiente.disabled =
+        false;
+
 }
 
 
-// --------------------------------------------------
+// ==================================================
 // SIGUIENTE PREGUNTA
-// --------------------------------------------------
+// ==================================================
 
-botonSiguiente.addEventListener("click", function () {
+botonSiguiente.addEventListener(
+    "click",
+    function () {
 
-    preguntaActual++;
+        preguntaActual++;
 
-    if (preguntaActual < preguntasTest.length) {
 
-        mostrarPregunta();
+        if (
+            preguntaActual <
+            preguntasTest.length
+        ) {
 
-    } else {
+            mostrarPregunta();
 
-        mostrarResultado();
+        } else {
+
+            mostrarResultado();
+
+        }
 
     }
+);
 
-});
 
-
-// --------------------------------------------------
+// ==================================================
 // MOSTRAR RESULTADO
-// --------------------------------------------------
+// ==================================================
 
 function mostrarResultado() {
 
+    // Parar contador
+
+    clearInterval(intervalo);
+
+
+    // Ocultar test
+
     test.classList.add("oculto");
+
+
+    // Mostrar resultado
+
     resultado.classList.remove("oculto");
+
+
+    // Calcular nota
 
     let notaFinal =
         (puntos / preguntasTest.length) * 10;
 
+
     nota.textContent =
         notaFinal.toFixed(2) + "/10";
 
+
     mensajeResultado.textContent =
         `Has acertado ${puntos} de ${preguntasTest.length} preguntas.`;
+
+
+    // Mostrar tiempo
+
+    let minutos =
+        Math.floor(tiempo / 60);
+
+
+    let segundos =
+        tiempo % 60;
+
+
+    let minutosTexto =
+        minutos.toString().padStart(2, "0");
+
+
+    let segundosTexto =
+        segundos.toString().padStart(2, "0");
+
+
+    tiempoFinal.textContent =
+        `⏱️ Tiempo empleado: ${minutosTexto}:${segundosTexto}`;
+
 }
 
 
-// --------------------------------------------------
-// REINICIAR
-// --------------------------------------------------
+// ==================================================
+// VOLVER A ELEGIR MODO
+// ==================================================
 
-botonReiniciar.addEventListener("click", function () {
+botonReiniciar.addEventListener(
+    "click",
+    function () {
 
-    resultado.classList.add("oculto");
-    seleccionModo.classList.remove("oculto");
-
-    barraProgreso.style.width = "0%";
-
-});
+        clearInterval(intervalo);
 
 
-// --------------------------------------------------
-// BOTONES DE MODO
-// --------------------------------------------------
-
-modoNormal.addEventListener("click", function () {
-
-    iniciarTest(false);
-
-});
+        resultado.classList.add(
+            "oculto"
+        );
 
 
-modoAleatorioBoton.addEventListener("click", function () {
+        seleccionModo.classList.remove(
+            "oculto"
+        );
 
-    iniciarTest(true);
 
-});
+        barraProgreso.style.width =
+            "0%";
+
+
+        contador.textContent =
+            "⏱️ 00:00";
+
+    }
+);
+
+
+// ==================================================
+// BOTÓN MODO NORMAL
+// ==================================================
+
+modoNormal.addEventListener(
+    "click",
+    function () {
+
+        iniciarTest(false);
+
+    }
+);
+
+
+// ==================================================
+// BOTÓN MODO ALEATORIO
+// ==================================================
+
+modoAleatorioBoton.addEventListener(
+    "click",
+    function () {
+
+        iniciarTest(true);
+
+    }
+);
