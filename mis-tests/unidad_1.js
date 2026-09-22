@@ -1,726 +1,526 @@
-// ========================================
-// PREGUNTAS DE LA UNIDAD 1
-// ========================================
-
 const preguntas = [
 
     {
         pregunta: "¿Qué es una red de ordenadores?",
-
         opciones: [
-            "Un conjunto de programas instalados en un ordenador",
-
-            "Un sistema de elementos interconectados mediante un medio físico por el que se transmite información",
-
+            "Un conjunto de ordenadores conectados para compartir recursos e información",
             "Un único ordenador conectado a Internet",
-
-            "Un sistema operativo para administrar redes"
+            "Un programa para navegar por Internet",
+            "Un sistema operativo"
         ],
-
-        correcta: 1
+        correcta: 0
     },
-
 
     {
-        pregunta: "¿Cuál de estos elementos forma parte de un proceso de comunicación?",
-
+        pregunta: "¿Cuáles son algunos elementos necesarios para que exista una comunicación?",
         opciones: [
-            "Emisor",
-
-            "Receptor",
-
-            "Medio de transmisión",
-
-            "Todos los anteriores"
+            "Emisor, receptor, mensaje, canal y protocolo",
+            "Solo emisor y receptor",
+            "Solo un ordenador",
+            "Un router y un switch"
         ],
-
-        correcta: 3
+        correcta: 0
     },
-
 
     {
         pregunta: "¿Qué es un protocolo de comunicación?",
-
         opciones: [
+            "Un conjunto de reglas que permite la comunicación",
             "Un tipo de cable",
-
-            "Un conjunto de reglas que deben cumplir el emisor y el receptor",
-
-            "Una dirección IP",
-
-            "Un dispositivo de red"
+            "Un ordenador",
+            "Una dirección IP"
         ],
-
-        correcta: 1
+        correcta: 0
     },
 
-
     {
-        pregunta: "¿Cuál de estos es un medio de transmisión guiado?",
-
+        pregunta: "¿Cuál es un medio de transmisión guiado?",
         opciones: [
-            "El aire",
-
-            "Las ondas de radio",
-
-            "Un cable",
-
-            "El espacio"
+            "Cable",
+            "Radio",
+            "Wi-Fi",
+            "Ondas de radio"
         ],
-
-        correcta: 2
+        correcta: 0
     },
 
-
     {
-        pregunta: "¿Cuál de estos es un medio de transmisión no guiado?",
-
+        pregunta: "¿Cuál es un medio de transmisión no guiado?",
         opciones: [
-            "Cable de cobre",
-
             "Fibra óptica",
-
             "Cable coaxial",
-
-            "Aire"
+            "Ondas de radio",
+            "Cable de cobre"
         ],
-
-        correcta: 3
-    },
-
-
-    {
-        pregunta: "¿Qué característica permite que una red pueda crecer y adaptarse al aumento de la demanda?",
-
-        opciones: [
-            "Seguridad",
-
-            "Escalabilidad",
-
-            "Confidencialidad",
-
-            "Integridad"
-        ],
-
-        correcta: 1
-    },
-
-
-    {
-        pregunta: "En una transmisión SIMPLEX, ¿en qué sentido viaja la información?",
-
-        opciones: [
-            "En ambos sentidos simultáneamente",
-
-            "En ambos sentidos alternativamente",
-
-            "Solo en un sentido",
-
-            "En ningún sentido"
-        ],
-
         correcta: 2
     },
 
+    {
+        pregunta: "¿Qué significa que una red sea escalable?",
+        opciones: [
+            "Que puede crecer sin afectar demasiado a su funcionamiento",
+            "Que solo puede tener pocos dispositivos",
+            "Que funciona únicamente de forma inalámbrica",
+            "Que no necesita protocolos"
+        ],
+        correcta: 0
+    },
 
     {
-        pregunta: "¿Cuál es un ejemplo de comunicación SEMIDUPLEX?",
-
+        pregunta: "¿Qué caracteriza a una transmisión simplex?",
         opciones: [
-            "Una conversación telefónica",
-
-            "Un walkie-talkie",
-
-            "Una emisión de televisión",
-
-            "Una descarga de Internet"
+            "La información circula en ambos sentidos simultáneamente",
+            "La información circula en un único sentido",
+            "La información circula alternativamente",
+            "No existe comunicación"
         ],
-
         correcta: 1
     },
 
-
     {
-        pregunta: "¿Qué caracteriza a una comunicación DUPLEX?",
-
+        pregunta: "¿Qué caracteriza a una transmisión semidúplex?",
         opciones: [
-            "Solo permite transmitir información en un sentido",
-
-            "Permite transmitir en ambos sentidos de forma alternativa",
-
-            "Permite transmitir en ambos sentidos a la vez",
-
-            "No necesita un medio de transmisión"
+            "La comunicación solo ocurre en un sentido",
+            "La comunicación ocurre en ambos sentidos al mismo tiempo",
+            "La comunicación ocurre en ambos sentidos, pero no simultáneamente",
+            "No existe receptor"
         ],
-
         correcta: 2
     },
 
-
     {
-        pregunta: "¿Qué ocurre en una conmutación de circuitos?",
-
+        pregunta: "¿Qué caracteriza a una transmisión dúplex?",
         opciones: [
-            "La información se fragmenta y cada fragmento toma un camino diferente",
-
-            "Se crea previamente una vía de comunicación entre los terminales",
-
-            "El mensaje se envía a todos los equipos",
-
-            "No existe ningún camino de comunicación"
+            "La comunicación ocurre en ambos sentidos simultáneamente",
+            "La comunicación ocurre únicamente en un sentido",
+            "No existe canal",
+            "Solo existe un receptor"
         ],
-
-        correcta: 1
+        correcta: 0
     },
 
+    {
+        pregunta: "¿Qué ocurre en la conmutación de circuitos?",
+        opciones: [
+            "Se establece un camino dedicado durante la comunicación",
+            "Los datos siempre se envían por caminos diferentes",
+            "No existe comunicación",
+            "Solo se utilizan redes inalámbricas"
+        ],
+        correcta: 0
+    },
 
     {
         pregunta: "¿Qué ocurre en la conmutación de paquetes?",
-
         opciones: [
-            "La información se transmite siempre como un único bloque",
-
-            "La información se fragmenta y los fragmentos pueden seguir caminos diferentes",
-
-            "Se crea un circuito físico exclusivo",
-
-            "La información se envía únicamente al primer equipo"
+            "La información se divide en paquetes que pueden viajar por la red",
+            "Se reserva siempre un circuito físico completo",
+            "Solo se utiliza un cable",
+            "La información no se divide"
         ],
-
-        correcta: 1
+        correcta: 0
     },
-
-
-    {
-        pregunta: "¿Qué caracteriza principalmente a una red P2P?",
-
-        opciones: [
-            "Existe un servidor central obligatorio",
-
-            "Todos los equipos tienen el mismo papel",
-
-            "Solo un ordenador puede enviar información",
-
-            "Los equipos no pueden comunicarse entre sí"
-        ],
-
-        correcta: 1
-    },
-
 
     {
         pregunta: "¿Qué significa P2P?",
-
         opciones: [
-            "Point to Protocol",
-
-            "Peer To Peer",
-
-            "Public To Private",
-
-            "Protocol To Protocol"
+            "Peer to Peer",
+            "Point to Point Router",
+            "Packet to Protocol",
+            "Private to Private"
         ],
-
-        correcta: 1
-    },
-
-
-    {
-        pregunta: "¿Qué tipo de red corresponde a un área personal?",
-
-        opciones: [
-            "PAN",
-
-            "LAN",
-
-            "MAN",
-
-            "WAN"
-        ],
-
         correcta: 0
     },
 
-
     {
-        pregunta: "¿Qué tipo de red corresponde a un área local?",
-
+        pregunta: "¿Qué caracteriza a una red P2P?",
         opciones: [
-            "PAN",
-
-            "LAN",
-
-            "MAN",
-
-            "WAN"
+            "Los dispositivos pueden actuar como clientes y servidores",
+            "Solo existe un servidor",
+            "No se pueden compartir recursos",
+            "Solo funciona con routers"
         ],
-
-        correcta: 1
+        correcta: 0
     },
 
-
     {
-        pregunta: "¿Qué tipo de red corresponde a un área metropolitana?",
-
+        pregunta: "¿Qué significa PAN?",
         opciones: [
-            "PAN",
-
-            "LAN",
-
-            "MAN",
-
-            "WAN"
+            "Personal Area Network",
+            "Public Area Network",
+            "Private Access Network",
+            "Packet Area Network"
         ],
-
-        correcta: 2
+        correcta: 0
     },
 
-
     {
-        pregunta: "¿Qué tipo de red puede abarcar una zona geográfica muy extensa?",
-
+        pregunta: "¿Qué significa LAN?",
         opciones: [
-            "PAN",
-
-            "LAN",
-
-            "MAN",
-
-            "WAN"
+            "Local Area Network",
+            "Large Area Network",
+            "Local Access Node",
+            "Linked Area Network"
         ],
-
-        correcta: 3
+        correcta: 0
     },
 
+    {
+        pregunta: "¿Qué significa MAN?",
+        opciones: [
+            "Metropolitan Area Network",
+            "Main Area Network",
+            "Medium Access Network",
+            "Metropolitan Access Node"
+        ],
+        correcta: 0
+    },
 
     {
-        pregunta: "¿Qué define la topología de una red?",
-
+        pregunta: "¿Qué significa WAN?",
         opciones: [
-            "El sistema operativo utilizado",
+            "Wide Area Network",
+            "Wireless Area Network",
+            "Web Access Network",
+            "Wide Access Node"
+        ],
+        correcta: 0
+    },
 
-            "La estructura que tendrá la red",
-
+    {
+        pregunta: "¿Qué es la topología de una red?",
+        opciones: [
+            "La forma en la que están organizados los dispositivos y conexiones",
+            "El sistema operativo de los ordenadores",
             "La dirección IP de los equipos",
-
-            "El fabricante de los ordenadores"
+            "El protocolo utilizado"
         ],
-
-        correcta: 1
+        correcta: 0
     },
-
 
     {
-        pregunta: "¿Qué define una topología física?",
-
+        pregunta: "¿Qué describe una topología física?",
         opciones: [
-            "Cómo se comunican lógicamente los equipos",
-
-            "La disposición real de cables, ordenadores y periféricos",
-
-            "Los protocolos utilizados",
-
-            "Las direcciones IP"
+            "La disposición física de los dispositivos y cables",
+            "El funcionamiento de los protocolos",
+            "Las direcciones IP",
+            "Los programas instalados"
         ],
-
-        correcta: 1
+        correcta: 0
     },
-
 
     {
         pregunta: "¿Qué caracteriza a una topología en bus?",
-
         opciones: [
-            "Cada equipo tiene una conexión directa con todos los demás",
-
-            "Todos los equipos se conectan a un cable principal",
-
-            "Todos los equipos se conectan a dos anillos",
-
-            "No utiliza cables"
+            "Todos los dispositivos comparten un cable principal",
+            "Todos los dispositivos tienen conexiones con todos",
+            "Existe un dispositivo central",
+            "Los dispositivos forman un círculo"
         ],
-
-        correcta: 1
-    },
-
-
-    {
-        pregunta: "¿Cuál es un inconveniente de la topología en bus?",
-
-        opciones: [
-            "Es demasiado escalable",
-
-            "Necesita muchísimos cables",
-
-            "Si se rompe el cable, la red puede caer",
-
-            "No permite conectar ordenadores"
-        ],
-
-        correcta: 2
-    },
-
-
-    {
-        pregunta: "En una topología en anillo, ¿cómo se conectan los nodos?",
-
-        opciones: [
-            "Todos a un switch central",
-
-            "Cada nodo con el siguiente y el último con el primero",
-
-            "Todos directamente entre sí",
-
-            "Todos a un único cable principal"
-        ],
-
-        correcta: 1
-    },
-
-
-    {
-        pregunta: "¿Qué ventaja ofrece una topología de doble anillo?",
-
-        opciones: [
-            "No utiliza cableado",
-
-            "Redundancia y tolerancia a fallos de uno de los anillos",
-
-            "No necesita dispositivos",
-
-            "Es más barata que un anillo"
-        ],
-
-        correcta: 1
-    },
-
-
-    {
-        pregunta: "¿Qué caracteriza a una topología estrella?",
-
-        opciones: [
-            "Todos los equipos se conectan a un concentrador",
-
-            "Todos los equipos se conectan directamente entre sí",
-
-            "Todos los equipos utilizan dos anillos",
-
-            "Todos utilizan un único cable principal"
-        ],
-
         correcta: 0
     },
 
-
     {
-        pregunta: "¿Qué dispositivos pueden actuar como concentrador en una topología estrella?",
-
+        pregunta: "¿Qué característica tiene una topología en anillo?",
         opciones: [
-            "Switch o HUB",
-
-            "Solo un router",
-
-            "Solo un servidor",
-
-            "Una tarjeta gráfica"
+            "Los dispositivos están conectados formando un círculo",
+            "Existe un dispositivo central",
+            "Todos los dispositivos usan un único cable lineal",
+            "Todos están conectados con todos"
         ],
-
         correcta: 0
     },
 
-
     {
-        pregunta: "¿Cuál es un punto de fallo de una topología estrella?",
-
+        pregunta: "¿Qué ventaja puede ofrecer un doble anillo?",
         opciones: [
-            "Cada ordenador individual",
-
-            "El HUB o concentrador",
-
-            "El teclado",
-
-            "La dirección IP"
+            "Mayor redundancia y tolerancia a fallos",
+            "Menor número de conexiones",
+            "Eliminación de todos los dispositivos",
+            "Ausencia total de cables"
         ],
-
-        correcta: 1
+        correcta: 0
     },
 
-
     {
-        pregunta: "¿Qué ventaja principal tiene una topología en malla?",
-
+        pregunta: "¿Qué caracteriza a una topología en estrella?",
         opciones: [
-            "Utiliza muy poco cableado",
-
-            "Tiene caminos alternativos y tolerancia a fallos",
-
-            "Solo permite un dispositivo",
-
-            "No necesita conexiones"
+            "Los dispositivos están conectados a un dispositivo central",
+            "Los dispositivos forman un círculo",
+            "Todos los dispositivos están conectados entre sí",
+            "Existe un único cable principal"
         ],
-
-        correcta: 1
+        correcta: 0
     },
 
+    {
+        pregunta: "¿Qué caracteriza a una topología en malla?",
+        opciones: [
+            "Los dispositivos tienen múltiples conexiones entre ellos",
+            "Existe un único dispositivo central",
+            "Solo existe un cable principal",
+            "Los dispositivos forman necesariamente un círculo"
+        ],
+        correcta: 0
+    },
 
     {
         pregunta: "¿Cuántas capas tiene el modelo OSI?",
-
         opciones: [
             "4",
-
             "5",
-
-            "6",
-
-            "7"
+            "7",
+            "8"
         ],
-
-        correcta: 3
+        correcta: 2
     },
 
-
     {
-        pregunta: "¿Qué significan las siglas OSI?",
-
+        pregunta: "¿Qué significa OSI?",
         opciones: [
-            "Open System Interconnection",
-
+            "Open Systems Interconnection",
             "Operating System Internet",
-
-            "Open Software Internet",
-
-            "Online System Interface"
+            "Open Security Interface",
+            "Online Systems Internet"
         ],
-
         correcta: 0
     },
 
-
     {
-        pregunta: "¿Cuál es la capa más cercana al usuario en el modelo OSI?",
-
+        pregunta: "¿Qué función tiene la capa de Aplicación del modelo OSI?",
         opciones: [
-            "Capa 1 - Física",
-
-            "Capa 3 - Red",
-
-            "Capa 7 - Aplicación",
-
-            "Capa 4 - Transporte"
+            "Proporciona servicios de red a las aplicaciones",
+            "Transmite bits por el medio físico",
+            "Gestiona direcciones MAC",
+            "Realiza el encaminamiento"
         ],
-
-        correcta: 2
+        correcta: 0
     },
 
-
     {
-        pregunta: "¿Qué capa del modelo OSI se encarga del direccionamiento y enrutamiento?",
-
+        pregunta: "¿Qué función tiene la capa de Presentación?",
         opciones: [
-            "Capa 1 - Física",
-
-            "Capa 2 - Enlace",
-
-            "Capa 3 - Red",
-
-            "Capa 7 - Aplicación"
+            "Formato, cifrado y compresión de los datos",
+            "Encaminamiento de paquetes",
+            "Control de cables",
+            "Asignación de direcciones MAC"
         ],
-
-        correcta: 2
+        correcta: 0
     },
 
+    {
+        pregunta: "¿Qué función tiene la capa de Transporte?",
+        opciones: [
+            "Controla la entrega de datos entre procesos",
+            "Solo transmite bits",
+            "Gestiona únicamente cables",
+            "Solo trabaja con direcciones MAC"
+        ],
+        correcta: 0
+    },
 
     {
-        pregunta: "¿Qué tipo de dirección se utiliza en la capa 2?",
-
+        pregunta: "¿Qué función tiene la capa de Red?",
         opciones: [
-            "Dirección IP",
+            "Realiza el direccionamiento lógico y el encaminamiento",
+            "Controla el medio físico",
+            "Gestiona archivos",
+            "Realiza únicamente cifrado"
+        ],
+        correcta: 0
+    },
 
+    {
+        pregunta: "¿Qué dirección utiliza la capa de Enlace para identificar físicamente los dispositivos?",
+        opciones: [
             "Dirección MAC",
-
-            "Dirección DNS",
-
-            "Dirección HTTP"
+            "Dirección IP",
+            "Puerto",
+            "URL"
         ],
-
-        correcta: 1
+        correcta: 0
     },
 
-
     {
-        pregunta: "¿Qué dispositivo trabaja principalmente en la capa 2 según tus apuntes?",
-
+        pregunta: "¿Qué dispositivo trabaja principalmente con direcciones MAC?",
         opciones: [
-            "Router",
-
             "Switch",
-
+            "Router",
             "Servidor DNS",
-
             "Módem"
         ],
-
-        correcta: 1
+        correcta: 0
     },
 
-
     {
-        pregunta: "¿Qué dispositivo trabaja en la capa 3 según tus apuntes?",
-
+        pregunta: "¿Qué dispositivo se utiliza para realizar el encaminamiento entre redes?",
         opciones: [
-            "HUB",
-
-            "Switch",
-
             "Router",
-
-            "Tarjeta de sonido"
+            "Switch",
+            "Hub",
+            "Tarjeta gráfica"
         ],
-
-        correcta: 2
+        correcta: 0
     },
-
 
     {
-        pregunta: "¿Qué unidad de información se utiliza en la capa 2?",
-
+        pregunta: "¿Cómo se llama la unidad de datos de la capa de Enlace?",
         opciones: [
-            "Bits",
-
-            "Frames o tramas",
-
-            "Paquetes",
-
-            "Segmentos"
+            "Trama",
+            "Paquete",
+            "Segmento",
+            "Bit"
         ],
-
-        correcta: 1
+        correcta: 0
     },
-
 
     {
-        pregunta: "¿Qué ocurre durante la encapsulación?",
-
+        pregunta: "¿Qué es la encapsulación?",
         opciones: [
-            "Se eliminan todos los datos",
-
-            "Se añade información de control a los datos al pasar por las capas",
-
-            "Se apaga la conexión",
-
-            "Se cambia la dirección física por una IP"
+            "Proceso de añadir información de control de las capas a los datos",
+            "Eliminar todos los datos",
+            "Apagar una conexión",
+            "Cambiar una dirección IP"
         ],
-
-        correcta: 1
+        correcta: 0
     },
-
 
     {
         pregunta: "¿Qué es el payload?",
-
         opciones: [
+            "La información útil que se transporta",
             "La dirección MAC",
-
-            "La información útil que se quiere transmitir",
-
-            "El dispositivo que transmite",
-
-            "La dirección IP del router"
+            "El cable utilizado",
+            "El protocolo de red"
         ],
-
-        correcta: 1
+        correcta: 0
     },
 
-
     {
-        pregunta: "¿Qué ocurre durante la desencapsulación?",
-
+        pregunta: "¿Qué es la desencapsulación?",
         opciones: [
-            "Se añaden nuevas cabeceras",
-
-            "Se eliminan las informaciones añadidas durante la encapsulación",
-
-            "Se cambia el protocolo por otro",
-
-            "Se elimina el mensaje original"
+            "Proceso inverso a la encapsulación al recibir los datos",
+            "Crear una nueva red",
+            "Asignar una dirección IP",
+            "Crear un cable"
         ],
-
-        correcta: 1
+        correcta: 0
     },
 
+    {
+        pregunta: "¿Qué es la multiplexación?",
+        opciones: [
+            "Permite gestionar varias comunicaciones utilizando un mismo medio",
+            "Eliminar paquetes",
+            "Apagar un dispositivo",
+            "Crear una dirección MAC"
+        ],
+        correcta: 0
+    },
 
     {
-        pregunta: "¿Qué utiliza el multiplexamiento para identificar a qué protocolo o servicio pertenece una información?",
-
+        pregunta: "¿Para qué sirve el identificador o clave de multiplexación?",
         opciones: [
-            "Una llave o identificador de multiplexación",
-
-            "Una dirección física",
-
-            "Un cable diferente",
-
-            "Una topología diferente"
+            "Para identificar a qué comunicación pertenece la información",
+            "Para apagar el router",
+            "Para cambiar el cable",
+            "Para eliminar la información"
         ],
-
         correcta: 0
     }
 
 ];
 
 
-// ========================================
-// VARIABLES
-// ========================================
+// --------------------------------------------------
+// VARIABLES DEL TEST
+// --------------------------------------------------
 
+let preguntasTest = [];
 let preguntaActual = 0;
-
 let puntos = 0;
-
 let respuestaSeleccionada = false;
+let modoAleatorio = false;
 
 
-// ========================================
+// --------------------------------------------------
 // ELEMENTOS HTML
-// ========================================
+// --------------------------------------------------
 
-const elementoPregunta =
-    document.getElementById("pregunta");
+const seleccionModo = document.getElementById("seleccionModo");
+const test = document.getElementById("test");
+const resultado = document.getElementById("resultado");
 
-const elementoOpciones =
-    document.getElementById("opciones");
+const modoNormal = document.getElementById("modoNormal");
+const modoAleatorioBoton = document.getElementById("modoAleatorio");
 
-const numeroPregunta =
-    document.getElementById("numeroPregunta");
+const numeroPregunta = document.getElementById("numeroPregunta");
+const puntuacion = document.getElementById("puntuacion");
+const barraProgreso = document.getElementById("barra-progreso");
 
-const puntuacion =
-    document.getElementById("puntuacion");
+const pregunta = document.getElementById("pregunta");
+const opciones = document.getElementById("opciones");
 
-const botonSiguiente =
-    document.getElementById("botonSiguiente");
+const botonSiguiente = document.getElementById("botonSiguiente");
+const botonReiniciar = document.getElementById("botonReiniciar");
 
-const barraProgreso =
-    document.getElementById("barra-progreso");
-
-const panel =
-    document.querySelector(".panel");
-
-const resultado =
-    document.getElementById("resultado");
-
-const nota =
-    document.getElementById("nota");
-
-const mensajeResultado =
-    document.getElementById("mensajeResultado");
-
-const botonReiniciar =
-    document.getElementById("botonReiniciar");
+const nota = document.getElementById("nota");
+const mensajeResultado = document.getElementById("mensajeResultado");
 
 
-// ========================================
+// --------------------------------------------------
+// MEZCLAR PREGUNTAS
+// --------------------------------------------------
+
+function mezclarPreguntas(array) {
+
+    let copia = [...array];
+
+    for (let i = copia.length - 1; i > 0; i--) {
+
+        let posicion = Math.floor(Math.random() * (i + 1));
+
+        let temporal = copia[i];
+
+        copia[i] = copia[posicion];
+
+        copia[posicion] = temporal;
+    }
+
+    return copia;
+}
+
+
+// --------------------------------------------------
+// INICIAR TEST
+// --------------------------------------------------
+
+function iniciarTest(aleatorio) {
+
+    modoAleatorio = aleatorio;
+
+    preguntaActual = 0;
+    puntos = 0;
+
+    if (modoAleatorio) {
+        preguntasTest = mezclarPreguntas(preguntas);
+    } else {
+        preguntasTest = [...preguntas];
+    }
+
+    seleccionModo.classList.add("oculto");
+    resultado.classList.add("oculto");
+    test.classList.remove("oculto");
+
+    puntuacion.textContent = "Puntos: 0";
+
+    mostrarPregunta();
+}
+
+
+// --------------------------------------------------
 // MOSTRAR PREGUNTA
-// ========================================
+// --------------------------------------------------
 
 function mostrarPregunta() {
 
@@ -728,255 +528,151 @@ function mostrarPregunta() {
 
     botonSiguiente.disabled = true;
 
-
-    const pregunta =
-        preguntas[preguntaActual];
-
-
-    elementoPregunta.textContent =
-        pregunta.pregunta;
-
-
-    elementoOpciones.innerHTML = "";
-
+    let preguntaActualObjeto = preguntasTest[preguntaActual];
 
     numeroPregunta.textContent =
-        `Pregunta ${preguntaActual + 1} de ${preguntas.length}`;
+        `Pregunta ${preguntaActual + 1} de ${preguntasTest.length}`;
+
+    pregunta.textContent = preguntaActualObjeto.pregunta;
+
+    opciones.innerHTML = "";
+
+    preguntaActualObjeto.opciones.forEach((opcion, indice) => {
+
+        const boton = document.createElement("button");
+
+        boton.classList.add("opcion");
+
+        boton.textContent = opcion;
+
+        boton.addEventListener("click", function () {
+
+            seleccionarRespuesta(indice, boton);
+
+        });
+
+        opciones.appendChild(boton);
+    });
 
 
-    puntuacion.textContent =
-        `Puntos: ${puntos}`;
+    let progreso =
+        ((preguntaActual + 1) / preguntasTest.length) * 100;
 
-
-    const progreso =
-        (preguntaActual / preguntas.length) * 100;
-
-
-    barraProgreso.style.width =
-        `${progreso}%`;
-
-
-    pregunta.opciones.forEach(
-        (opcion, indice) => {
-
-            const boton =
-                document.createElement("button");
-
-
-            boton.classList.add("opcion");
-
-
-            boton.textContent =
-                opcion;
-
-
-            boton.addEventListener(
-                "click",
-                () => {
-
-                    seleccionarRespuesta(
-                        indice,
-                        boton
-                    );
-
-                }
-            );
-
-
-            elementoOpciones.appendChild(
-                boton
-            );
-
-        }
-    );
-
+    barraProgreso.style.width = progreso + "%";
 }
 
 
-// ========================================
+// --------------------------------------------------
 // SELECCIONAR RESPUESTA
-// ========================================
+// --------------------------------------------------
 
-function seleccionarRespuesta(
-    indice,
-    botonSeleccionado
-) {
+function seleccionarRespuesta(indice, botonSeleccionado) {
 
     if (respuestaSeleccionada) {
-
         return;
-
     }
-
 
     respuestaSeleccionada = true;
 
+    let preguntaActualObjeto = preguntasTest[preguntaActual];
 
-    const pregunta =
-        preguntas[preguntaActual];
+    const botones = document.querySelectorAll(".opcion");
+
+    botones.forEach((boton, posicion) => {
+
+        if (posicion === preguntaActualObjeto.correcta) {
+
+            boton.classList.add("correcta");
+
+        }
+
+    });
 
 
-    const botones =
-        document.querySelectorAll(".opcion");
-
-
-    if (indice === pregunta.correcta) {
+    if (indice === preguntaActualObjeto.correcta) {
 
         puntos++;
 
-        botonSeleccionado.classList.add(
-            "correcta"
-        );
+        puntuacion.textContent = `Puntos: ${puntos}`;
+
+    } else {
+
+        botonSeleccionado.classList.add("incorrecta");
 
     }
-
-    else {
-
-        botonSeleccionado.classList.add(
-            "incorrecta"
-        );
-
-
-        botones[
-            pregunta.correcta
-        ].classList.add(
-            "correcta"
-        );
-
-    }
-
-
-    botones.forEach(
-        boton => {
-
-            boton.disabled = true;
-
-        }
-    );
-
-
-    puntuacion.textContent =
-        `Puntos: ${puntos}`;
-
 
     botonSiguiente.disabled = false;
-
 }
 
 
-// ========================================
+// --------------------------------------------------
 // SIGUIENTE PREGUNTA
-// ========================================
+// --------------------------------------------------
 
-botonSiguiente.addEventListener(
-    "click",
-    () => {
+botonSiguiente.addEventListener("click", function () {
 
-        preguntaActual++;
+    preguntaActual++;
 
-
-        if (
-            preguntaActual <
-            preguntas.length
-        ) {
-
-            mostrarPregunta();
-
-        }
-
-        else {
-
-            mostrarResultado();
-
-        }
-
-    }
-);
-
-
-// ========================================
-// MOSTRAR RESULTADO
-// ========================================
-
-function mostrarResultado() {
-
-    panel.classList.add(
-        "oculto"
-    );
-
-
-    resultado.classList.remove(
-        "oculto"
-    );
-
-
-    const notaFinal =
-        (puntos / preguntas.length) * 10;
-
-
-    nota.textContent =
-        `${notaFinal.toFixed(1)}/10`;
-
-
-    if (notaFinal >= 9) {
-
-        mensajeResultado.textContent =
-            `🔥 ¡Excelente! Has acertado ${puntos} de ${preguntas.length}.`;
-
-    }
-
-    else if (notaFinal >= 7) {
-
-        mensajeResultado.textContent =
-            `👏 ¡Muy bien! Has acertado ${puntos} de ${preguntas.length}.`;
-
-    }
-
-    else if (notaFinal >= 5) {
-
-        mensajeResultado.textContent =
-            `👍 Has aprobado con ${puntos} aciertos de ${preguntas.length}.`;
-
-    }
-
-    else {
-
-        mensajeResultado.textContent =
-            `📚 Necesitas repasar un poco más. Has acertado ${puntos} de ${preguntas.length}.`;
-
-    }
-
-}
-
-
-// ========================================
-// REINICIAR TEST
-// ========================================
-
-botonReiniciar.addEventListener(
-    "click",
-    () => {
-
-        preguntaActual = 0;
-
-        puntos = 0;
-
-        panel.classList.remove(
-            "oculto"
-        );
-
-        resultado.classList.add(
-            "oculto"
-        );
+    if (preguntaActual < preguntasTest.length) {
 
         mostrarPregunta();
 
+    } else {
+
+        mostrarResultado();
+
     }
-);
+
+});
 
 
-// ========================================
-// INICIAR TEST
-// ========================================
+// --------------------------------------------------
+// MOSTRAR RESULTADO
+// --------------------------------------------------
 
-mostrarPregunta();
+function mostrarResultado() {
+
+    test.classList.add("oculto");
+    resultado.classList.remove("oculto");
+
+    let notaFinal =
+        (puntos / preguntasTest.length) * 10;
+
+    nota.textContent =
+        notaFinal.toFixed(2) + "/10";
+
+    mensajeResultado.textContent =
+        `Has acertado ${puntos} de ${preguntasTest.length} preguntas.`;
+}
+
+
+// --------------------------------------------------
+// REINICIAR
+// --------------------------------------------------
+
+botonReiniciar.addEventListener("click", function () {
+
+    resultado.classList.add("oculto");
+    seleccionModo.classList.remove("oculto");
+
+    barraProgreso.style.width = "0%";
+
+});
+
+
+// --------------------------------------------------
+// BOTONES DE MODO
+// --------------------------------------------------
+
+modoNormal.addEventListener("click", function () {
+
+    iniciarTest(false);
+
+});
+
+
+modoAleatorioBoton.addEventListener("click", function () {
+
+    iniciarTest(true);
+
+});
