@@ -2,225 +2,428 @@
     box-sizing: border-box;
 }
 
+
 body {
+
     margin: 0;
+
     font-family: Arial, sans-serif;
-    background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
+
+    background: linear-gradient(
+        135deg,
+        #0f2027,
+        #203a43,
+        #2c5364
+    );
+
     min-height: 100vh;
+
     display: flex;
+
     justify-content: center;
+
     align-items: center;
+
     padding: 20px;
 }
 
+
 .contenedor {
+
     width: 100%;
+
     max-width: 800px;
+
 }
 
-/* PANEL PRINCIPAL */
+
+/* ----------------------------- */
+/* PANEL */
+/* ----------------------------- */
 
 .panel {
+
     background: white;
+
     border-radius: 15px;
+
     padding: 30px;
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+
+    box-shadow:
+        0 10px 30px rgba(0, 0, 0, 0.3);
+
 }
+
 
 .panel h1 {
+
     text-align: center;
+
     margin-top: 0;
+
     color: #203a43;
+
 }
+
 
 .panel > p {
+
     text-align: center;
+
     color: #666;
+
 }
 
 
+/* ----------------------------- */
 /* SELECCIÓN DE MODO */
+/* ----------------------------- */
 
 .seleccion-modo {
+
     text-align: center;
+
 }
+
 
 .seleccion-modo h2 {
+
     margin-top: 30px;
+
     color: #333;
+
 }
+
 
 .botones-modo {
+
     display: flex;
+
     gap: 20px;
+
     margin-top: 30px;
+
 }
+
 
 .modo {
+
     flex: 1;
+
     min-height: 120px;
+
     font-size: 18px;
+
     display: flex;
+
     flex-direction: column;
+
     justify-content: center;
+
     gap: 10px;
+
 }
+
 
 .modo span {
+
     font-size: 14px;
+
     font-weight: normal;
+
     opacity: 0.8;
+
 }
 
 
+/* ----------------------------- */
 /* INFORMACIÓN DEL TEST */
+/* ----------------------------- */
 
 .informacion {
+
     display: flex;
+
     justify-content: space-between;
+
+    align-items: center;
+
     margin-bottom: 15px;
+
     font-weight: bold;
+
     color: #444;
+
 }
 
 
+/* CONTADOR */
+
+#contador {
+
+    font-size: 18px;
+
+    color: #203a43;
+
+}
+
+
+/* ----------------------------- */
 /* BARRA DE PROGRESO */
+/* ----------------------------- */
 
 .barra-contenedor {
+
     width: 100%;
+
     height: 10px;
+
     background: #ddd;
+
     border-radius: 10px;
+
     overflow: hidden;
+
     margin-bottom: 30px;
+
 }
+
 
 #barra-progreso {
+
     width: 0%;
+
     height: 100%;
+
     background: #2c5364;
+
     transition: width 0.3s;
+
 }
 
 
+/* ----------------------------- */
 /* PREGUNTA */
+/* ----------------------------- */
 
 #pregunta {
+
     color: #222;
+
     margin-bottom: 25px;
+
 }
 
 
+/* ----------------------------- */
 /* OPCIONES */
+/* ----------------------------- */
 
 .opciones {
+
     display: flex;
+
     flex-direction: column;
+
     gap: 12px;
+
 }
+
 
 .opcion {
+
     width: 100%;
+
     padding: 15px;
+
     border: 2px solid #ddd;
+
     border-radius: 10px;
+
     background: white;
+
     cursor: pointer;
+
     text-align: left;
+
     font-size: 16px;
+
     transition: 0.2s;
+
 }
+
 
 .opcion:hover {
+
     border-color: #2c5364;
+
     background: #f2f7f9;
+
 }
+
 
 .opcion.correcta {
+
     background: #c8e6c9;
+
     border-color: #2e7d32;
+
 }
+
 
 .opcion.incorrecta {
+
     background: #ffcdd2;
+
     border-color: #c62828;
+
 }
 
 
+/* ----------------------------- */
 /* BOTONES */
+/* ----------------------------- */
 
 .boton {
+
     border: none;
+
     background: #203a43;
+
     color: white;
+
     padding: 14px 25px;
+
     border-radius: 10px;
+
     cursor: pointer;
+
     font-size: 16px;
+
     font-weight: bold;
+
     margin-top: 25px;
+
     transition: 0.2s;
+
 }
+
 
 .boton:hover {
+
     background: #2c5364;
+
     transform: translateY(-2px);
+
 }
+
 
 .boton:disabled {
+
     background: #999;
+
     cursor: not-allowed;
+
     transform: none;
+
 }
 
 
+/* ----------------------------- */
 /* RESULTADO */
+/* ----------------------------- */
 
 .resultado {
+
     background: white;
+
     border-radius: 15px;
+
     padding: 40px;
+
     text-align: center;
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+
+    box-shadow:
+        0 10px 30px rgba(0, 0, 0, 0.3);
+
 }
+
 
 .nota {
+
     font-size: 50px;
+
     font-weight: bold;
+
     color: #203a43;
+
     margin: 20px 0;
+
 }
 
 
+#tiempoFinal {
+
+    font-size: 18px;
+
+    font-weight: bold;
+
+    color: #203a43;
+
+}
+
+
+/* ----------------------------- */
 /* OCULTAR */
+/* ----------------------------- */
 
 .oculto {
+
     display: none;
+
 }
 
 
+/* ----------------------------- */
 /* MÓVIL */
+/* ----------------------------- */
 
 @media (max-width: 600px) {
 
     .panel {
+
         padding: 20px;
+
     }
+
 
     .botones-modo {
+
         flex-direction: column;
+
     }
+
 
     .informacion {
+
         flex-direction: column;
+
         gap: 8px;
+
     }
+
 
     #pregunta {
+
         font-size: 20px;
+
     }
 
+
     .opcion {
+
         font-size: 15px;
+
     }
+
 }
