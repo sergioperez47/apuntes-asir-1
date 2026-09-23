@@ -1335,9 +1335,11 @@ let preguntasTest = [];
 
 let preguntaActual = 0;
 
-let puntos = 0;
+let respuestasUsuario = [];
 
-let respuestaSeleccionada = false;
+let opcionesMezcladas = [];
+
+let modoAleatorioActual = false;
 
 let tiempo = 0;
 
@@ -1348,79 +1350,51 @@ let intervalo = null;
 // ELEMENTOS HTML
 // ==================================================
 
-const seleccionModo =
-    document.getElementById("seleccionModo");
+const seleccionModo = document.getElementById("seleccionModo");
 
-const test =
-    document.getElementById("test");
+const test = document.getElementById("test");
 
-const resultado =
-    document.getElementById("resultado");
+const resultado = document.getElementById("resultado");
 
-const modoNormal =
-    document.getElementById("modoNormal");
+const botonNormal = document.getElementById("modoNormal");
 
-const modoAleatorioBoton =
-    document.getElementById("modoAleatorio");
+const botonAleatorio = document.getElementById("modoAleatorio");
 
-const numeroPregunta =
-    document.getElementById("numeroPregunta");
+const preguntaElemento = document.getElementById("pregunta");
 
-const contador =
-    document.getElementById("contador");
+const opcionesElemento = document.getElementById("opciones");
 
-const puntuacion =
-    document.getElementById("puntuacion");
+const botonAnterior = document.getElementById("botonAnterior");
 
-const barraProgreso =
-    document.getElementById("barra-progreso");
+const botonReiniciarTest = document.getElementById("botonReiniciarTest");
 
-const pregunta =
-    document.getElementById("pregunta");
+const botonSiguiente = document.getElementById("botonSiguiente");
 
-const opciones =
-    document.getElementById("opciones");
+const numeroPregunta = document.getElementById("numeroPregunta");
 
-const botonSiguiente =
-    document.getElementById("botonSiguiente");
+const puntuacionElemento = document.getElementById("puntuacion");
 
-const botonReiniciar =
-    document.getElementById("botonReiniciar");
+const contador = document.getElementById("contador");
 
-const nota =
-    document.getElementById("nota");
+const barraProgreso = document.getElementById("barra-progreso");
 
-const mensajeResultado =
-    document.getElementById("mensajeResultado");
+const nota = document.getElementById("nota");
 
-const tiempoFinal =
-    document.getElementById("tiempoFinal");
+const mensajeResultado = document.getElementById("mensajeResultado");
+
+const tiempoFinal = document.getElementById("tiempoFinal");
+
+const botonReiniciar = document.getElementById("botonReiniciar");
 
 
 // ==================================================
-// FUNCIÓN PARA MEZCLAR
+// MEZCLAR ARRAY
 // ==================================================
 
 function mezclar(array) {
 
-    let copia = [...array];
+    return array.sort(() => Math.random() - 0.5);
 
-    for (let i = copia.length - 1; i > 0; i--) {
-
-        let posicion =
-            Math.floor(Math.random() * (i + 1));
-
-        let temporal =
-            copia[i];
-
-        copia[i] =
-            copia[posicion];
-
-        copia[posicion] =
-            temporal;
-    }
-
-    return copia;
 }
 
 
@@ -1430,26 +1404,44 @@ function mezclar(array) {
 
 function iniciarTest(aleatorio) {
 
-    preguntaActual = 0;
+    modoAleatorioActual = aleatorio;
 
-    puntos = 0;
-
-    tiempo = 0;
-
-    clearInterval(intervalo);
-
+    preguntasTest = [...preguntas];
 
     if (aleatorio) {
 
-        preguntasTest =
-            mezclar(preguntas);
-
-    } else {
-
-        preguntasTest =
-            [...preguntas];
+        preguntasTest = mezclar(preguntasTest);
 
     }
+
+    preguntaActual = 0;
+
+    respuestasUsuario =
+        new Array(preguntasTest.length).fill(null);
+
+    opcionesMezcladas =
+        new Array(preguntasTest.length);
+
+
+    // Mezclamos las respuestas una sola vez
+    // para cada pregunta.
+
+    preguntasTest.forEach((pregunta, indice) => {
+
+        let opciones = pregunta.opciones.map(
+            (texto, posicion) => {
+
+                return {
+                    texto: texto,
+                    indice: posicion
+                };
+
+            }
+        );
+
+        opcionesMezcladas[indice] = mezclar(opciones);
+
+    });
 
 
     seleccionModo.classList.add("oculto");
@@ -1459,49 +1451,14 @@ function iniciarTest(aleatorio) {
     test.classList.remove("oculto");
 
 
-    puntuacion.textContent =
-        "Puntos: 0";
+    tiempo = 0;
 
+    actualizarCronometro();
 
-    contador.textContent =
-        "⏱️ 00:00";
-
-
-    intervalo = setInterval(function () {
-
-        tiempo++;
-
-        actualizarContador();
-
-    }, 1000);
-
+    iniciarCronometro();
 
     mostrarPregunta();
-}
 
-
-// ==================================================
-// ACTUALIZAR CONTADOR
-// ==================================================
-
-function actualizarContador() {
-
-    let minutos =
-        Math.floor(tiempo / 60);
-
-    let segundos =
-        tiempo % 60;
-
-
-    let minutosTexto =
-        minutos.toString().padStart(2, "0");
-
-    let segundosTexto =
-        segundos.toString().padStart(2, "0");
-
-
-    contador.textContent =
-        `⏱️ ${minutosTexto}:${segundosTexto}`;
 }
 
 
@@ -1511,100 +1468,135 @@ function actualizarContador() {
 
 function mostrarPregunta() {
 
-    respuestaSeleccionada = false;
-
-    botonSiguiente.disabled = true;
-
-
-    let preguntaActualObjeto =
+    const pregunta =
         preguntasTest[preguntaActual];
+
+    const opciones =
+        opcionesMezcladas[preguntaActual];
+
+
+    preguntaElemento.textContent =
+        pregunta.pregunta;
 
 
     numeroPregunta.textContent =
         `Pregunta ${preguntaActual + 1} de ${preguntasTest.length}`;
 
 
-    pregunta.textContent =
-        preguntaActualObjeto.pregunta;
+    puntuacionElemento.textContent =
+        `Puntos: ${calcularPuntos()} `;
 
 
-    opciones.innerHTML = "";
-
-
-    /*
-     * Creamos una copia de las respuestas.
-     *
-     * Guardamos si cada respuesta es correcta
-     * ANTES de mezclarlas.
-     */
-
-    let respuestas =
-        preguntaActualObjeto.opciones.map(
-            function (texto, indice) {
-
-                return {
-                    texto: texto,
-                    correcta:
-                        indice ===
-                        preguntaActualObjeto.correcta
-                };
-
-            }
-        );
-
-
-    // Mezclar respuestas
-
-    respuestas =
-        mezclar(respuestas);
-
-
-    // Crear botones
-
-    respuestas.forEach(
-        function (respuesta) {
-
-            const boton =
-                document.createElement("button");
-
-
-            boton.classList.add("opcion");
-
-
-            boton.textContent =
-                respuesta.texto;
-
-
-            boton.addEventListener(
-                "click",
-                function () {
-
-                    seleccionarRespuesta(
-                        respuesta.correcta,
-                        boton
-                    );
-
-                }
-            );
-
-
-            opciones.appendChild(boton);
-
-        }
-    );
-
-
-    // Actualizar barra
-
-    let progreso =
-        (
-            (preguntaActual + 1)
-            / preguntasTest.length
-        ) * 100;
+    const progreso =
+        (preguntaActual / preguntasTest.length) * 100;
 
 
     barraProgreso.style.width =
-        progreso + "%";
+        `${progreso}%`;
+
+
+    opcionesElemento.innerHTML = "";
+
+
+    opciones.forEach(opcion => {
+
+        const boton =
+            document.createElement("button");
+
+
+        boton.classList.add("opcion");
+
+        boton.textContent =
+            opcion.texto;
+
+
+        const respuestaGuardada =
+            respuestasUsuario[preguntaActual];
+
+
+        // Si ya había una respuesta seleccionada,
+        // mostramos su estado.
+
+        if (respuestaGuardada !== null) {
+
+            if (opcion.indice === pregunta.correcta) {
+
+                boton.classList.add("correcta");
+
+            }
+
+            if (
+                opcion.indice === respuestaGuardada &&
+                respuestaGuardada !== pregunta.correcta
+            ) {
+
+                boton.classList.add("incorrecta");
+
+            }
+
+            boton.disabled = true;
+
+        } else {
+
+            boton.addEventListener("click", () => {
+
+                seleccionarRespuesta(
+                    opcion.indice
+                );
+
+            });
+
+        }
+
+
+        opcionesElemento.appendChild(boton);
+
+    });
+
+
+    // Botón anterior
+
+    if (preguntaActual === 0) {
+
+        botonAnterior.disabled = true;
+
+    } else {
+
+        botonAnterior.disabled = false;
+
+    }
+
+
+    // Botón siguiente
+
+    if (respuestasUsuario[preguntaActual] === null) {
+
+        botonSiguiente.disabled = true;
+
+    } else {
+
+        botonSiguiente.disabled = false;
+
+    }
+
+
+    // En la última pregunta cambiamos el texto
+
+    if (
+        preguntaActual ===
+        preguntasTest.length - 1
+    ) {
+
+        botonSiguiente.textContent =
+            "Terminar ✓";
+
+    } else {
+
+        botonSiguiente.textContent =
+            "Siguiente →";
+
+    }
+
 }
 
 
@@ -1612,49 +1604,40 @@ function mostrarPregunta() {
 // SELECCIONAR RESPUESTA
 // ==================================================
 
-function seleccionarRespuesta(
-    esCorrecta,
-    botonSeleccionado
-) {
+function seleccionarRespuesta(indiceSeleccionado) {
 
-    if (respuestaSeleccionada) {
-
-        return;
-    }
-
-
-    respuestaSeleccionada = true;
-
-
-    // Buscar la respuesta correcta
-
-    let preguntaActualObjeto =
+    const pregunta =
         preguntasTest[preguntaActual];
 
 
-    let respuestaCorrecta =
-        preguntaActualObjeto.opciones[
-            preguntaActualObjeto.correcta
-        ];
+    respuestasUsuario[preguntaActual] =
+        indiceSeleccionado;
 
 
-    // Marcar la respuesta correcta
+    mostrarPregunta();
 
-    const botones =
-        document.querySelectorAll(".opcion");
+}
 
 
-    botones.forEach(
-        function (boton) {
+// ==================================================
+// CALCULAR PUNTOS
+// ==================================================
+
+function calcularPuntos() {
+
+    let puntos = 0;
+
+
+    respuestasUsuario.forEach(
+        (respuesta, indice) => {
 
             if (
-                boton.textContent ===
-                respuestaCorrecta
+                respuesta !== null &&
+                respuesta ===
+                preguntasTest[indice].correcta
             ) {
 
-                boton.classList.add(
-                    "correcta"
-                );
+                puntos++;
 
             }
 
@@ -1662,167 +1645,243 @@ function seleccionarRespuesta(
     );
 
 
-    // Comprobar respuesta
+    return puntos;
 
-    if (esCorrecta) {
-
-        puntos++;
-
-        puntuacion.textContent =
-            `Puntos: ${puntos}`;
-
-    } else {
-
-        botonSeleccionado.classList.add(
-            "incorrecta"
-        );
-
-    }
-
-
-    botonSiguiente.disabled =
-        false;
 }
 
 
 // ==================================================
-// SIGUIENTE PREGUNTA
+// BOTÓN ANTERIOR
 // ==================================================
 
-botonSiguiente.addEventListener(
-    "click",
-    function () {
+botonAnterior.addEventListener("click", () => {
+
+    if (preguntaActual > 0) {
+
+        preguntaActual--;
+
+        mostrarPregunta();
+
+    }
+
+});
+
+
+// ==================================================
+// BOTÓN SIGUIENTE
+// ==================================================
+
+botonSiguiente.addEventListener("click", () => {
+
+    if (
+        preguntaActual <
+        preguntasTest.length - 1
+    ) {
 
         preguntaActual++;
 
+        mostrarPregunta();
 
-        if (
-            preguntaActual <
-            preguntasTest.length
-        ) {
+    } else {
 
-            mostrarPregunta();
-
-        } else {
-
-            mostrarResultado();
-
-        }
+        terminarTest();
 
     }
-);
+
+});
 
 
 // ==================================================
-// MOSTRAR RESULTADO
+// REINICIAR TEST
 // ==================================================
 
-function mostrarResultado() {
-
-    // Parar contador
+botonReiniciarTest.addEventListener("click", () => {
 
     clearInterval(intervalo);
 
 
-    // Ocultar test
+    preguntasTest = [];
+
+    respuestasUsuario = [];
+
+    opcionesMezcladas = [];
+
+    preguntaActual = 0;
+
+    tiempo = 0;
+
 
     test.classList.add("oculto");
 
+    resultado.classList.add("oculto");
 
-    // Mostrar resultado
-
-    resultado.classList.remove("oculto");
-
-
-    // Calcular nota
-
-    let notaFinal =
-        (puntos / preguntasTest.length) * 10;
+    seleccionModo.classList.remove("oculto");
 
 
-    nota.textContent =
-        notaFinal.toFixed(2) + "/10";
+    botonSiguiente.textContent =
+        "Siguiente →";
 
 
-    mensajeResultado.textContent =
-        `Has acertado ${puntos} de ${preguntasTest.length} preguntas.`;
+    botonSiguiente.disabled = true;
+
+    botonAnterior.disabled = true;
 
 
-    // Mostrar tiempo
+    actualizarCronometro();
 
-    let minutos =
+});
+
+
+// ==================================================
+// CRONÓMETRO
+// ==================================================
+
+function iniciarCronometro() {
+
+    clearInterval(intervalo);
+
+
+    intervalo = setInterval(() => {
+
+        tiempo++;
+
+        actualizarCronometro();
+
+    }, 1000);
+
+}
+
+
+function actualizarCronometro() {
+
+    const minutos =
         Math.floor(tiempo / 60);
 
-    let segundos =
+
+    const segundos =
         tiempo % 60;
 
 
-    let minutosTexto =
-        minutos.toString().padStart(2, "0");
+    contador.textContent =
+        `⏱️ ${String(minutos).padStart(2, "0")}:${String(segundos).padStart(2, "0")}`;
 
-    let segundosTexto =
-        segundos.toString().padStart(2, "0");
-
-
-    tiempoFinal.textContent =
-        `⏱️ Tiempo empleado: ${minutosTexto}:${segundosTexto}`;
 }
 
 
 // ==================================================
-// VOLVER A ELEGIR MODO
+// TERMINAR TEST
 // ==================================================
 
-botonReiniciar.addEventListener(
-    "click",
-    function () {
+function terminarTest() {
 
-        clearInterval(intervalo);
+    clearInterval(intervalo);
 
 
-        resultado.classList.add(
-            "oculto"
-        );
+    const puntos =
+        calcularPuntos();
 
 
-        seleccionModo.classList.remove(
-            "oculto"
-        );
+    const total =
+        preguntasTest.length;
 
 
-        barraProgreso.style.width =
-            "0%";
+    const porcentaje =
+        (puntos / total) * 100;
 
 
-        contador.textContent =
-            "⏱️ 00:00";
-    }
-);
+    const notaFinal =
+        (puntos / total) * 10;
+
+
+    test.classList.add("oculto");
+
+    resultado.classList.remove("oculto");
+
+
+    barraProgreso.style.width =
+        "100%";
+
+
+    nota.textContent =
+        `${notaFinal.toFixed(2)}/10`;
+
+
+    mensajeResultado.textContent =
+        `Has acertado ${puntos} de ${total} preguntas (${porcentaje.toFixed(1)}%).`;
+
+
+    const minutos =
+        Math.floor(tiempo / 60);
+
+
+    const segundos =
+        tiempo % 60;
+
+
+    tiempoFinal.textContent =
+        `⏱️ Tiempo empleado: ${String(minutos).padStart(2, "0")}:${String(segundos).padStart(2, "0")}`;
+
+}
 
 
 // ==================================================
 // MODO NORMAL
 // ==================================================
 
-modoNormal.addEventListener(
-    "click",
-    function () {
+botonNormal.addEventListener("click", () => {
 
-        iniciarTest(false);
+    iniciarTest(false);
 
-    }
-);
+});
 
 
 // ==================================================
 // MODO ALEATORIO
 // ==================================================
 
-modoAleatorioBoton.addEventListener(
-    "click",
-    function () {
+botonAleatorio.addEventListener("click", () => {
 
-        iniciarTest(true);
+    iniciarTest(true);
 
-    }
-);
+});
+
+
+// ==================================================
+// VOLVER A HACER EL TEST
+// ==================================================
+
+botonReiniciar.addEventListener("click", () => {
+
+    clearInterval(intervalo);
+
+
+    resultado.classList.add("oculto");
+
+    test.classList.add("oculto");
+
+    seleccionModo.classList.remove("oculto");
+
+
+    preguntasTest = [];
+
+    respuestasUsuario = [];
+
+    opcionesMezcladas = [];
+
+    preguntaActual = 0;
+
+    tiempo = 0;
+
+
+    botonSiguiente.textContent =
+        "Siguiente →";
+
+
+    botonSiguiente.disabled = true;
+
+    botonAnterior.disabled = true;
+
+
+    actualizarCronometro();
+
+});
