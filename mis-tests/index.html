@@ -2,32 +2,46 @@
 <html lang="es">
 
 <head>
+
     <meta charset="UTF-8">
+
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <title>Test de ASIR - Unidad 1</title>
 
     <link rel="stylesheet" href="style.css">
+
 </head>
+
 
 <body>
 
+
     <main class="contenedor">
 
+
+        <!-- ========================================= -->
         <!-- SELECCIÓN DEL MODO -->
+        <!-- ========================================= -->
+
         <section id="seleccionModo" class="panel seleccion-modo">
 
+
             <h1>💻 Test de ASIR</h1>
+
 
             <p>
                 Unidad 1 - Introducción a las redes
             </p>
 
+
             <h2>
                 Elige el modo del test
             </h2>
 
+
             <div class="botones-modo">
+
 
                 <button id="modoNormal" class="boton modo">
 
@@ -50,40 +64,62 @@
 
                 </button>
 
+
             </div>
 
 
+            <!-- ========================================= -->
             <!-- ACCESO AL TEST DE ISO -->
+            <!-- ========================================= -->
+
             <a href="iso/" class="boton boton-iso">
 
                 🖥️ Test de ISO
 
             </a>
 
+
         </section>
 
 
+
+        <!-- ========================================= -->
         <!-- TEST -->
+        <!-- ========================================= -->
+
         <section id="test" class="panel oculto">
+
 
             <div class="informacion">
 
+
                 <span id="numeroPregunta">
-                    Pregunta 1 de 40
+
+                    Pregunta 1
+
                 </span>
+
 
                 <span id="contador">
+
                     ⏱️ 00:00
+
                 </span>
 
+
                 <span id="puntuacion">
+
                     Puntos: 0
+
                 </span>
+
 
             </div>
 
 
+
             <!-- BARRA DE PROGRESO -->
+
             <div class="barra-contenedor">
 
                 <div id="barra-progreso"></div>
@@ -91,44 +127,101 @@
             </div>
 
 
+
+            <!-- ========================================= -->
             <!-- PREGUNTA -->
+            <!-- ========================================= -->
+
             <h2 id="pregunta">
+
                 Cargando pregunta...
+
             </h2>
 
 
+
+            <!-- ========================================= -->
             <!-- RESPUESTAS -->
+            <!-- ========================================= -->
+
             <div id="opciones" class="opciones"></div>
 
 
-            <!-- BOTÓN SIGUIENTE -->
-            <button id="botonSiguiente" class="boton" disabled>
 
-                Siguiente →
+            <!-- ========================================= -->
+            <!-- BOTONES DE NAVEGACIÓN -->
+            <!-- ========================================= -->
 
-            </button>
+            <div class="botones-navegacion">
+
+
+                <button
+                    id="botonAnterior"
+                    class="boton"
+                    disabled
+                >
+
+                    ← Anterior
+
+                </button>
+
+
+                <button
+                    id="botonReiniciarTest"
+                    class="boton boton-reiniciar"
+                >
+
+                    🔄 Reiniciar
+
+                </button>
+
+
+                <button
+                    id="botonSiguiente"
+                    class="boton"
+                    disabled
+                >
+
+                    Siguiente →
+
+                </button>
+
+
+            </div>
+
 
         </section>
 
 
+
+        <!-- ========================================= -->
         <!-- RESULTADO -->
+        <!-- ========================================= -->
+
         <section id="resultado" class="resultado oculto">
 
+
             <h2>
+
                 🎉 Test terminado
+
             </h2>
 
 
             <div class="nota" id="nota">
+
                 0/10
+
             </div>
 
 
             <p id="mensajeResultado">
+
             </p>
 
 
             <p id="tiempoFinal">
+
             </p>
 
 
@@ -138,15 +231,23 @@
 
             </button>
 
+
         </section>
+
 
     </main>
 
 
+
+    <!-- ========================================= -->
     <!-- JAVASCRIPT -->
+    <!-- ========================================= -->
 
     <script src="unidad_1.js"></script>
 
+
 </body>
+
+</html>
 
 </html>
