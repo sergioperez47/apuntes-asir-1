@@ -1324,6 +1324,774 @@ const preguntas = [
         correcta: 0
     }
 
+    // ==================================================
+    // WIRESHARK Y CAPTURA DE TRAMAS ETHERNET
+    // ==================================================
+
+    {
+        pregunta: "¿Para qué sirve Wireshark?",
+        opciones: [
+            "Para capturar y analizar tráfico de red",
+            "Para crear direcciones MAC",
+            "Para sustituir el sistema operativo",
+            "Para fabricar tarjetas de red"
+        ],
+        correcta: 0
+    },
+
+    {
+        pregunta: "¿Qué muestra el filtro icmp de Wireshark?",
+        opciones: [
+            "Solo los paquetes que coinciden con el protocolo ICMP",
+            "Únicamente las direcciones MAC",
+            "Solo el tráfico DNS",
+            "Todos los archivos del ordenador"
+        ],
+        correcta: 0
+    },
+
+    {
+        pregunta: "¿Qué hace un filtro de visualización en Wireshark?",
+        opciones: [
+            "Impide que el tráfico filtrado llegue a la tarjeta de red",
+            "Elimina los paquetes de Internet",
+            "Limita lo que se muestra en pantalla, pero no impide que se capture otro tráfico",
+            "Desconecta la interfaz de red"
+        ],
+        correcta: 2
+    },
+
+    {
+        pregunta: "¿Qué protocolo se utiliza habitualmente para comprobar la conectividad mediante ping?",
+        opciones: [
+            "HTTP",
+            "ICMP",
+            "FTP",
+            "SMTP"
+        ],
+        correcta: 1
+    },
+
+    {
+        pregunta: "¿Qué mensaje ICMP envía normalmente el equipo que inicia un ping?",
+        opciones: [
+            "Echo Reply",
+            "ARP Reply",
+            "TCP SYN",
+            "Echo Request"
+        ],
+        correcta: 3
+    },
+
+    {
+        pregunta: "¿Qué mensaje ICMP representa la respuesta a una petición de ping?",
+        opciones: [
+            "Echo Reply",
+            "Echo Request",
+            "ARP Request",
+            "DNS Query"
+        ],
+        correcta: 0
+    },
+
+    {
+        pregunta: "¿Qué es una trama Ethernet II?",
+        opciones: [
+            "Una unidad de datos utilizada en una red Ethernet",
+            "Un tipo de dirección IP",
+            "Un programa para capturar tráfico",
+            "Un protocolo de correo electrónico"
+        ],
+        correcta: 0
+    },
+
+    {
+        pregunta: "¿Cuántos bytes ocupa la dirección MAC de destino en una trama Ethernet II?",
+        opciones: [
+            "2 bytes",
+            "4 bytes",
+            "6 bytes",
+            "8 bytes"
+        ],
+        correcta: 2
+    },
+
+    {
+        pregunta: "¿Cuántos bytes ocupa la dirección MAC de origen en una trama Ethernet II?",
+        opciones: [
+            "6 bytes",
+            "2 bytes",
+            "4 bytes",
+            "12 bytes"
+        ],
+        correcta: 0
+    },
+
+    {
+        pregunta: "¿Cuántos bytes ocupa el campo EtherType de una trama Ethernet II?",
+        opciones: [
+            "6 bytes",
+            "4 bytes",
+            "8 bytes",
+            "2 bytes"
+        ],
+        correcta: 3
+    },
+
+    {
+        pregunta: "¿Qué función tiene el campo EtherType?",
+        opciones: [
+            "Indicar el tipo de protocolo encapsulado en la trama",
+            "Identificar la contraseña del equipo",
+            "Indicar el nombre del usuario",
+            "Mostrar la velocidad del procesador"
+        ],
+        correcta: 0
+    },
+
+    {
+        pregunta: "¿Qué valor EtherType identifica IPv4 en Ethernet II?",
+        opciones: [
+            "0x0806",
+            "0x0800",
+            "0x86DD",
+            "0x0001"
+        ],
+        correcta: 1
+    },
+
+    {
+        pregunta: "¿Qué valor EtherType identifica ARP en Ethernet II?",
+        opciones: [
+            "0x0800",
+            "0x0808",
+            "0x0806",
+            "0x0801"
+        ],
+        correcta: 2
+    },
+
+    {
+        pregunta: "¿Qué tamaño tiene el campo de datos de una trama Ethernet II según la práctica?",
+        opciones: [
+            "Entre 46 y 1500 bytes",
+            "Siempre 6 bytes",
+            "Entre 2 y 4 bytes",
+            "Siempre 4 bytes"
+        ],
+        correcta: 0
+    },
+
+    {
+        pregunta: "¿Qué tamaño tiene el campo FCS de una trama Ethernet II?",
+        opciones: [
+            "2 bytes",
+            "6 bytes",
+            "8 bytes",
+            "4 bytes"
+        ],
+        correcta: 3
+    },
+
+    {
+        pregunta: "¿Para qué sirve el campo FCS de una trama Ethernet?",
+        opciones: [
+            "Para asignar una dirección IP",
+            "Para ayudar a detectar errores de transmisión",
+            "Para resolver nombres de dominio",
+            "Para identificar el sistema operativo"
+        ],
+        correcta: 1
+    },
+
+    {
+        pregunta: "¿Qué tamaño tiene el campo preámbulo más el delimitador de inicio de trama en el esquema de la práctica?",
+        opciones: [
+            "4 bytes",
+            "6 bytes",
+            "8 bytes",
+            "12 bytes"
+        ],
+        correcta: 2
+    },
+
+    {
+        pregunta: "¿Qué tamaño tiene una dirección MAC?",
+        opciones: [
+            "48 bits",
+            "32 bits",
+            "64 bytes",
+            "128 bits"
+        ],
+        correcta: 0
+    },
+
+    {
+        pregunta: "¿Cuántos dígitos hexadecimales representan una dirección MAC completa?",
+        opciones: [
+            "8",
+            "10",
+            "16",
+            "12"
+        ],
+        correcta: 3
+    },
+
+    {
+        pregunta: "¿Qué identifica el OUI de una dirección MAC?",
+        opciones: [
+            "La dirección IP del router",
+            "El fabricante asociado al prefijo de la dirección MAC",
+            "El puerto TCP utilizado",
+            "La máscara de subred"
+        ],
+        correcta: 1
+    },
+
+    {
+        pregunta: "¿Qué parte de una dirección MAC corresponde al OUI en el esquema explicado en la práctica?",
+        opciones: [
+            "Los dos últimos dígitos hexadecimales",
+            "Los cuatro primeros dígitos hexadecimales",
+            "Los seis primeros dígitos hexadecimales",
+            "Los doce dígitos completos exclusivamente"
+        ],
+        correcta: 2
+    },
+
+    {
+        pregunta: "¿Qué dirección MAC de destino se utiliza en una petición ARP de difusión Ethernet?",
+        opciones: [
+            "FF:FF:FF:FF:FF:FF",
+            "00:00:00:00:00:00",
+            "127.0.0.1",
+            "255.255.255.0"
+        ],
+        correcta: 0
+    },
+
+    {
+        pregunta: "¿Para qué se utiliza ARP en una red IPv4 local?",
+        opciones: [
+            "Para cifrar las tramas",
+            "Para traducir nombres de dominio",
+            "Para asignar direcciones MAC aleatorias",
+            "Para averiguar la dirección MAC asociada a una dirección IPv4 local"
+        ],
+        correcta: 3
+    },
+
+    {
+        pregunta: "¿Por qué puede aparecer una petición ARP antes del primer ping a un equipo local?",
+        opciones: [
+            "Porque ICMP necesita una contraseña",
+            "Porque el equipo necesita averiguar la dirección MAC del destino",
+            "Porque Ethernet no admite direcciones MAC",
+            "Porque el ping cambia la máscara de red"
+        ],
+        correcta: 1
+    },
+
+    {
+        pregunta: "¿Qué sucede normalmente con las direcciones MAC de origen y destino en la respuesta Ethernet de un ping local?",
+        opciones: [
+            "Se mantienen siempre idénticas a las de la petición",
+            "Se sustituyen por nombres DNS",
+            "Se intercambian respecto a la petición",
+            "Desaparecen de la trama"
+        ],
+        correcta: 2
+    },
+
+    {
+        pregunta: "Al hacer ping a un equipo remoto, ¿qué dirección MAC de destino utiliza normalmente la trama Ethernet que sale de la red local?",
+        opciones: [
+            "La MAC del router o puerta de enlace del siguiente salto",
+            "Siempre la MAC del servidor DNS",
+            "La MAC del equipo remoto, aunque esté en otra red",
+            "La dirección de difusión en todos los casos"
+        ],
+        correcta: 0
+    },
+
+    {
+        pregunta: "Al hacer ping a un servidor remoto, ¿qué ocurre normalmente con la IP de destino del paquete IP?",
+        opciones: [
+            "Se convierte en una dirección MAC",
+            "Se cambia por la IP del equipo local",
+            "Desaparece del paquete",
+            "Corresponde a la dirección IP del servidor remoto"
+        ],
+        correcta: 3
+    },
+
+    {
+        pregunta: "¿Qué panel de Wireshark permite consultar los campos y protocolos de un paquete seleccionado?",
+        opciones: [
+            "El panel de configuración del sistema",
+            "El panel de detalles del paquete",
+            "El administrador de archivos",
+            "El panel de usuarios"
+        ],
+        correcta: 1
+    },
+
+    {
+        pregunta: "¿Qué ocurre al detener una captura en Wireshark?",
+        opciones: [
+            "Se apaga el ordenador",
+            "Se elimina obligatoriamente la captura",
+            "Se detiene la captura de nuevos paquetes en esa sesión",
+            "Se cambia automáticamente la dirección IP"
+        ],
+        correcta: 2
+    },
+
+    {
+        pregunta: "¿Qué representa el campo de datos de una trama Ethernet?",
+        opciones: [
+            "Los datos encapsulados de las capas superiores",
+            "Únicamente la dirección MAC de origen",
+            "Solo el campo FCS",
+            "La contraseña de la red"
+        ],
+        correcta: 0
+    },
+
+
+    // ==================================================
+    // MODELO OSI Y TCP/IP: AMPLIACIÓN
+    // ==================================================
+
+    {
+        pregunta: "¿Qué capa OSI se encarga de establecer, mantener y cerrar sesiones?",
+        opciones: [
+            "Red",
+            "Física",
+            "Enlace",
+            "Sesión"
+        ],
+        correcta: 3
+    },
+
+    {
+        pregunta: "¿Qué capa OSI se ocupa de la representación, compresión y cifrado de los datos?",
+        opciones: [
+            "Transporte",
+            "Presentación",
+            "Física",
+            "Red"
+        ],
+        correcta: 1
+    },
+
+    {
+        pregunta: "¿Qué unidad de datos se asocia normalmente a la capa de Red?",
+        opciones: [
+            "Trama",
+            "Bit",
+            "Paquete",
+            "Archivo"
+        ],
+        correcta: 2
+    },
+
+    {
+        pregunta: "¿Qué unidad de datos se asocia normalmente a la capa Física?",
+        opciones: [
+            "Bit",
+            "Segmento",
+            "Paquete",
+            "Trama"
+        ],
+        correcta: 0
+    },
+
+    {
+        pregunta: "¿Qué unidad de datos se asocia normalmente a la capa de Transporte en el esquema general de las diapositivas?",
+        opciones: [
+            "Trama",
+            "Bit",
+            "Paquete",
+            "Segmento"
+        ],
+        correcta: 3
+    },
+
+    {
+        pregunta: "¿Qué organismo aparece relacionado con el desarrollo del modelo OSI?",
+        opciones: [
+            "IANA",
+            "ISO",
+            "IEEE exclusivamente",
+            "ICANN"
+        ],
+        correcta: 1
+    },
+
+    {
+        pregunta: "¿Qué recomendación de la ITU se relaciona con el modelo OSI en las diapositivas?",
+        opciones: [
+            "RFC 1918",
+            "IEEE 802.3",
+            "X.200",
+            "HTTP"
+        ],
+        correcta: 2
+    },
+
+    {
+        pregunta: "¿Qué organización está relacionada con las recomendaciones y estándares de Internet mediante RFC?",
+        opciones: [
+            "IETF",
+            "ISO exclusivamente",
+            "IEEE exclusivamente",
+            "ITU exclusivamente"
+        ],
+        correcta: 0
+    },
+
+
+    // ==================================================
+    // TOPOLOGÍAS: REPASO DE DETALLES
+    // ==================================================
+
+    {
+        pregunta: "¿Qué inconveniente tiene la topología en estrella?",
+        opciones: [
+            "No permite añadir nuevos equipos",
+            "Necesita obligatoriamente dos anillos",
+            "Todos los equipos deben conectarse entre sí",
+            "El dispositivo central puede ser un punto único de fallo"
+        ],
+        correcta: 3
+    },
+
+    {
+        pregunta: "¿Qué topología suele necesitar una gran cantidad de cableado debido a sus múltiples enlaces?",
+        opciones: [
+            "Bus",
+            "Malla",
+            "Anillo simple",
+            "Estrella lógica de difusión"
+        ],
+        correcta: 1
+    },
+
+    {
+        pregunta: "¿Qué característica distingue a la topología en árbol?",
+        opciones: [
+            "Todos los equipos forman un círculo",
+            "Todos los equipos utilizan un único cable lineal",
+            "La red se organiza mediante ramas o segmentos jerárquicos",
+            "Cada equipo tiene conexión directa con todos los demás"
+        ],
+        correcta: 2
+    },
+
+    {
+        pregunta: "¿Qué inconveniente presenta una topología en anillo al incorporar un nuevo equipo?",
+        opciones: [
+            "Puede requerir interrumpir el anillo para insertar el nodo",
+            "Se convierte siempre en una WAN",
+            "Desaparecen todas las direcciones IP",
+            "No puede utilizar ningún protocolo"
+        ],
+        correcta: 0
+    },
+
+    {
+        pregunta: "¿Qué describe una topología lógica de difusión?",
+        opciones: [
+            "Los datos solo pueden circular en un cable exclusivo",
+            "Los equipos transmiten únicamente cuando tienen un token",
+            "Cada equipo dispone de una conexión física con todos los demás",
+            "Una transmisión se difunde a los equipos del dominio correspondiente"
+        ],
+        correcta: 3
+    },
+{
+    pregunta: "¿Qué problema existía cuando cada fabricante establecía sus propias normas de conexión?",
+    opciones: [
+        "Los equipos de fabricantes distintos podían tener dificultades para interoperar",
+        "Todos los equipos recibían la misma dirección MAC",
+        "Las redes solo podían funcionar mediante fibra óptica",
+        "Los protocolos dejaban de necesitar reglas"
+    ],
+    correcta: 0
+},
+{
+    pregunta: "¿En qué año reconoce la ISO la necesidad de crear un estándar para las redes informáticas, según los apuntes?",
+    opciones: [
+        "1969",
+        "1977",
+        "1984",
+        "1992"
+    ],
+    correcta: 1
+},
+{
+    pregunta: "¿Qué comité creó la ISO en 1977 para trabajar en la normalización relacionada con la comunicación entre sistemas?",
+    opciones: [
+        "SC16",
+        "IEEE 802.11",
+        "IANA 200",
+        "TCP /IP"
+    ],
+    correcta: 0
+},
+{
+    pregunta: "¿Qué recomendación de la ITU está asociada al modelo OSI en los documentos?",
+    opciones: [
+        "X.200",
+        "RFC 1918",
+        "IEEE 802.3",
+        "HTTP 1.1"
+    ],
+    correcta: 0
+},
+{
+    pregunta: "¿Qué describen las recomendaciones X.211–X.217bis mencionadas en los apuntes?",
+    opciones: [
+        "Especificaciones más detalladas relacionadas con el modelo OSI",
+        "Únicamente las direcciones privadas IPv4",
+        "Los pasos para instalar Wireshark",
+        "Los tipos de cable de una topología en estrella"
+    ],
+    correcta: 0
+},
+{
+    pregunta: "¿Qué significa que OSI sea un modelo de referencia?",
+    opciones: [
+        "Describe una organización conceptual de las funciones de comunicación entre nodos",
+        "Es un programa obligatorio instalado en todos los ordenadores",
+        "Es un protocolo que sustituye a todos los demás",
+        "Es una topología física basada en un concentrador"
+    ],
+    correcta: 0
+},
+{
+    pregunta: "¿Qué representa TCP/IP en los apuntes?",
+    opciones: [
+        "Una suite o conjunto de protocolos que permite la comunicación entre ordenadores",
+        "Un único cable utilizado en las redes LAN",
+        "Una organización que asigna nombres de dominio",
+        "Un modelo físico de siete conectores"
+    ],
+    correcta: 0
+},
+{
+    pregunta: "¿De qué dos protocolos procede el nombre TCP/IP?",
+    opciones: [
+        "Transfer Control Program e Internet Process",
+        "Transmission Control Protocol e Internet Protocol",
+        "Transfer Communication Port e Internal Protocol",
+        "Transmission Cable Protocol e Internet Port"
+    ],
+    correcta: 1
+},
+{
+    pregunta: "Durante la encapsulación, ¿qué añade una capa a los datos que recibe de una capa superior?",
+    opciones: [
+        "Información de control propia, como una cabecera",
+        "Siempre una nueva dirección MAC de fabricante",
+        "Un cable físico adicional",
+        "Una copia completa del sistema operativo"
+    ],
+    correcta: 0
+},
+{
+    pregunta: "¿Qué es el payload dentro de un mensaje encapsulado?",
+    opciones: [
+        "La información útil transportada dentro del mensaje",
+        "La dirección física del router",
+        "El identificador del fabricante de la tarjeta de red",
+        "El nombre del organismo que publicó un estándar"
+    ],
+    correcta: 0
+},
+{
+    pregunta: "¿Qué sucede durante la desencapsulación en el equipo de destino?",
+    opciones: [
+        "Se retira progresivamente la información de control añadida por las capas correspondientes",
+        "Se añaden cabeceras nuevas hasta llegar a la aplicación",
+        "Se transforma siempre una dirección privada en pública",
+        "Se elimina el contenido original del mensaje"
+    ],
+    correcta: 0
+},
+{
+    pregunta: "¿Para qué sirve la llave de multiplexación descrita en los apuntes?",
+    opciones: [
+        "Para identificar a qué protocolo o servicio superior deben entregarse los datos",
+        "Para indicar la longitud física del cable",
+        "Para identificar el fabricante del switch",
+        "Para determinar la topología física de la red"
+    ],
+    correcta: 0
+},
+{
+    pregunta: "Cuando un mensaje llega al destino, ¿qué debe hacer el protocolo con el identificador de multiplexación?",
+    opciones: [
+        "Utilizarlo para entregar la carga útil al protocolo o aplicación correspondiente",
+        "Convertirlo en una dirección MAC de difusión",
+        "Añadirlo al nombre del equipo de origen",
+        "Usarlo para seleccionar un cable de mayor longitud"
+    ],
+    correcta: 0
+},
+{
+    pregunta: "¿Cuál es la diferencia entre encapsulación y PDU según los conceptos de los apuntes?",
+    opciones: [
+        "La encapsulación es el proceso de añadir información de control; la PDU es la unidad de datos de un protocolo",
+        "La encapsulación es un organismo y la PDU una topología",
+        "Ambas son nombres distintos para una dirección IP",
+        "La PDU es el proceso de retirar cables y la encapsulación es una señal eléctrica"
+    ],
+    correcta: 0
+},
+{
+    pregunta: "¿Cuál es una función de la IANA según los apuntes?",
+    opciones: [
+        "Coordinar recursos de numeración, nombres de dominio y asignaciones de protocolos",
+        "Fabricar tarjetas de red para ordenadores",
+        "Diseñar exclusivamente topologías en árbol",
+        "Capturar paquetes con Wireshark"
+    ],
+    correcta: 0
+},
+{
+    pregunta: "Además de los recursos de direcciones IP, ¿qué otro recurso gestiona la IANA según el documento?",
+    opciones: [
+        "La raíz del sistema de nombres de dominio y recursos de nombres internacionalizados",
+        "La longitud de todos los cables Ethernet",
+        "La memoria RAM de los routers",
+        "Las contraseñas de los usuarios de una LAN"
+    ],
+    correcta: 0
+},
+{
+    pregunta: "¿Qué tipo de asignación de protocolos aparece entre las responsabilidades de la IANA?",
+    opciones: [
+        "La asignación de números de puerto",
+        "La asignación de colores a las tramas",
+        "La asignación de nombres comerciales a los cables",
+        "La asignación de fabricantes a cada topología"
+    ],
+    correcta: 0
+},
+{
+    pregunta: "¿Qué tipo de entidad describe el documento que es IEEE?",
+    opciones: [
+        "Una asociación técnico-profesional sin ánimo de lucro vinculada a las nuevas tecnologías",
+        "Una empresa dedicada exclusivamente a vender routers",
+        "Un protocolo de transporte de Internet",
+        "Un programa de análisis de tráfico de red"
+    ],
+    correcta: 0
+},
+{
+    pregunta: "¿Cuál es uno de los objetivos del IEEE que aparecen en los apuntes?",
+    opciones: [
+        "Promover la creatividad y el desarrollo e integración de nuevas tecnologías",
+        "Asignar direcciones IP privadas a todos los hogares",
+        "Administrar las contraseñas de todos los equipos conectados",
+        "Sustituir el modelo OSI por una topología física"
+    ],
+    correcta: 0
+},
+{
+    pregunta: "¿Qué función cumplen los RFC en el contexto de los protocolos de Internet?",
+    opciones: [
+        "Documentan especificaciones y aspectos técnicos relacionados con protocolos y estándares de Internet",
+        "Son dispositivos que conectan físicamente dos redes",
+        "Son campos obligatorios de todas las tramas Ethernet",
+        "Son programas que sustituyen a las direcciones IP"
+    ],
+    correcta: 0
+},
+{
+    pregunta: "¿Qué organismo aparece relacionado con el desarrollo de estándares de telecomunicaciones y con la recomendación X.200?",
+    opciones: [
+        "ITU-T",
+        "IANA",
+        "Wireshark",
+        "Ethernet"
+    ],
+    correcta: 0
+},
+{
+    pregunta: "¿Qué ventaja de una topología en estrella destaca el documento frente a un fallo de un nodo?",
+    opciones: [
+        "El fallo de un nodo no tiene por qué hacer caer toda la red",
+        "El fallo de un nodo siempre desconecta todos los demás",
+        "La red sigue funcionando aunque falle necesariamente el concentrador",
+        "No necesita ningún dispositivo central"
+    ],
+    correcta: 0
+},
+{
+    pregunta: "¿Qué inconveniente de la topología en árbol se indica para el segmento principal?",
+    opciones: [
+        "Si falla el segmento principal, también puede caer el segmento que depende de él",
+        "No permite conectar varios concentradores",
+        "Todos los equipos deben conectarse directamente entre sí",
+        "No admite cableado punto a punto"
+    ],
+    correcta: 0
+},
+{
+    pregunta: "En la transmisión mediante tokens, ¿cuándo puede transmitir una estación?",
+    opciones: [
+        "Cuando está en posesión del testigo o token",
+        "Solo cuando todos los equipos están apagados",
+        "Siempre que envíe una dirección IP pública",
+        "Únicamente después de recibir una trama ARP"
+    ],
+    correcta: 0
+},
+{
+    pregunta: "¿Qué dos ejemplos de protocolos de nivel 2 asociados a la transmisión mediante tokens se citan en el documento?",
+    opciones: [
+        "Token Ring y Token Bus",
+        "TCP y UDP",
+        "HTTP y HTTPS",
+        "ARP e ICMP"
+    ],
+    correcta: 0
+},
+{
+    pregunta: "¿Qué caracteriza a la topología lógica de difusión o broadcast descrita en los apuntes?",
+    opciones: [
+        "Los hosts envían los datos hacia los demás hosts del medio sin un turno asignado mediante testigo",
+        "Solo transmite el equipo que tiene un token",
+        "Cada equipo dispone obligatoriamente de un cable exclusivo hasta Internet",
+        "Los datos solo pueden circular en un único sentido por un anillo"
+    ],
+    correcta: 0
+},
+{
+    pregunta: "¿Qué ventaja de la topología en árbol se destaca respecto a la compatibilidad?",
+    opciones: [
+        "Ofrece soporte para equipos de multitud de fabricantes",
+        "Elimina la necesidad de configurar la red",
+        "No necesita cableado entre segmentos",
+        "Garantiza que nunca falle el segmento principal"
+    ],
+    correcta: 0
+},
+{
+    pregunta: "En la práctica de Wireshark, ¿qué se recomienda hacer si no se sabe qué interfaz de red seleccionar para capturar tráfico?",
+    opciones: [
+        "Consultar los detalles de las interfaces para obtener más información",
+        "Seleccionar siempre la primera interfaz sin comprobarla",
+        "Cambiar todas las direcciones MAC manualmente",
+        "Desinstalar el controlador de red"
+    ],
+    correcta: 0
+}
+
+    
 ];
 
 
