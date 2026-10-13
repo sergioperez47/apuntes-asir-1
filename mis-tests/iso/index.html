@@ -30,7 +30,7 @@
             <h1>🖥️ Test de ASIR</h1>
 
 
-            <p>
+            <p id="tituloUnidad">
                 Unidad 1 - ISO
             </p>
 
@@ -77,6 +77,36 @@
                 🌐 Test de Redes
 
             </a>
+
+
+            <!-- ========================================= -->
+            <!-- SELECCIÓN DE UNIDAD -->
+            <!-- Se conserva el diseño y la estructura original -->
+            <!-- ========================================= -->
+
+            <div id="selectorUnidades" class="botones-modo">
+
+                <button id="botonUnidad1" class="boton modo">
+
+                    📘 Unidad 1 - ISO
+
+                    <span>
+                        Virtualización y sistemas operativos
+                    </span>
+
+                </button>
+
+                <button id="botonUnidad2" class="boton modo">
+
+                    💻 Unidad 2 - VirtualBox
+
+                    <span>
+                        VirtualBox y virtualización
+                    </span>
+
+                </button>
+
+            </div>
 
 
         </section>
@@ -190,6 +220,13 @@
             </div>
 
 
+            <button id="botonCambiarUnidad" class="boton boton-iso">
+
+                ← Elegir otra unidad
+
+            </button>
+
+
         </section>
 
 
@@ -232,6 +269,13 @@
             </button>
 
 
+            <button id="botonCambiarUnidadResultado" class="boton boton-iso">
+
+                ← Elegir otra unidad
+
+            </button>
+
+
         </section>
 
 
@@ -241,9 +285,12 @@
 
     <!-- ========================================= -->
     <!-- JAVASCRIPT -->
+    <!-- Se cargan ambos archivos, pero solo se inicia la unidad elegida -->
     <!-- ========================================= -->
 
     <script src="unidad_1_iso.js"></script>
+    <script src="unidad_2_iso.js"></script>
+    <script src="selector_unidades.js"></script>
 
 
 </body>
