@@ -1322,7 +1322,7 @@ const preguntas = [
             "La instalación de sistemas operativos"
         ],
         correcta: 0
-    }
+    },
 
     // ==================================================
     // WIRESHARK Y CAPTURA DE TRAMAS ETHERNET
