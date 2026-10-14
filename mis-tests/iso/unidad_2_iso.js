@@ -512,7 +512,152 @@ const preguntas = [
             "Únicamente el navegador web"
         ],
         correcta: 0
-    }
+    },
+
+    {
+        pregunta: "¿Qué requisitos técnicos son necesarios para utilizar una máquina virtual?",
+        opciones: [
+            "Suficiente memoria RAM, soporte de virtualización en la CPU y espacio de almacenamiento",
+            "Una tarjeta gráfica dedicada y dos discos duros obligatoriamente",
+            "Conexión a Internet y una tarjeta de sonido específica",
+            "Un segundo ordenador conectado por cable"
+        ],
+        correcta: 0
+    },
+    {
+        pregunta: "¿Qué tecnologías de procesador permiten la virtualización por hardware?",
+        opciones: [
+            "Intel VT-x y AMD-V",
+            "Intel Hyper-Threading y AMD Radeon",
+            "BIOS y UEFI",
+            "SATA y NVMe"
+        ],
+        correcta: 0
+    },
+    {
+        pregunta: "¿Qué utilidad tiene utilizar una máquina virtual para ejecutar sistemas operativos antiguos?",
+        opciones: [
+            "Permite ejecutar aplicaciones antiguas incompatibles con el sistema actual",
+            "Aumenta automáticamente la velocidad del ordenador físico",
+            "Elimina la necesidad de instalar un sistema operativo",
+            "Convierte cualquier aplicación en una aplicación web"
+        ],
+        correcta: 0
+    },
+    {
+        pregunta: "¿Cómo se representa habitualmente un CD o DVD de instalación en una máquina virtual?",
+        opciones: [
+            "Mediante una imagen ISO",
+            "Mediante un archivo CSV",
+            "Mediante un archivo de registro del sistema",
+            "Mediante una carpeta compartida obligatoriamente"
+        ],
+        correcta: 0
+    },
+    {
+        pregunta: "¿Cómo se almacena normalmente un disco virtual de una máquina virtual?",
+        opciones: [
+            "Como un archivo en el equipo anfitrión",
+            "Únicamente en la memoria RAM",
+            "Siempre en un disco físico independiente",
+            "En una conexión de red obligatoriamente"
+        ],
+        correcta: 0
+    },
+    {
+        pregunta: "¿Qué característica puede tener un disco virtual de tamaño dinámico?",
+        opciones: [
+            "Puede aumentar su tamaño según las necesidades, dentro de los límites configurados",
+            "Ocupa siempre todo el espacio máximo desde el primer momento",
+            "No puede almacenar archivos del sistema operativo",
+            "Solo funciona con máquinas virtuales Linux"
+        ],
+        correcta: 0
+    },
+    {
+        pregunta: "¿Qué ventaja ofrece la virtualización relacionada con la disponibilidad?",
+        opciones: [
+            "Puede facilitar la alta disponibilidad y la migración en vivo",
+            "Elimina por completo cualquier fallo del hardware",
+            "Evita tener que realizar copias de seguridad",
+            "Impide que las máquinas virtuales se apaguen"
+        ],
+        correcta: 0
+    },
+    {
+        pregunta: "¿Qué inconveniente puede presentar la virtualización en un entorno empresarial?",
+        opciones: [
+            "El equipo físico puede convertirse en un único punto de fallo",
+            "No permite ejecutar varios sistemas operativos",
+            "Obliga a utilizar un ordenador físico por aplicación",
+            "Impide realizar pruebas de software"
+        ],
+        correcta: 0
+    },
+    {
+        pregunta: "¿Qué característica distingue a un hipervisor de tipo 1?",
+        opciones: [
+            "Se ejecuta directamente sobre el hardware físico",
+            "Necesita ejecutarse obligatoriamente dentro de VirtualBox",
+            "Solo permite ejecutar aplicaciones de oficina",
+            "Se instala exclusivamente como una aplicación de usuario"
+        ],
+        correcta: 0
+    },
+    {
+        pregunta: "¿Cuál de estos programas es un ejemplo de hipervisor de tipo 1 según los apuntes?",
+        opciones: [
+            "VMware ESXi",
+            "VirtualBox",
+            "VMware Workstation",
+            "Parallels Desktop"
+        ],
+        correcta: 0
+    },
+    {
+        pregunta: "¿Qué opción describe una operación de pausa de una máquina virtual?",
+        opciones: [
+            "Suspende temporalmente su ejecución para poder reanudarla después",
+            "Elimina definitivamente la máquina virtual",
+            "Borra todos los datos del disco virtual",
+            "Exporta automáticamente la máquina a un archivo OVA"
+        ],
+        correcta: 0
+    },
+    {
+        pregunta: "¿Qué diferencia hay entre apagar normalmente una máquina virtual y forzar su apagado?",
+        opciones: [
+            "El apagado forzado corta la ejecución sin seguir necesariamente el procedimiento normal del sistema invitado",
+            "El apagado forzado crea siempre una instantánea",
+            "El apagado normal elimina el disco virtual",
+            "No existe ninguna diferencia"
+        ],
+        correcta: 0
+    },
+    {
+        pregunta: "¿Para qué sirven los grupos de máquinas virtuales en VirtualBox?",
+        opciones: [
+            "Para organizar máquinas virtuales y facilitar su gestión conjunta",
+            "Para convertir varias máquinas virtuales en un único archivo ISO",
+            "Para aumentar automáticamente la memoria RAM de todas las máquinas",
+            "Para sustituir el sistema operativo anfitrión"
+        ],
+        correcta: 0
+    },
+    {
+        pregunta: "¿Qué permiten las operaciones por lotes en VirtualBox?",
+        opciones: [
+            "Realizar determinadas operaciones sobre varias máquinas virtuales conjuntamente",
+            "Ejecutar exclusivamente una máquina virtual cada vez",
+            "Eliminar la necesidad de configurar las máquinas",
+            "Convertir una máquina virtual en un contenedor Docker"
+        ],
+        correcta: 0
+    },
+    {
+        pregunta: "¿Qué permite hacer la función de captura de pantalla de VirtualBox?",
+        opciones
+    
 ];
 
 
