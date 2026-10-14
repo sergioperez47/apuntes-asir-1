@@ -654,10 +654,16 @@ const preguntas = [
         ],
         correcta: 0
     },
-    {
+  {
         pregunta: "¿Qué permite hacer la función de captura de pantalla de VirtualBox?",
-        opciones
-    
+        opciones: [
+            "Guardar una imagen de lo que se muestra en la máquina virtual",
+            "Crear automáticamente un disco duro nuevo",
+            "Cambiar el tipo de hipervisor",
+            "Modificar la dirección IP del anfitrión"
+        ],
+        correcta: 0
+    }
 ];
 
 
