@@ -1,49 +1,83 @@
+```html
 <!DOCTYPE html>
 <html lang="es">
 
 <head>
-
     <meta charset="UTF-8">
-
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>Test de ASIR - Unidad 1</title>
+    <title>Test de ASIR - Redes</title>
 
     <link rel="stylesheet" href="style.css">
 
 </head>
 
-
 <body>
 
-
     <main class="contenedor">
+
+        <!-- ========================================= -->
+        <!-- SELECCIÓN DE UNIDAD -->
+        <!-- ========================================= -->
+
+        <section id="selectorUnidades" class="panel seleccion-modo">
+
+            <h1>💻 Test de ASIR</h1>
+
+            <p>Selecciona la unidad de Redes que quieres practicar.</p>
+
+            <div class="botones-modo">
+
+                <button id="botonUnidad1" class="boton modo" type="button">
+
+                    📋 Unidad 1
+
+                    <span>
+                        Introducción a las redes
+                    </span>
+
+                </button>
+
+                <button id="botonUnidad2" class="boton modo" type="button">
+
+                    🎲 Unidad 2
+
+                    <span>
+                        Conceptos y direccionamiento de redes
+                    </span>
+
+                </button>
+
+            </div>
+
+            <!-- ACCESO AL TEST DE ISO -->
+
+            <a href="iso/" class="boton boton-iso">
+                🖥️ Test de ISO
+            </a>
+
+        </section>
 
 
         <!-- ========================================= -->
         <!-- SELECCIÓN DEL MODO -->
         <!-- ========================================= -->
 
-        <section id="seleccionModo" class="panel seleccion-modo">
-
+        <section id="seleccionModo" class="panel seleccion-modo oculto">
 
             <h1>💻 Test de ASIR</h1>
 
-
-            <p>
-                Unidad 1 - Introducción a las redes
+            <p id="descripcionUnidad">
+                Unidad de Redes
             </p>
-
 
             <h2>
                 Elige el modo del test
             </h2>
 
-
             <div class="botones-modo">
 
-
-                <button id="modoNormal" class="boton modo">
+                <button id="modoNormal" class="boton modo" type="button">
 
                     📋 Modo normal
 
@@ -53,8 +87,7 @@
 
                 </button>
 
-
-                <button id="modoAleatorio" class="boton modo">
+                <button id="modoAleatorio" class="boton modo" type="button">
 
                     🎲 Modo aleatorio
 
@@ -64,23 +97,13 @@
 
                 </button>
 
-
             </div>
 
-
-            <!-- ========================================= -->
-            <!-- ACCESO AL TEST DE ISO -->
-            <!-- ========================================= -->
-
-            <a href="iso/" class="boton boton-iso">
-
-                🖥️ Test de ISO
-
-            </a>
-
+            <button id="botonCambiarUnidadInicio" class="boton" type="button">
+                ← Elegir otra unidad
+            </button>
 
         </section>
-
 
 
         <!-- ========================================= -->
@@ -89,33 +112,21 @@
 
         <section id="test" class="panel oculto">
 
-
             <div class="informacion">
 
-
                 <span id="numeroPregunta">
-
                     Pregunta 1
-
                 </span>
-
 
                 <span id="contador">
-
                     ⏱️ 00:00
-
                 </span>
-
 
                 <span id="puntuacion">
-
                     Puntos: 0
-
                 </span>
 
-
             </div>
-
 
 
             <!-- BARRA DE PROGRESO -->
@@ -127,71 +138,55 @@
             </div>
 
 
-
-            <!-- ========================================= -->
             <!-- PREGUNTA -->
-            <!-- ========================================= -->
 
             <h2 id="pregunta">
-
                 Cargando pregunta...
-
             </h2>
 
 
-
-            <!-- ========================================= -->
             <!-- RESPUESTAS -->
-            <!-- ========================================= -->
 
             <div id="opciones" class="opciones"></div>
 
 
-
-            <!-- ========================================= -->
             <!-- BOTONES DE NAVEGACIÓN -->
-            <!-- ========================================= -->
 
             <div class="botones-navegacion">
-
 
                 <button
                     id="botonAnterior"
                     class="boton"
+                    type="button"
                     disabled
                 >
-
                     ← Anterior
-
                 </button>
-
 
                 <button
                     id="botonReiniciarTest"
                     class="boton boton-reiniciar"
+                    type="button"
                 >
-
                     🔄 Reiniciar
-
                 </button>
-
 
                 <button
                     id="botonSiguiente"
                     class="boton"
+                    type="button"
                     disabled
                 >
-
                     Siguiente →
-
                 </button>
-
 
             </div>
 
+            <button id="botonCambiarUnidad" class="boton" type="button">
+                ← Cambiar de unidad
+            </button>
 
         </section>
-
 
 
         <!-- ========================================= -->
@@ -200,54 +195,37 @@
 
         <section id="resultado" class="resultado oculto">
 
-
             <h2>
-
                 🎉 Test terminado
-
             </h2>
 
-
             <div class="nota" id="nota">
-
                 0/10
-
             </div>
 
+            <p id="mensajeResultado"></p>
 
-            <p id="mensajeResultado">
+            <p id="tiempoFinal"></p>
 
-            </p>
-
-
-            <p id="tiempoFinal">
-
-            </p>
-
-
-            <button id="botonReiniciar" class="boton">
-
+            <button id="botonReiniciar" class="boton" type="button">
                 🔄 Volver a hacer el test
-
             </button>
 
+            <button id="botonCambiarUnidadResultado" class="boton" type="button">
+                ← Elegir otra unidad
+            </button>
 
         </section>
 
-
     </main>
-
 
 
     <!-- ========================================= -->
     <!-- JAVASCRIPT -->
     <!-- ========================================= -->
 
-    <script src="unidad_1.js"></script>
-
+    <script src="selector_unidades.js"></script>
 
 </body>
-
-</html>
 
 </html>
