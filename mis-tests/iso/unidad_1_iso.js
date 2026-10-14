@@ -940,7 +940,228 @@ const preguntas = [
             "Meter todos los procesos directamente en la CPU"
         ],
         correcta: 0
-    }
+    },
+{
+    pregunta: "¿Qué tipo de datos se utiliza en documentos y correos electrónicos?",
+    opciones: [
+        "Texto",
+        "Numéricos",
+        "Gráficos",
+        "Audio"
+    ],
+    correcta: 0
+},
+{
+    pregunta: "¿Qué tipo de datos se utiliza para realizar cálculos en hojas de Excel?",
+    opciones: [
+        "Texto",
+        "Numéricos",
+        "Gráficos",
+        "Vídeo"
+    ],
+    correcta: 1
+},
+{
+    pregunta: "¿Qué tipo de datos incluye imágenes y fotografías?",
+    opciones: [
+        "Audio",
+        "Texto",
+        "Gráficos",
+        "Numéricos"
+    ],
+    correcta: 2
+},
+{
+    pregunta: "¿Qué tipo de datos incluye música y grabaciones?",
+    opciones: [
+        "Vídeo",
+        "Gráficos",
+        "Texto",
+        "Audio"
+    ],
+    correcta: 3
+},
+{
+    pregunta: "¿Qué tipo de datos incluye películas y contenido en streaming?",
+    opciones: [
+        "Vídeo",
+        "Numéricos",
+        "Texto",
+        "Gráficos"
+    ],
+    correcta: 0
+},
+   {
+    pregunta: "¿Qué característica tiene la memoria RAM?",
+    opciones: [
+        "Es volátil y almacena datos temporalmente",
+        "Es permanente y contiene el firmware",
+        "Es un dispositivo de salida",
+        "Realiza operaciones matemáticas y lógicas"
+    ],
+    correcta: 0
+},
+{
+    pregunta: "¿Qué característica se asocia a la memoria ROM según los apuntes?",
+    opciones: [
+        "Es volátil y temporal",
+        "Es permanente y contiene firmware",
+        "Es un periférico de entrada",
+        "Es un bus de comunicación"
+    ],
+    correcta: 1
+},
+{
+    pregunta: "¿Cuáles son ejemplos de memoria secundaria?",
+    opciones: [
+        "RAM y ROM",
+        "Teclado y ratón",
+        "Discos duros (HDD) y discos sólidos (SSD)",
+        "Router y tarjeta de red"
+    ],
+    correcta: 2
+},
+{
+    pregunta: "¿Cuál de los siguientes es un ejemplo de almacenamiento externo?",
+    opciones: [
+        "Unidad de Control",
+        "Memoria USB",
+        "ALU",
+        "Bus de control"
+    ],
+    correcta: 1
+},
+{
+    pregunta: "¿Qué son los buses de un sistema informático?",
+    opciones: [
+        "Canales de comunicación que transportan datos",
+        "Dispositivos que muestran información",
+        "Memorias permanentes",
+        "Componentes que ejecutan instrucciones"
+    ],
+    correcta: 0
+},
+{
+    pregunta: "¿Cuáles son los tres tipos de buses indicados en los apuntes?",
+    opciones: [
+        "RAM, ROM y SSD",
+        "Entrada, salida y entrada/salida",
+        "Datos, direcciones y control",
+        "CPU, UC y ALU"
+    ],
+    correcta: 2
+},
+{
+    pregunta: "¿Cuál de estos grupos contiene únicamente periféricos de entrada?",
+    opciones: [
+        "Monitor, impresora y altavoces",
+        "Teclado, ratón y escáner",
+        "USB, monitor y router",
+        "Impresora, ratón y altavoces"
+    ],
+    correcta: 1
+},
+{
+    pregunta: "¿Cuál de estos grupos contiene únicamente periféricos de salida?",
+    opciones: [
+        "Teclado, ratón y escáner",
+        "USB, tarjeta SD y disco externo",
+        "Monitor, impresora y altavoces",
+        "Router, WiFi y Bluetooth"
+    ],
+    correcta: 2
+},
+{
+    pregunta: "¿Qué periféricos pueden realizar funciones de entrada y salida según los apuntes?",
+    opciones: [
+        "Teclado y escáner",
+        "Monitor e impresora",
+        "Memorias USB y discos externos",
+        "Altavoces y ratón"
+    ],
+    correcta: 2
+},
+{
+    pregunta: "¿Cuál de los siguientes grupos incluye dispositivos de comunicación?",
+    opciones: [
+        "Tarjeta de red, router, WiFi y Bluetooth",
+        "RAM, ROM, HDD y SSD",
+        "Teclado, ratón, monitor e impresora",
+        "UC, ALU y registros"
+    ],
+    correcta: 0
+},
+    {
+    pregunta: "¿Qué función del sistema operativo permite organizar y gestionar los archivos?",
+    opciones: [
+        "Administración de procesos",
+        "Sistema de archivos",
+        "Gestión de memoria",
+        "Interfaz de usuario"
+    ],
+    correcta: 1
+},
+{
+    pregunta: "¿Qué significan las siglas CLI y GUI?",
+    opciones: [
+        "Dos tipos de memoria",
+        "Dos tipos de procesador",
+        "Interfaz de línea de comandos e interfaz gráfica de usuario",
+        "Dos sistemas de almacenamiento"
+    ],
+    correcta: 2
+},
+{
+    pregunta: "¿Cuál de los siguientes grupos contiene ejemplos de sistemas operativos?",
+    opciones: [
+        "Windows, Linux, macOS y Android",
+        "Word, Excel, Photoshop y AutoCAD",
+        "Chrome, WhatsApp Desktop y Excel",
+        "RAM, ROM, HDD y SSD"
+    ],
+    correcta: 0
+},
+{
+    pregunta: "¿Cuál de los siguientes programas es un ejemplo de software de ofimática, además de Word?",
+    opciones: [
+        "AutoCAD",
+        "LibreOffice",
+        "Android",
+        "UEFI"
+    ],
+    correcta: 1
+},
+{
+    pregunta: "¿Cuál de los siguientes es un ejemplo de software de diseño mencionado en los apuntes?",
+    opciones: [
+        "Excel",
+        "Linux",
+        "AutoCAD",
+        "WhatsApp Desktop"
+    ],
+    correcta: 2
+},
+{
+    pregunta: "¿Cuál de los siguientes grupos contiene ejemplos de software de comunicación?",
+    opciones: [
+        "Navegadores web, clientes de correo y WhatsApp Desktop",
+        "Word, Excel y LibreOffice",
+        "Photoshop y AutoCAD",
+        "Windows, Linux y macOS"
+    ],
+    correcta: 0
+},
+{
+    pregunta: "¿Cuál de los siguientes es un ejemplo de software de juegos?",
+    opciones: [
+        "Un sistema de archivos",
+        "Un simulador o videojuego",
+        "Una interfaz de línea de comandos",
+        "Un controlador de memoria"
+    ],
+    correcta: 1
+}
+
 
 ];
 
