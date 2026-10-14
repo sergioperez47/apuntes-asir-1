@@ -2089,7 +2089,612 @@ const preguntas = [
         "Desinstalar el controlador de red"
     ],
     correcta: 0
-}
+},
+      // ==================================================
+    // PREGUNTAS NUEVAS - AMPLIACIÓN UT1
+    // ==================================================
+
+    {
+        pregunta: "¿Qué elementos intervienen en un proceso de comunicación?",
+        opciones: [
+            "Emisor, receptor, medio, información y protocolo",
+            "Únicamente emisor y receptor",
+            "Router, switch, servidor y cable",
+            "Dirección IP, máscara y puerta de enlace"
+        ],
+        correcta: 0
+    },
+    {
+        pregunta: "¿Por qué debe adaptarse la información al medio de transmisión?",
+        opciones: [
+            "Porque cada medio transmite señales de determinadas características",
+            "Porque todos los medios transmiten únicamente señales eléctricas",
+            "Porque los protocolos eliminan la necesidad de adaptar la información",
+            "Porque la información solo puede transmitirse por cable"
+        ],
+        correcta: 0
+    },
+    {
+        pregunta: "¿Qué caracteriza a un medio de transmisión guiado?",
+        opciones: [
+            "Que la señal se transmite por un medio físicamente delimitado",
+            "Que utiliza exclusivamente ondas de radio",
+            "Que no existe ningún medio físico",
+            "Que no necesita dispositivos de red"
+        ],
+        correcta: 0
+    },
+    {
+        pregunta: "¿Cuál es un ejemplo de medio de transmisión no guiado?",
+        opciones: [
+            "El aire por el que se propagan ondas de radio",
+            "Un cable de par trenzado",
+            "Un cable coaxial",
+            "Una fibra óptica"
+        ],
+        correcta: 0
+    },
+    {
+        pregunta: "¿Qué ocurre en una comunicación simplex?",
+        opciones: [
+            "La información solo puede viajar en un sentido",
+            "La información viaja en ambos sentidos simultáneamente",
+            "La información viaja en ambos sentidos, pero por turnos",
+            "No existe un emisor definido"
+        ],
+        correcta: 0
+    },
+    {
+        pregunta: "¿Qué diferencia fundamental existe entre semidúplex y dúplex completo?",
+        opciones: [
+            "En semidúplex se alternan los sentidos; en dúplex completo se transmite en ambos sentidos simultáneamente",
+            "Semidúplex solo funciona por fibra y dúplex completo solo por radio",
+            "En dúplex completo solo puede transmitir un dispositivo",
+            "No existe ninguna diferencia"
+        ],
+        correcta: 0
+    },
+    {
+        pregunta: "¿Qué caracteriza a una red entre iguales o P2P?",
+        opciones: [
+            "Los equipos pueden compartir recursos sin depender necesariamente de un servidor dedicado",
+            "Todos los equipos deben conectarse a un servidor central obligatorio",
+            "Solo permite compartir impresoras",
+            "No permite que los equipos compartan archivos"
+        ],
+        correcta: 0
+    },
+    {
+        pregunta: "¿Qué característica es propia de una arquitectura cliente-servidor?",
+        opciones: [
+            "Los clientes solicitan servicios que proporcionan los servidores",
+            "Todos los equipos deben realizar exactamente la misma función",
+            "No existen servicios centralizados",
+            "Cada cliente tiene que funcionar como router"
+        ],
+        correcta: 0
+    },
+    {
+        pregunta: "¿Qué tipo de red suele abarcar una zona geográfica extensa, como varios países?",
+        opciones: [
+            "WAN",
+            "PAN",
+            "LAN",
+            "Una red de área corporal"
+        ],
+        correcta: 0
+    },
+    {
+        pregunta: "¿Cuál es una ventaja habitual de una topología de estrella?",
+        opciones: [
+            "Un fallo en un cable de un equipo normalmente no desconecta los demás equipos",
+            "No necesita ningún dispositivo central",
+            "Todos los equipos comparten necesariamente un único cable principal",
+            "Es imposible que falle el dispositivo central"
+        ],
+        correcta: 0
+    },
+    {
+        pregunta: "¿Cuál es una desventaja importante de la topología de estrella?",
+        opciones: [
+            "El dispositivo central puede convertirse en un punto único de fallo",
+            "No permite conectar varios dispositivos",
+            "No se puede ampliar la red",
+            "Cada equipo necesita conectarse directamente con todos los demás"
+        ],
+        correcta: 0
+    },
+    {
+        pregunta: "¿Qué característica distingue a una topología de malla completa?",
+        opciones: [
+            "Cada nodo tiene un enlace directo con los demás nodos",
+            "Todos los equipos dependen de un único cable troncal",
+            "Los equipos forman obligatoriamente un único anillo",
+            "Todos los equipos se conectan a un único concentrador"
+        ],
+        correcta: 0
+    },
+    {
+        pregunta: "¿Qué ventaja puede ofrecer una topología de malla frente a otras topologías?",
+        opciones: [
+            "La existencia de caminos alternativos si falla un enlace",
+            "La eliminación de todos los costes de cableado",
+            "La ausencia de cualquier configuración de red",
+            "La garantía de que ningún nodo podrá fallar"
+        ],
+        correcta: 0
+    },
+    {
+        pregunta: "¿Qué caracteriza a una topología de árbol?",
+        opciones: [
+            "Organiza los dispositivos de forma jerárquica y ramificada",
+            "Todos los dispositivos se conectan siempre en círculo",
+            "Todos los dispositivos se conectan entre sí directamente",
+            "Solo admite dos dispositivos"
+        ],
+        correcta: 0
+    },
+    {
+        pregunta: "¿Qué sucede en una topología de bus tradicional si falla el cable troncal?",
+        opciones: [
+            "Puede verse afectada la comunicación de gran parte o de toda la red",
+            "Solo deja de funcionar el equipo más alejado",
+            "La red se transforma automáticamente en una estrella",
+            "La comunicación no puede verse afectada"
+        ],
+        correcta: 0
+    },
+    {
+        pregunta: "¿Qué significa que una red tenga escalabilidad?",
+        opciones: [
+            "Que puede crecer o reducirse según las necesidades",
+            "Que todos los equipos deben tener el mismo tamaño físico",
+            "Que nunca necesita mantenimiento",
+            "Que solo funciona con un número fijo de equipos"
+        ],
+        correcta: 0
+    },
+    {
+        pregunta: "¿Qué busca la equitatividad en el diseño de una red?",
+        opciones: [
+            "Que los equipos que comparten tecnología dispongan de una distribución adecuada de los recursos ofrecidos",
+            "Que un único equipo utilice todos los recursos",
+            "Que todos los equipos tengan la misma dirección IP",
+            "Que todos los cables midan lo mismo"
+        ],
+        correcta: 0
+    },
+    {
+        pregunta: "¿Qué objetivo tiene la robustez de una red?",
+        opciones: [
+            "Que la información pueda circular de forma fluida y la red soporte problemas",
+            "Que la red solo funcione con un equipo",
+            "Que el coste sea siempre cero",
+            "Que no se utilicen protocolos"
+        ],
+        correcta: 0
+    },
+    {
+        pregunta: "¿Qué significa la disponibilidad dentro de la seguridad de una red?",
+        opciones: [
+            "Que los recursos y servicios estén accesibles cuando se necesitan",
+            "Que cualquier persona pueda leer todos los datos",
+            "Que los datos no puedan modificarse nunca",
+            "Que todos los dispositivos tengan una dirección pública"
+        ],
+        correcta: 0
+    },
+    {
+        pregunta: "¿Qué objetivo persigue la confidencialidad?",
+        opciones: [
+            "Evitar que personas no autorizadas accedan a la información",
+            "Garantizar que los datos siempre lleguen más rápido",
+            "Permitir que cualquiera modifique la información",
+            "Aumentar el número de conexiones físicas"
+        ],
+        correcta: 0
+    },
+    {
+        pregunta: "¿Qué propiedad de seguridad pretende evitar modificaciones no autorizadas de los datos?",
+        opciones: [
+            "Integridad",
+            "Escalabilidad",
+            "Flexibilidad",
+            "Equitatividad"
+        ],
+        correcta: 0
+    },
+    {
+        pregunta: "¿Cuál es el principal objetivo de la normalización en redes?",
+        opciones: [
+            "Facilitar la interoperabilidad entre sistemas y fabricantes diferentes",
+            "Obligar a utilizar un único fabricante de equipos",
+            "Eliminar todos los protocolos de comunicación",
+            "Sustituir los medios de transmisión por software"
+        ],
+        correcta: 0
+    },
+    {
+        pregunta: "¿Por qué fue importante desarrollar un modelo de referencia como OSI?",
+        opciones: [
+            "Para disponer de una arquitectura común que facilitara la comunicación entre sistemas diferentes",
+            "Para impedir la conexión entre fabricantes distintos",
+            "Para sustituir todas las redes por una sola red física",
+            "Para eliminar la necesidad de dividir las comunicaciones en funciones"
+        ],
+        correcta: 0
+    },
+    {
+        pregunta: "¿Qué significa la sigla OSI?",
+        opciones: [
+            "Open Systems Interconnection",
+            "Open Security Internet",
+            "Operating System Interface",
+            "Online Systems Installation"
+        ],
+        correcta: 0
+    },
+    {
+        pregunta: "¿Qué representa una PDU en una capa del modelo OSI?",
+        opciones: [
+            "La unidad de datos correspondiente a esa capa",
+            "La dirección física del router",
+            "El fabricante de una tarjeta de red",
+            "Un tipo de cable de comunicaciones"
+        ],
+        correcta: 0
+    },
+    {
+        pregunta: "¿Qué sucede durante la desencapsulación en el receptor?",
+        opciones: [
+            "Se van procesando y retirando las cabeceras correspondientes a las capas",
+            "Se añaden indefinidamente cabeceras nuevas al mensaje recibido",
+            "Se convierten todas las direcciones IP en direcciones MAC",
+            "Se elimina siempre el contenido original del mensaje"
+        ],
+        correcta: 0
+    },
+    {
+        pregunta: "¿Qué función cumple la capa física del modelo OSI?",
+        opciones: [
+            "Transmitir bits mediante el medio físico",
+            "Elegir las aplicaciones del usuario",
+            "Gestionar las sesiones de las aplicaciones",
+            "Definir exclusivamente las direcciones IP"
+        ],
+        correcta: 0
+    },
+    {
+        pregunta: "¿Qué función se asocia principalmente con la capa de enlace de datos?",
+        opciones: [
+            "Organizar los datos en tramas y gestionar la comunicación a nivel de enlace",
+            "Traducir nombres de dominio para las aplicaciones",
+            "Gestionar exclusivamente las sesiones",
+            "Ejecutar los programas del usuario"
+        ],
+        correcta: 0
+    },
+    {
+        pregunta: "¿Qué función caracteriza a la capa de red del modelo OSI?",
+        opciones: [
+            "El direccionamiento lógico y el encaminamiento de paquetes",
+            "La presentación de imágenes al usuario",
+            "La transmisión de bits sin estructura",
+            "La administración de ventanas de aplicaciones"
+        ],
+        correcta: 0
+    },
+    {
+        pregunta: "¿Qué tarea puede realizar la capa de transporte?",
+        opciones: [
+            "Gestionar la comunicación extremo a extremo entre procesos",
+            "Definir la forma física del conector Ethernet",
+            "Transmitir únicamente señales luminosas",
+            "Asignar fabricantes a las direcciones MAC"
+        ],
+        correcta: 0
+    },
+    {
+        pregunta: "¿Qué función se relaciona con la capa de sesión del modelo OSI?",
+        opciones: [
+            "Establecer, gestionar y finalizar sesiones de comunicación",
+            "Definir la longitud física de un cable",
+            "Asignar direcciones MAC a los fabricantes",
+            "Convertir señales eléctricas directamente en ondas de radio"
+        ],
+        correcta: 0
+    },
+    {
+        pregunta: "¿Qué función se asocia con la capa de presentación del modelo OSI?",
+        opciones: [
+            "Representar y transformar los datos, por ejemplo mediante formatos o codificación",
+            "Encaminar paquetes entre redes",
+            "Controlar el acceso físico al cable exclusivamente",
+            "Asignar direcciones IP públicas"
+        ],
+        correcta: 0
+    },
+    {
+        pregunta: "¿Qué capa del modelo OSI ofrece servicios de red directamente a las aplicaciones?",
+        opciones: [
+            "Aplicación",
+            "Física",
+            "Enlace de datos",
+            "Red"
+        ],
+        correcta: 0
+    },
+    {
+        pregunta: "¿Qué organismo desarrolló el modelo OSI en colaboración con la ITU-T según los apuntes?",
+        opciones: [
+            "ISO",
+            "IANA",
+            "IEEE exclusivamente",
+            "La ICANN"
+        ],
+        correcta: 0
+    },
+    {
+        pregunta: "¿Qué recomendación de la ITU se relaciona con el modelo OSI en los apuntes?",
+        opciones: [
+            "X.200",
+            "802.11",
+            "HTTP/1.1",
+            "DNS-53"
+        ],
+        correcta: 0
+    },
+    {
+        pregunta: "¿Qué organismo está relacionado con la elaboración de estándares técnicos de redes como la familia IEEE 802?",
+        opciones: [
+            "IEEE",
+            "IANA",
+            "IETF exclusivamente",
+            "ISO no tiene ninguna relación con estándares"
+        ],
+        correcta: 0
+    },
+    {
+        pregunta: "En una trama Ethernet II, ¿cuánto ocupa el campo de dirección MAC de destino?",
+        opciones: [
+            "6 bytes",
+            "2 bytes",
+            "4 bytes",
+            "8 bytes"
+        ],
+        correcta: 0
+    },
+    {
+        pregunta: "En una trama Ethernet II, ¿cuánto ocupa el campo de dirección MAC de origen?",
+        opciones: [
+            "6 bytes",
+            "1 byte",
+            "2 bytes",
+            "8 bytes"
+        ],
+        correcta: 0
+    },
+    {
+        pregunta: "¿Cuánto ocupa el campo EtherType de una trama Ethernet II?",
+        opciones: [
+            "2 bytes",
+            "6 bytes",
+            "4 bytes",
+            "8 bytes"
+        ],
+        correcta: 0
+    },
+    {
+        pregunta: "¿Qué valor EtherType identifica normalmente IPv4 en Ethernet II?",
+        opciones: [
+            "0x0800",
+            "0x0806",
+            "0x86DD",
+            "0x0000"
+        ],
+        correcta: 0
+    },
+    {
+        pregunta: "¿Qué valor EtherType identifica normalmente ARP en Ethernet II?",
+        opciones: [
+            "0x0806",
+            "0x0800",
+            "0x0805",
+            "0xFFFF"
+        ],
+        correcta: 0
+    },
+    {
+        pregunta: "¿Qué longitud tiene el campo FCS indicado en el esquema de Ethernet II de la práctica?",
+        opciones: [
+            "4 bytes",
+            "2 bytes",
+            "6 bytes",
+            "8 bytes"
+        ],
+        correcta: 0
+    },
+    {
+        pregunta: "¿Para qué sirve el campo FCS de una trama Ethernet?",
+        opciones: [
+            "Para detectar errores en la trama mediante una comprobación",
+            "Para indicar el nombre de dominio del destino",
+            "Para almacenar la dirección IP del router",
+            "Para indicar qué aplicación generó el mensaje"
+        ],
+        correcta: 0
+    },
+    {
+        pregunta: "¿Qué indica normalmente la dirección MAC de destino ff:ff:ff:ff:ff:ff?",
+        opciones: [
+            "Que la trama se envía a difusión en la red local",
+            "Que la trama se dirige a un único servidor conocido",
+            "Que el paquete no tiene dirección de destino",
+            "Que se trata siempre de una dirección IPv4"
+        ],
+        correcta: 0
+    },
+    {
+        pregunta: "¿Qué información identifica el campo de dirección MAC de origen de una trama Ethernet?",
+        opciones: [
+            "La interfaz de red que ha enviado la trama en ese enlace",
+            "La dirección IP pública del servidor DNS",
+            "El número de puerto TCP de la aplicación",
+            "La ruta completa que seguirá el paquete por Internet"
+        ],
+        correcta: 0
+    },
+    {
+        pregunta: "¿Qué representan los primeros 24 bits de una dirección MAC convencional, según la explicación de OUI de la práctica?",
+        opciones: [
+            "El identificador OUI asociado al fabricante",
+            "El número de puerto TCP",
+            "La dirección IPv4 de destino",
+            "El campo FCS"
+        ],
+        correcta: 0
+    },
+    {
+        pregunta: "¿Qué permite conocer el campo de datos de una trama Ethernet?",
+        opciones: [
+            "El contenido del protocolo encapsulado, como un mensaje ARP o un paquete IP",
+            "Únicamente la dirección MAC de origen",
+            "Solo el fabricante de la tarjeta de red",
+            "Exclusivamente el valor FCS"
+        ],
+        correcta: 0
+    },
+    {
+        pregunta: "¿Por qué una captura de Wireshark puede no mostrar el preámbulo Ethernet?",
+        opciones: [
+            "Porque la tarjeta de red puede procesarlo antes de entregar la trama capturada al programa",
+            "Porque Ethernet nunca utiliza preámbulo",
+            "Porque el preámbulo contiene siempre una dirección IP",
+            "Porque Wireshark elimina todas las direcciones MAC"
+        ],
+        correcta: 0
+    },
+    {
+        pregunta: "¿Qué diferencia hay entre un filtro de visualización de Wireshark y detener la captura?",
+        opciones: [
+            "El filtro limita los paquetes mostrados; detener la captura detiene la recopilación de nuevos paquetes",
+            "Ambas acciones borran automáticamente todos los paquetes",
+            "El filtro apaga la tarjeta de red y detener la captura solo cambia el color de la pantalla",
+            "El filtro impide físicamente que el tráfico llegue al equipo"
+        ],
+        correcta: 0
+    },
+    {
+        pregunta: "¿Qué protocolo permite resolver una dirección IPv4 local conocida para averiguar la dirección MAC correspondiente en una LAN IPv4?",
+        opciones: [
+            "ARP",
+            "ICMP",
+            "HTTP",
+            "FTP"
+        ],
+        correcta: 0
+    },
+    {
+        pregunta: "¿Por qué puede aparecer una petición ARP antes del primer ping a la puerta de enlace?",
+        opciones: [
+            "Porque el equipo necesita conocer la MAC del siguiente salto para enviar la trama Ethernet",
+            "Porque ARP asigna una nueva dirección IP pública",
+            "Porque ICMP no puede funcionar con direcciones IP",
+            "Porque el ping siempre cambia la dirección MAC del equipo"
+        ],
+        correcta: 0
+    },
+    {
+        pregunta: "Cuando un equipo envía un paquete a una dirección IP de otra red, ¿a qué dispositivo suele dirigir la trama Ethernet inicial?",
+        opciones: [
+            "A la MAC de la puerta de enlace predeterminada",
+            "A la MAC del servidor remoto a través de Internet directamente",
+            "A la dirección MAC de difusión en todos los enlaces de Internet",
+            "A la MAC del servidor DNS en todos los casos"
+        ],
+        correcta: 0
+    },
+    {
+        pregunta: "En un ping, ¿qué mensaje ICMP envía normalmente el equipo que inicia la comprobación?",
+        opciones: [
+            "Echo Request",
+            "Echo Reply",
+            "ARP Reply",
+            "TCP SYN"
+        ],
+        correcta: 0
+    },
+    {
+        pregunta: "En un ping correcto, ¿qué mensaje ICMP suele devolver el destino?",
+        opciones: [
+            "Echo Reply",
+            "Echo Request",
+            "ARP Request",
+            "DHCP Discover"
+        ],
+        correcta: 0
+    },
+    {
+        pregunta: "Al comparar una petición de ping y su respuesta en un enlace Ethernet local, ¿qué suele ocurrir con las MAC de origen y destino?",
+        opciones: [
+            "Se invierten entre la petición y la respuesta del mismo enlace",
+            "Las dos direcciones MAC siempre permanecen idénticas",
+            "Las direcciones MAC se sustituyen por números de puerto",
+            "Las direcciones MAC se convierten en nombres de dominio"
+        ],
+        correcta: 0
+    },
+    {
+        pregunta: "¿Qué tres paneles principales aparecen en la ventana de análisis de Wireshark descrita en la práctica?",
+        opciones: [
+            "Lista de paquetes, detalles del paquete y bytes del paquete",
+            "Direcciones IP, usuarios y contraseñas",
+            "Procesos, servicios y memoria",
+            "Aplicaciones, archivos y registro del sistema"
+        ],
+        correcta: 0
+    },
+    {
+        pregunta: "¿Para qué sirve seleccionar un campo dentro del panel Detalles del paquete en Wireshark?",
+        opciones: [
+            "Para resaltar los bytes correspondientes a ese campo en el panel de bytes",
+            "Para cambiar la dirección IP del equipo automáticamente",
+            "Para modificar la trama que ya se ha recibido en la red",
+            "Para reiniciar el router de la red"
+        ],
+        correcta: 0
+    },
+    {
+        pregunta: "¿Qué debes hacer si quieres iniciar una captura en una interfaz concreta de Wireshark?",
+        opciones: [
+            "Seleccionar la interfaz de red adecuada e iniciar la captura",
+            "Elegir cualquier archivo del disco y cambiarle la extensión",
+            "Desactivar todas las interfaces de red",
+            "Aplicar un filtro antes de abrir Wireshark y cerrar el programa"
+        ],
+        correcta: 0
+    },
+    {
+        pregunta: "¿Qué información se puede comparar al analizar un ping a la puerta de enlace y otro a un servidor de Internet?",
+        opciones: [
+            "Las direcciones IP de destino y las direcciones MAC del siguiente salto en cada enlace",
+            "Solo el nombre del usuario de Linux",
+            "Únicamente la marca del monitor",
+            "El número de archivos almacenados en el equipo"
+        ],
+        correcta: 0
+    },
+    {
+        pregunta: "¿Qué describe mejor el proceso de encapsulación en una comunicación de red?",
+        opciones: [
+            "Cada capa añade la información de control que necesita antes de entregar los datos a la capa inferior",
+            "Todas las capas eliminan las cabeceras antes de transmitir",
+            "Solo la capa física añade direcciones IP",
+            "El mensaje se transmite sin ningún tipo de información de control"
+        ],
+        correcta: 0
+    }
+  
 
     
 ];
