@@ -1160,8 +1160,502 @@ const preguntas = [
         "Un controlador de memoria"
     ],
     correcta: 1
-}
+},
+   
+    {
+        pregunta: "¿Qué componente del sistema operativo se carga en memoria al arrancar y gestiona el procesador y la memoria?",
+        opciones: [
+            "El kernel o núcleo",
+            "La interfaz gráfica",
+            "La aplicación de usuario",
+            "El sistema de archivos exclusivamente"
+        ],
+        correcta: 0
+    },
+    {
+        pregunta: "¿Cuál es la función de la capa de servicios de un sistema operativo?",
+        opciones: [
+            "Gestionar procesos, memoria y entrada/salida, entre otros servicios",
+            "Sustituir físicamente al procesador",
+            "Mostrar únicamente iconos en pantalla",
+            "Almacenar exclusivamente las contraseñas"
+        ],
+        correcta: 0
+    },
+    {
+        pregunta: "¿Qué es una shell?",
+        opciones: [
+            "Una interfaz mediante comandos",
+            "Un tipo de memoria RAM",
+            "Un componente físico de la CPU",
+            "Una licencia de software"
+        ],
+        correcta: 0
+    },
+    {
+        pregunta: "¿Cómo se caracteriza la arquitectura monolítica?",
+        opciones: [
+            "Gran parte de los componentes se ejecutan dentro del espacio del kernel",
+            "Todos los servicios se ejecutan exclusivamente como aplicaciones independientes",
+            "No dispone de gestión de memoria",
+            "Necesita siempre varios ordenadores conectados"
+        ],
+        correcta: 0
+    },
+    {
+        pregunta: "¿Cuál es una ventaja de la arquitectura monolítica?",
+        opciones: [
+            "La comunicación rápida entre sus componentes",
+            "Que un error nunca puede afectar al resto del sistema",
+            "Que todos sus servicios se ejecutan sin kernel",
+            "Que no necesita controladores"
+        ],
+        correcta: 0
+    },
+    {
+        pregunta: "¿Cuál es una desventaja de la arquitectura monolítica?",
+        opciones: [
+            "Un error en un servicio puede provocar la caída de todo el sistema",
+            "La comunicación entre componentes siempre es demasiado lenta",
+            "No permite gestionar procesos",
+            "Solo funciona con interfaces gráficas"
+        ],
+        correcta: 0
+    },
+    {
+        pregunta: "¿Qué caracteriza a la arquitectura microkernel?",
+        opciones: [
+            "Mantiene en el núcleo solo las funciones esenciales y ejecuta otros servicios como procesos independientes",
+            "Incluye todos los servicios en un único programa dentro del kernel",
+            "Elimina la comunicación entre procesos",
+            "Solo permite ejecutar una aplicación"
+        ],
+        correcta: 0
+    },
+    {
+        pregunta: "¿Qué ventaja de seguridad ofrece el microkernel según el PDF?",
+        opciones: [
+            "Los servidores en modo usuario tienen menos acceso directo al hardware",
+            "Todos los programas tienen permisos de administrador",
+            "Elimina la necesidad de proteger los procesos",
+            "Impide utilizar aplicaciones de red"
+        ],
+        correcta: 0
+    },
+    {
+        pregunta: "¿Qué inconveniente puede tener un microkernel?",
+        opciones: [
+            "La comunicación entre clientes y servidores puede introducir cambios de contexto y reducir el rendimiento",
+            "No permite separar los servicios",
+            "Todos los errores provocan necesariamente la caída del ordenador",
+            "No puede gestionar memoria"
+        ],
+        correcta: 0
+    },
+    {
+        pregunta: "¿Qué arquitectura combina características de los diseños monolítico y microkernel?",
+        opciones: [
+            "Híbrida",
+            "Distribuida",
+            "Monotarea",
+            "Centralizada"
+        ],
+        correcta: 0
+    },
+    {
+        pregunta: "¿Qué ventaja de la arquitectura híbrida se menciona en el PDF?",
+        opciones: [
+            "Combina rendimiento con flexibilidad y modularidad",
+            "Elimina completamente el kernel",
+            "Evita que se puedan cargar módulos",
+            "Obliga a ejecutar todos los servicios en un ordenador distinto"
+        ],
+        correcta: 0
+    },
+    {
+        pregunta: "¿Qué sistemas se citan como ejemplos de microkernel o que incorporan ideas de este diseño?",
+        opciones: [
+            "GNU Hurd, QNX y Minix",
+            "MS-DOS y Windows Me exclusivamente",
+            "Photoshop, Word y Excel",
+            "BIOS, UEFI y RAM"
+        ],
+        correcta: 0
+    },
+    
+    {
+        pregunta: "¿Qué caracterizaba a los ordenadores de la etapa sin sistema operativo (1940-1955)?",
+        opciones: [
+            "Programación directa en código máquina e interacción manual con el hardware",
+            "Uso generalizado de interfaces gráficas",
+            "Uso de teléfonos inteligentes",
+            "Virtualización masiva de servidores"
+        ],
+        correcta: 0
+    },
+    {
+        pregunta: "¿Qué tecnología sustituyó a las válvulas de vacío en la segunda generación?",
+        opciones: [
+            "Los transistores",
+            "Los circuitos integrados",
+            "Los microprocesadores modernos",
+            "Las pantallas táctiles"
+        ],
+        correcta: 0
+    },
+    {
+        pregunta: "¿Qué técnica de procesamiento aparece en los primeros sistemas operativos de la segunda generación?",
+        opciones: [
+            "Procesamiento por lotes o batch",
+            "Interfaz gráfica multitáctil",
+            "Computación móvil",
+            "Virtualización de escritorios en la nube"
+        ],
+        correcta: 0
+    },
+    {
+        pregunta: "¿Para qué se utilizaba el ordenador satélite en la segunda generación?",
+        opciones: [
+            "Para gestionar operaciones lentas de entrada/salida y liberar al ordenador principal",
+            "Para sustituir todos los transistores",
+            "Para ejecutar exclusivamente videojuegos",
+            "Para proporcionar una interfaz gráfica"
+        ],
+        correcta: 0
+    },
+    {
+        pregunta: "¿Qué avances caracterizaron a la tercera generación (1965-1980)?",
+        opciones: [
+            "Circuitos integrados, multiprogramación, tiempo compartido y memoria virtual",
+            "Ausencia total de sistemas operativos",
+            "Popularización de los teléfonos inteligentes",
+            "Aparición exclusiva de Windows 11"
+        ],
+        correcta: 0
+    },
+    {
+        pregunta: "¿Qué proyecto se considera precursor de UNIX en el PDF?",
+        opciones: [
+            "MULTICS",
+            "OS/2",
+            "MS-DOS",
+            "Android"
+        ],
+        correcta: 0
+    },
+    {
+        pregunta: "¿Qué avance tecnológico impulsó los ordenadores personales en la cuarta generación (1980-1990)?",
+        opciones: [
+            "La revolución del microprocesador",
+            "La sustitución de los ordenadores por teléfonos inteligentes",
+            "La desaparición de los sistemas operativos",
+            "La aparición de las tarjetas perforadas"
+        ],
+        correcta: 0
+    },
+    {
+        pregunta: "¿Qué sistema operativo aparece en la cuarta generación como precursor de la familia Windows 9x, según el PDF?",
+        opciones: [
+            "OS/2",
+            "MULTICS",
+            "QNX",
+            "GNU Hurd"
+        ],
+        correcta: 0
+    },
+    {
+        pregunta: "¿Qué cambio se popularizó durante la quinta generación (1990-2000)?",
+        opciones: [
+            "Los entornos gráficos de usuario y una experiencia más intuitiva",
+            "La programación exclusivamente en código máquina",
+            "La desaparición de Linux",
+            "El uso exclusivo de tarjetas perforadas"
+        ],
+        correcta: 0
+    },
+    {
+        pregunta: "¿Qué tendencias destaca el PDF para la sexta generación (2000-actualidad)?",
+        opciones: [
+            "Expansión de las redes y crecimiento de la computación móvil",
+            "Desaparición de las redes informáticas",
+            "Uso exclusivo de ordenadores sin sistema operativo",
+            "Regreso generalizado a las válvulas de vacío"
+        ],
+        correcta: 0
+    },
+    
+    {
+        pregunta: "¿Qué diferencia a un sistema operativo multiusuario de uno monousuario?",
+        opciones: [
+            "El multiusuario permite que varios usuarios utilicen el sistema simultáneamente",
+            "El multiusuario solo ejecuta una tarea",
+            "El monousuario siempre necesita Internet",
+            "No existe ninguna diferencia"
+        ],
+        correcta: 0
+    },
+    {
+        pregunta: "¿Qué diferencia existe entre un sistema monotarea y uno multitarea?",
+        opciones: [
+            "El monotarea ejecuta una tarea a la vez y el multitarea puede gestionar varias",
+            "El monotarea permite más usuarios que el multitarea",
+            "El multitarea no utiliza procesador",
+            "El monotarea solo funciona en teléfonos"
+        ],
+        correcta: 0
+    },
+    {
+        pregunta: "¿Qué caracteriza a un sistema operativo de tiempo compartido?",
+        opciones: [
+            "Alterna rápidamente entre tareas para compartir el sistema",
+            "Garantiza siempre plazos estrictos en aplicaciones críticas",
+            "Solo puede ejecutar una tarea durante toda la sesión",
+            "Gestiona exclusivamente recursos de varios ordenadores"
+        ],
+        correcta: 0
+    },
+    {
+        pregunta: "¿Qué caracteriza a un sistema operativo de tiempo real duro?",
+        opciones: [
+            "Debe cumplir los plazos estrictos sin excepciones",
+            "Puede incumplir los plazos sin consecuencias",
+            "Solo utiliza interfaces gráficas",
+            "Permite únicamente un usuario"
+        ],
+        correcta: 0
+    },
+    {
+        pregunta: "¿Qué diferencia al tiempo real blando del tiempo real duro?",
+        opciones: [
+            "El tiempo real blando admite cierta tolerancia en el cumplimiento de los plazos",
+            "El tiempo real blando no puede ejecutar procesos",
+            "El tiempo real duro solo funciona en ordenadores personales",
+            "No hay ninguna diferencia"
+        ],
+        correcta: 0
+    },
+    {
+        pregunta: "¿Qué diferencia existe entre sistemas centralizados y distribuidos según la gestión de recursos?",
+        opciones: [
+            "Los centralizados gestionan recursos de un ordenador y los distribuidos de varios ordenadores en red",
+            "Los centralizados no tienen memoria y los distribuidos sí",
+            "Los distribuidos solo permiten un usuario",
+            "Los centralizados siempre son móviles"
+        ],
+        correcta: 0
+    },
+    {
+        pregunta: "¿Cuál es un ejemplo de sistema operativo embebido según el PDF?",
+        opciones: [
+            "El sistema de un router o de un electrodoméstico inteligente",
+            "Un sistema exclusivamente para edición de textos",
+            "Una licencia Retail",
+            "Un programa de hojas de cálculo"
+        ],
+        correcta: 0
+    },
 
+    {
+        pregunta: "¿Qué define una licencia de software?",
+        opciones: [
+            "Las condiciones de uso y los derechos y obligaciones de las partes",
+            "La velocidad del procesador",
+            "La cantidad de memoria RAM",
+            "El tipo de interfaz gráfica"
+        ],
+        correcta: 0
+    },
+    {
+        pregunta: "¿Cuál es una característica habitual de un sistema operativo propietario según el PDF?",
+        opciones: [
+            "No se permite acceder al código fuente ni modificarlo libremente",
+            "Siempre debe distribuirse gratuitamente",
+            "Obliga a publicar todas las modificaciones",
+            "No necesita licencia de uso"
+        ],
+        correcta: 0
+    },
+    {
+        pregunta: "¿Qué caracteriza a una licencia OEM?",
+        opciones: [
+            "Suele venir preinstalada con un equipo y queda vinculada a ese dispositivo",
+            "Se puede transferir libremente a cualquier equipo",
+            "Está diseñada exclusivamente para publicar fotografías",
+            "Obliga a liberar todo el código modificado"
+        ],
+        correcta: 0
+    },
+    {
+        pregunta: "¿Qué diferencia principal tiene una licencia Retail frente a una OEM?",
+        opciones: [
+            "La Retail puede transferirse a otro equipo si se desinstala del anterior",
+            "La Retail solo puede utilizarse en el equipo con el que se compró",
+            "La Retail está destinada exclusivamente a desarrolladores",
+            "La Retail no permite instalar el sistema operativo"
+        ],
+        correcta: 0
+    },
+    {
+        pregunta: "¿Para quién está diseñada la licencia por volumen?",
+        opciones: [
+            "Para empresas y organizaciones que necesitan gestionar múltiples licencias",
+            "Exclusivamente para usuarios de teléfonos móviles",
+            "Para distribuir obras sin derechos de autor",
+            "Para sustituir el firmware del ordenador"
+        ],
+        correcta: 0
+    },
+    {
+        pregunta: "¿Cuál es la finalidad de las suscripciones para desarrolladores descritas en el PDF?",
+        opciones: [
+            "Probar, desarrollar y evaluar software",
+            "Utilizar cualquier software de evaluación en producción sin restricciones",
+            "Transferir automáticamente licencias OEM",
+            "Crear licencias Creative Commons"
+        ],
+        correcta: 0
+    },
+    {
+        pregunta: "¿Cuáles son las cuatro libertades del software libre descritas por Richard Stallman?",
+        opciones: [
+            "Uso, estudio, distribución y mejora",
+            "Compra, instalación, venta y eliminación",
+            "Lectura, escritura, ejecución y apagado",
+            "Copia, compresión, cifrado y borrado"
+        ],
+        correcta: 0
+    },
+    {
+        pregunta: "¿Qué exige la GPL para los trabajos derivados que se distribuyen?",
+        opciones: [
+            "Que se distribuyan bajo los mismos términos de la GPL",
+            "Que se conviertan en software propietario",
+            "Que no se puedan modificar",
+            "Que solo puedan utilizarse en ordenadores personales"
+        ],
+        correcta: 0
+    },
+    {
+        pregunta: "¿Qué permite la licencia MIT según el PDF?",
+        opciones: [
+            "Usar y modificar el código e integrarlo incluso en software propietario",
+            "Prohibir cualquier uso comercial",
+            "Obligar siempre a publicar el código del producto derivado",
+            "Distribuir únicamente copias sin modificaciones"
+        ],
+        correcta: 0
+    },
+    {
+        pregunta: "¿Qué característica adicional destaca la licencia Apache 2.0 frente a la MIT?",
+        opciones: [
+            "Incluye cláusulas explícitas sobre patentes",
+            "Prohíbe toda utilización comercial",
+            "Impide modificar el código fuente",
+            "Solo se aplica a fotografías"
+        ],
+        correcta: 0
+    },
+    
+    {
+        pregunta: "¿Qué significa BY en una licencia Creative Commons?",
+        opciones: [
+            "Atribución: hay que dar crédito al autor",
+            "No Comercial",
+            "Sin Obras Derivadas",
+            "Compartir Igual"
+        ],
+        correcta: 0
+    },
+    {
+        pregunta: "¿Qué significa SA en Creative Commons?",
+        opciones: [
+            "Compartir Igual",
+            "Atribución",
+            "No Comercial",
+            "Sin Obras Derivadas"
+        ],
+        correcta: 0
+    },
+    {
+        pregunta: "¿Qué significa NC en Creative Commons?",
+        opciones: [
+            "No Comercial",
+            "Compartir Igual",
+            "Atribución",
+            "Sin Obras Derivadas"
+        ],
+        correcta: 0
+    },
+    {
+        pregunta: "¿Qué significa ND en Creative Commons?",
+        opciones: [
+            "Sin Obras Derivadas",
+            "No Comercial",
+            "Compartir Igual",
+            "Atribución"
+        ],
+        correcta: 0
+    },
+    {
+        pregunta: "¿Qué permite la licencia CC BY según el PDF?",
+        opciones: [
+            "Usar la obra incluso comercialmente, siempre que se dé crédito al autor",
+            "Usar la obra solo con fines no comerciales",
+            "Compartir la obra únicamente sin modificaciones",
+            "No distribuir la obra"
+        ],
+        correcta: 0
+    },
+    {
+        pregunta: "¿Qué condición añade CC BY-SA?",
+        opciones: [
+            "Las obras derivadas distribuidas deben llevar la misma licencia",
+            "Se prohíbe cualquier uso comercial",
+            "No se permite modificar la obra",
+            "No es necesario reconocer al autor"
+        ],
+        correcta: 0
+    },
+    {
+        pregunta: "¿Qué permite CC BY-NC?",
+        opciones: [
+            "Modificar y compartir la obra, pero no utilizarla con fines comerciales",
+            "Utilizarla comercialmente sin atribución",
+            "Compartirla solo si no se modifica",
+            "Eliminar todos los derechos del autor"
+        ],
+        correcta: 0
+    },
+    {
+        pregunta: "¿Qué restricción tiene CC BY-ND?",
+        opciones: [
+            "No permite modificar la obra ni crear obras derivadas",
+            "Prohíbe toda distribución",
+            "Prohíbe siempre el uso comercial",
+            "Obliga a compartir igual todas las modificaciones"
+        ],
+        correcta: 0
+    },
+    {
+        pregunta: "¿Cuál es la licencia Creative Commons más restrictiva de las seis principales que aparecen en el PDF?",
+        opciones: [
+            "CC BY-NC-ND",
+            "CC BY",
+            "CC BY-SA",
+            "CC BY-NC"
+        ],
+        correcta: 0
+    },
+    {
+        pregunta: "¿Qué representa CC0?",
+        opciones: [
+            "La renuncia a los derechos hasta donde permite la ley para facilitar el uso como dominio público",
+            "La obligación de publicar una obra bajo GPL",
+            "La prohibición de distribuir una obra",
+            "Una licencia exclusiva para sistemas operativos propietarios"
+        ],
+        correcta: 0
+    }
 
 ];
 
