@@ -2,6 +2,7 @@
 document.addEventListener("DOMContentLoaded", () => {
     const parametros = new URLSearchParams(window.location.search);
     const unidadElegida = parametros.get("unidad");
+    const modoElegido = parametros.get("modo");
 
     const selectorUnidades = document.getElementById("selectorUnidades");
     const botonUnidad1 = document.getElementById("botonUnidad1");
@@ -17,10 +18,14 @@ document.addEventListener("DOMContentLoaded", () => {
     const botonCambiarUnidadResultado =
         document.getElementById("botonCambiarUnidadResultado");
 
-    // Localizar los botones Normal y Aleatorio.
+    // Localizar los botones Normal, Aleatorio y Examen.
     const botonesModo = seleccionModo
         ? seleccionModo.querySelector(".botones-modo")
         : null;
+
+    const modoNormal = document.getElementById("modoNormal");
+    const modoAleatorio = document.getElementById("modoAleatorio");
+    const modoExamen = document.getElementById("modoExamen");
 
     // Volver a la pantalla de selección de unidades.
     function volverAlSelector() {
@@ -31,6 +36,16 @@ document.addEventListener("DOMContentLoaded", () => {
     function seleccionarUnidad(numero) {
         window.location.href =
             `${window.location.pathname}?unidad=${numero}`;
+    }
+
+    // Seleccionar el modo y cargar la unidad correspondiente.
+    function seleccionarModo(modo) {
+        if (unidadElegida !== "1" && unidadElegida !== "2") {
+            return;
+        }
+
+        window.location.href =
+            `${window.location.pathname}?unidad=${unidadElegida}&modo=${modo}`;
     }
 
     // Comprobar que existen los elementos necesarios.
@@ -65,6 +80,25 @@ document.addEventListener("DOMContentLoaded", () => {
             "click",
             volverAlSelector
         );
+    }
+
+    // Eventos para elegir el modo del test.
+    if (modoNormal) {
+        modoNormal.addEventListener("click", () => {
+            seleccionarModo("normal");
+        });
+    }
+
+    if (modoAleatorio) {
+        modoAleatorio.addEventListener("click", () => {
+            seleccionarModo("aleatorio");
+        });
+    }
+
+    if (modoExamen) {
+        modoExamen.addEventListener("click", () => {
+            seleccionarModo("examen");
+        });
     }
 
     // Si no hay unidad elegida, mostrar el selector.
@@ -113,6 +147,9 @@ document.addEventListener("DOMContentLoaded", () => {
     } else {
         script.src = "unidad_2_iso.js";
     }
+
+    // Guardar el modo seleccionado para que lo lea el test.
+    script.dataset.modo = modoElegido || "";
 
     script.onerror = () => {
         alert(
