@@ -427,3 +427,39 @@ body {
     }
 
 }
+
+/* ----------------------------- */
+/* MODO EXAMEN */
+/* ----------------------------- */
+
+#avisoExamen {
+    background: #fff3cd;
+    color: #664d03;
+    border: 1px solid #ffecb5;
+    border-radius: 10px;
+    padding: 12px;
+    text-align: center;
+    font-weight: bold;
+    margin: 15px 0;
+}
+
+/* Resumen de resultados del examen */
+
+#resumenExamen {
+    background: #f2f7f9;
+    border-radius: 10px;
+    padding: 15px;
+    margin-top: 20px;
+}
+
+#resumenExamen p {
+    margin: 10px 0;
+    font-weight: bold;
+    color: #203a43;
+}
+
+/* Aviso cuando queda poco tiempo */
+
+#contador.tiempo-limite {
+    color: #c62828;
+}
