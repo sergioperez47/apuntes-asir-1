@@ -1991,3 +1991,4 @@ if (botonExamen) {
 // ==================================================
 
 botonReiniciar.addEventListener("click", volverAlMenuDeModos);
+
