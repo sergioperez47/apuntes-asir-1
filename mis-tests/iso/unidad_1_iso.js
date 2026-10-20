@@ -1674,10 +1674,13 @@ let opcionesMezcladas = [];
 
 let modoAleatorioActual = false;
 
+let modoExamenActual = false;
+
 let tiempo = 0;
 
 let intervalo = null;
 
+const TIEMPO_LIMITE_EXAMEN = 30 * 60;
 
 // ==================================================
 // ELEMENTOS HTML
@@ -1692,6 +1695,8 @@ const resultado = document.getElementById("resultado");
 const botonNormal = document.getElementById("modoNormal");
 
 const botonAleatorio = document.getElementById("modoAleatorio");
+
+const botonExamen = document.getElementById("modoExamen");
 
 const preguntaElemento = document.getElementById("pregunta");
 
@@ -1735,13 +1740,15 @@ function mezclar(array) {
 // INICIAR TEST
 // ==================================================
 
-function iniciarTest(aleatorio) {
+function iniciarTest(aleatorio, examen = false) {
 
     modoAleatorioActual = aleatorio;
 
+    modoExamenActual = examen;
+
     preguntasTest = [...preguntas];
 
-    if (aleatorio) {
+    if (aleatorio || examen) {
 
         preguntasTest = mezclar(preguntasTest);
 
@@ -1755,6 +1762,43 @@ function iniciarTest(aleatorio) {
     opcionesMezcladas =
         new Array(preguntasTest.length);
 
+    // Mezclamos las respuestas una sola vez
+    // para cada pregunta.
+
+    preguntasTest.forEach((pregunta, indice) => {
+
+        let opciones = pregunta.opciones.map(
+            (texto, posicion) => {
+
+                return {
+                    texto: texto,
+                    indice: posicion
+                };
+
+            }
+        );
+
+        opcionesMezcladas[indice] = mezclar(opciones);
+
+    });
+
+    seleccionModo.classList.add("oculto");
+
+    resultado.classList.add("oculto");
+
+    test.classList.remove("oculto");
+
+    tiempo = modoExamenActual
+        ? TIEMPO_LIMITE_EXAMEN
+        : 0;
+
+    actualizarCronometro();
+
+    iniciarCronometro();
+
+    mostrarPregunta();
+
+}
 
     // Mezclamos las respuestas una sola vez
     // para cada pregunta.
@@ -1847,39 +1891,46 @@ function mostrarPregunta() {
             respuestasUsuario[preguntaActual];
 
 
-        // Si ya había una respuesta seleccionada,
-        // mostramos su estado.
+// Si ya había una respuesta seleccionada,
+// mostramos su estado.
 
-        if (respuestaGuardada !== null) {
+if (respuestaGuardada !== null) {
 
-            if (opcion.indice === pregunta.correcta) {
+    // En el modo examen no mostramos los aciertos
+    // ni los fallos mientras se está realizando.
 
-                boton.classList.add("correcta");
+    if (!modoExamenActual) {
 
-            }
+        if (opcion.indice === pregunta.correcta) {
 
-            if (
-                opcion.indice === respuestaGuardada &&
-                respuestaGuardada !== pregunta.correcta
-            ) {
-
-                boton.classList.add("incorrecta");
-
-            }
-
-            boton.disabled = true;
-
-        } else {
-
-            boton.addEventListener("click", () => {
-
-                seleccionarRespuesta(
-                    opcion.indice
-                );
-
-            });
+            boton.classList.add("correcta");
 
         }
+
+        if (
+            opcion.indice === respuestaGuardada &&
+            respuestaGuardada !== pregunta.correcta
+        ) {
+
+            boton.classList.add("incorrecta");
+
+        }
+
+    }
+
+    boton.disabled = true;
+
+} else {
+
+    boton.addEventListener("click", () => {
+
+        seleccionarRespuesta(
+            opcion.indice
+        );
+
+    });
+
+}
 
 
         opcionesElemento.appendChild(boton);
@@ -1902,15 +1953,18 @@ function mostrarPregunta() {
 
     // Botón siguiente
 
-    if (respuestasUsuario[preguntaActual] === null) {
+if (
+    respuestasUsuario[preguntaActual] === null &&
+    !modoExamenActual
+) {
 
-        botonSiguiente.disabled = true;
+    botonSiguiente.disabled = true;
 
-    } else {
+} else {
 
-        botonSiguiente.disabled = false;
+    botonSiguiente.disabled = false;
 
-    }
+}
 
 
     // En la última pregunta cambiamos el texto
@@ -2073,10 +2127,29 @@ function iniciarCronometro() {
 
     clearInterval(intervalo);
 
-
     intervalo = setInterval(() => {
 
-        tiempo++;
+        if (modoExamenActual) {
+
+            tiempo--;
+
+            if (tiempo <= 0) {
+
+                tiempo = 0;
+
+                actualizarCronometro();
+
+                terminarTest();
+
+                return;
+
+            }
+
+        } else {
+
+            tiempo++;
+
+        }
 
         actualizarCronometro();
 
@@ -2090,10 +2163,8 @@ function actualizarCronometro() {
     const minutos =
         Math.floor(tiempo / 60);
 
-
     const segundos =
         tiempo % 60;
-
 
     contador.textContent =
         `⏱️ ${String(minutos).padStart(2, "0")}:${String(segundos).padStart(2, "0")}`;
@@ -2218,3 +2289,17 @@ botonReiniciar.addEventListener("click", () => {
     actualizarCronometro();
 
 });
+
+// ==================================================
+// MODO EXAMEN
+// ==================================================
+
+if (botonExamen) {
+
+    botonExamen.addEventListener("click", () => {
+
+        iniciarTest(true, true);
+
+    });
+
+}
