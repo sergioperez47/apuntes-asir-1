@@ -463,3 +463,10 @@ body {
 #contador.tiempo-limite {
     color: #c62828;
 }
+/* Resaltar la respuesta elegida durante el examen */
+#test .opcion.seleccionada {
+    background-color: #cfe2ff;
+    border: 2px solid #0d6efd;
+    color: #084298;
+    font-weight: bold;
+}
