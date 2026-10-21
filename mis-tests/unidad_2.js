@@ -73,7 +73,7 @@ const preguntas = [
 {"pregunta":"¿Cuántas subredes /27 caben en una red /24?","opciones":["2","4","8","16"],"correcta":2}
 ];
 
-// VARIABLES DEL TEST
+// VARIABLES Y FUNCIONAMIENTO DEL TEST
 
 let preguntasTest = [];
 let preguntaActual = 0;
@@ -81,12 +81,15 @@ let respuestasUsuario = [];
 let opcionesMezcladas = [];
 let tiempo = 0;
 let intervalo = null;
+let modoActual = "normal";
+const DURACION_EXAMEN = 30 * 60;
 
 const seleccionModo = document.getElementById("seleccionModo");
 const test = document.getElementById("test");
 const resultado = document.getElementById("resultado");
 const botonNormal = document.getElementById("modoNormal");
 const botonAleatorio = document.getElementById("modoAleatorio");
+const botonExamen = document.getElementById("modoExamen");
 const preguntaElemento = document.getElementById("pregunta");
 const opcionesElemento = document.getElementById("opciones");
 const botonAnterior = document.getElementById("botonAnterior");
@@ -101,118 +104,80 @@ const mensajeResultado = document.getElementById("mensajeResultado");
 const tiempoFinal = document.getElementById("tiempoFinal");
 const botonReiniciar = document.getElementById("botonReiniciar");
 
-// MEZCLAR PREGUNTAS Y RESPUESTAS
-
 function mezclar(array) {
     const copia = [...array];
-
     for (let i = copia.length - 1; i > 0; i--) {
         const j = Math.floor(Math.random() * (i + 1));
         [copia[i], copia[j]] = [copia[j], copia[i]];
     }
-
     return copia;
 }
 
-// INICIAR TEST
-
-function iniciarTest(aleatorio) {
-    preguntasTest = [...preguntas];
-
-    if (aleatorio) {
-        preguntasTest = mezclar(preguntasTest);
-    }
-
+function iniciarTest(aleatorio, examen = false) {
+    clearInterval(intervalo);
+    modoActual = examen ? "examen" : (aleatorio ? "aleatorio" : "normal");
+    preguntasTest = aleatorio ? mezclar(preguntas) : [...preguntas];
     preguntaActual = 0;
     respuestasUsuario = new Array(preguntasTest.length).fill(null);
-
     opcionesMezcladas = preguntasTest.map(p =>
-        mezclar(p.opciones.map((texto, indice) => ({
-            texto,
-            indice
-        })))
+        mezclar(p.opciones.map((texto, indice) => ({ texto, indice })))
     );
 
     seleccionModo.classList.add("oculto");
     resultado.classList.add("oculto");
     test.classList.remove("oculto");
 
-    tiempo = 0;
+    tiempo = examen ? DURACION_EXAMEN : 0;
     actualizarCronometro();
     iniciarCronometro();
     mostrarPregunta();
 }
 
-// MOSTRAR PREGUNTA
-
 function mostrarPregunta() {
+    if (!preguntasTest.length) return;
     const pregunta = preguntasTest[preguntaActual];
-
     preguntaElemento.textContent = pregunta.pregunta;
-    numeroPregunta.textContent =
-        `Pregunta ${preguntaActual + 1} de ${preguntasTest.length}`;
-
-    puntuacionElemento.textContent = `Puntos: ${calcularPuntos()}`;
-
-    barraProgreso.style.width =
-        `${((preguntaActual + 1) / preguntasTest.length) * 100}%`;
-
+    numeroPregunta.textContent = `Pregunta ${preguntaActual + 1} de ${preguntasTest.length}`;
+    puntuacionElemento.textContent = modoActual === "examen"
+        ? `Respondidas: ${respuestasUsuario.filter(r => r !== null).length}/${preguntasTest.length}`
+        : `Puntos: ${calcularPuntos()}`;
+    barraProgreso.style.width = `${((preguntaActual + 1) / preguntasTest.length) * 100}%`;
     opcionesElemento.innerHTML = "";
 
     opcionesMezcladas[preguntaActual].forEach(opcion => {
         const boton = document.createElement("button");
-
         boton.classList.add("opcion");
         boton.textContent = opcion.texto;
-
         const respuestaGuardada = respuestasUsuario[preguntaActual];
 
-        if (respuestaGuardada !== null) {
-            if (opcion.indice === pregunta.correcta) {
-                boton.classList.add("correcta");
-            }
-
-            if (
-                opcion.indice === respuestaGuardada &&
-                respuestaGuardada !== pregunta.correcta
-            ) {
+        if (modoActual !== "examen" && respuestaGuardada !== null) {
+            if (opcion.indice === pregunta.correcta) boton.classList.add("correcta");
+            if (opcion.indice === respuestaGuardada && respuestaGuardada !== pregunta.correcta) {
                 boton.classList.add("incorrecta");
             }
-
             boton.disabled = true;
         } else {
+            if (respuestaGuardada === opcion.indice) boton.classList.add("seleccionada");
             boton.addEventListener("click", () => {
                 respuestasUsuario[preguntaActual] = opcion.indice;
                 mostrarPregunta();
             });
         }
-
         opcionesElemento.appendChild(boton);
     });
 
     botonAnterior.disabled = preguntaActual === 0;
-
-    botonSiguiente.disabled =
-        respuestasUsuario[preguntaActual] === null;
-
-    botonSiguiente.textContent =
-        preguntaActual === preguntasTest.length - 1
-            ? "Terminar test ✓"
-            : "Siguiente →";
+    // En modo examen se puede avanzar aunque la pregunta esté sin responder.
+    botonSiguiente.disabled = modoActual !== "examen" && respuestasUsuario[preguntaActual] === null;
+    botonSiguiente.textContent = preguntaActual === preguntasTest.length - 1
+        ? (modoActual === "examen" ? "Entregar examen ✓" : "Terminar test ✓")
+        : "Siguiente →";
 }
-
-// CALCULAR PUNTUACIÓN
 
 function calcularPuntos() {
-    return respuestasUsuario.reduce((total, respuesta, indice) => {
-        return total + (
-            respuesta !== null &&
-            respuesta === preguntasTest[indice].correcta ? 1 : 0
-        );
-    }, 0);
+    return respuestasUsuario.reduce((total, respuesta, indice) =>
+        total + (respuesta !== null && respuesta === preguntasTest[indice].correcta ? 1 : 0), 0);
 }
-
-// BOTÓN ANTERIOR
 
 botonAnterior.addEventListener("click", () => {
     if (preguntaActual > 0) {
@@ -221,58 +186,55 @@ botonAnterior.addEventListener("click", () => {
     }
 });
 
-// BOTÓN SIGUIENTE
-
 botonSiguiente.addEventListener("click", () => {
-    if (respuestasUsuario[preguntaActual] === null) {
-        return;
-    }
-
+    if (modoActual !== "examen" && respuestasUsuario[preguntaActual] === null) return;
     if (preguntaActual < preguntasTest.length - 1) {
         preguntaActual++;
         mostrarPregunta();
     } else {
-        terminarTest();
+        terminarTest(false);
     }
 });
 
-// MODO NORMAL Y ALEATORIO
+botonNormal.addEventListener("click", () => iniciarTest(false, false));
+botonAleatorio.addEventListener("click", () => iniciarTest(true, false));
+if (botonExamen) botonExamen.addEventListener("click", () => iniciarTest(true, true));
 
-botonNormal.addEventListener("click", () => iniciarTest(false));
-botonAleatorio.addEventListener("click", () => iniciarTest(true));
+botonReiniciarTest.addEventListener("click", () => volverSeleccionModo());
+botonReiniciar.addEventListener("click", () => volverSeleccionModo());
 
-// REINICIAR TEST Y VOLVER A LA SELECCIÓN DE MODO
-
-botonReiniciarTest.addEventListener("click", () => {
+function volverSeleccionModo() {
     clearInterval(intervalo);
-
+    intervalo = null;
     test.classList.add("oculto");
     resultado.classList.add("oculto");
     seleccionModo.classList.remove("oculto");
-
+    preguntasTest = [];
+    respuestasUsuario = [];
+    opcionesMezcladas = [];
+    preguntaActual = 0;
+    tiempo = 0;
+    modoActual = "normal";
     botonSiguiente.textContent = "Siguiente →";
     botonSiguiente.disabled = true;
     botonAnterior.disabled = true;
-
-    tiempo = 0;
     actualizarCronometro();
-});
-
-// VOLVER A HACER EL TEST DESDE LOS RESULTADOS
-
-botonReiniciar.addEventListener("click", () => {
-    clearInterval(intervalo);
-    resultado.classList.add("oculto");
-    seleccionModo.classList.remove("oculto");
-});
-
-// CRONÓMETRO
+}
 
 function iniciarCronometro() {
     clearInterval(intervalo);
-
     intervalo = setInterval(() => {
-        tiempo++;
+        if (modoActual === "examen") {
+            tiempo--;
+            if (tiempo <= 0) {
+                tiempo = 0;
+                actualizarCronometro();
+                terminarTest(true);
+                return;
+            }
+        } else {
+            tiempo++;
+        }
         actualizarCronometro();
     }, 1000);
 }
@@ -280,34 +242,37 @@ function iniciarCronometro() {
 function actualizarCronometro() {
     const minutos = Math.floor(tiempo / 60);
     const segundos = tiempo % 60;
-
-    contador.textContent =
-        `⏱️ ${String(minutos).padStart(2, "0")}:${String(segundos).padStart(2, "0")}`;
+    contador.textContent = `⏱️ ${String(minutos).padStart(2, "0")}:${String(segundos).padStart(2, "0")}`;
+    if (modoActual === "examen" && tiempo <= 300) contador.classList.add("tiempo-urgente");
+    else contador.classList.remove("tiempo-urgente");
 }
 
-// FINALIZAR TEST
-
-function terminarTest() {
+function terminarTest(porTiempo = false) {
+    if (resultado.classList.contains("oculto") === false) return;
     clearInterval(intervalo);
+    intervalo = null;
 
     const puntos = calcularPuntos();
     const total = preguntasTest.length;
-    const porcentaje = puntos / total * 100;
-    const notaFinal = puntos / total * 10;
+    const respondidas = respuestasUsuario.filter(r => r !== null).length;
+    const sinResponder = total - respondidas;
+    const fallos = respondidas - puntos;
+    const porcentaje = total ? puntos / total * 100 : 0;
+    const notaFinal = total ? puntos / total * 10 : 0;
 
     test.classList.add("oculto");
     resultado.classList.remove("oculto");
-
     barraProgreso.style.width = "100%";
-
     nota.textContent = `${notaFinal.toFixed(2)}/10`;
 
     mensajeResultado.textContent =
-        `Has acertado ${puntos} de ${total} preguntas (${porcentaje.toFixed(1)}%).`;
+        `Aciertos: ${puntos} · Fallos: ${fallos} · Sin responder: ${sinResponder} · Total: ${total} (${porcentaje.toFixed(1)}% de aciertos).`;
 
-    const minutos = Math.floor(tiempo / 60);
-    const segundos = tiempo % 60;
-
-    tiempoFinal.textContent =
-        `⏱️ Tiempo empleado: ${String(minutos).padStart(2, "0")}:${String(segundos).padStart(2, "0")}`;
+    if (modoActual === "examen") {
+        tiempoFinal.textContent = porTiempo
+            ? "⏰ Tiempo agotado. El examen se ha entregado automáticamente."
+            : `📝 Examen entregado. Tiempo restante: ${String(Math.floor(tiempo / 60)).padStart(2, "0")}:${String(tiempo % 60).padStart(2, "0")}`;
+    } else {
+        tiempoFinal.textContent = `⏱️ Tiempo empleado: ${String(Math.floor(tiempo / 60)).padStart(2, "0")}:${String(tiempo % 60).padStart(2, "0")}`;
+    }
 }
