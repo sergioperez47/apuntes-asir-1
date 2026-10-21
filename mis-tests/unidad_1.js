@@ -2693,695 +2693,214 @@ const preguntas = [
             "El mensaje se transmite sin ningún tipo de información de control"
         ],
         correcta: 0
-    },
+    }
+  
 
-    // ==================================================
-    // AMPLIACIÓN: LAS SIETE CAPAS DEL MODELO OSI
-    // ==================================================
-    {
-        pregunta: "¿Qué función realiza la capa Física del modelo OSI?",
-        opciones: ["Transmitir bits como señales por el medio físico", "Asignar direcciones IP", "Controlar sesiones entre aplicaciones", "Cifrar los datos de una aplicación"],
-        correcta: 0
-    },
-    {
-        pregunta: "¿Qué función corresponde a la capa de Enlace de datos?",
-        opciones: ["Resolver nombres de dominio", "Organizar los bits en tramas y gestionar direcciones MAC", "Elegir rutas entre redes mediante direcciones IP", "Ofrecer servicios directamente a las aplicaciones"],
-        correcta: 1
-    },
-    {
-        pregunta: "¿Qué dispositivo trabaja principalmente en la capa de Red para encaminar paquetes entre redes?",
-        opciones: ["Hub", "Repetidor", "Router", "Conector RJ-45"],
-        correcta: 2
-    },
-    {
-        pregunta: "¿Qué función realiza la capa de Transporte del modelo OSI?",
-        opciones: ["Transmitir señales eléctricas", "Gestionar la entrega de datos entre procesos y, según el protocolo, su fiabilidad", "Definir la dirección MAC de una tarjeta", "Convertir los datos en señales luminosas"],
-        correcta: 1
-    },
-    {
-        pregunta: "¿Qué tarea se asocia a la capa de Sesión?",
-        opciones: ["Establecer, mantener y finalizar sesiones de comunicación", "Encaminar paquetes usando direcciones IP", "Transmitir bits por un cable", "Determinar la dirección MAC de destino"],
-        correcta: 0
-    },
-    {
-        pregunta: "¿Qué función puede realizar la capa de Presentación?",
-        opciones: ["Seleccionar la ruta del paquete", "Convertir formatos y realizar compresión o cifrado de datos", "Repetir una señal eléctrica", "Asignar puertos TCP"],
-        correcta: 1
-    },
-    {
-        pregunta: "¿Qué describe mejor la capa de Aplicación del modelo OSI?",
-        opciones: ["El medio físico de transmisión", "La comunicación directa con los servicios de red que utilizan las aplicaciones", "El direccionamiento MAC", "La señalización eléctrica del cable"],
-        correcta: 1
-    },
-    {
-        pregunta: "¿A qué capa del modelo OSI se asocia normalmente Ethernet cuando se habla de tramas y direcciones MAC?",
-        opciones: ["Aplicación", "Presentación", "Enlace de datos", "Sesión"],
-        correcta: 2
-    },
-    {
-        pregunta: "¿Qué protocolo de la capa de Transporte ofrece una comunicación fiable y orientada a conexión?",
-        opciones: ["IP", "TCP", "ARP", "Ethernet"],
-        correcta: 1
-    },
-    {
-        pregunta: "¿Qué protocolo de Transporte prioriza la sencillez y no garantiza por sí mismo la entrega de los datagramas?",
-        opciones: ["UDP", "TCP", "IP", "HTTP"],
-        correcta: 0
-    },
-    {
-        pregunta: "¿Cuál es la función principal de IP en la arquitectura TCP/IP?",
-        opciones: ["Mostrar páginas web", "Direccionar datagramas y permitir su encaminamiento entre redes", "Cifrar siempre todos los datos", "Comprobar el estado físico de un cable"],
-        correcta: 1
-    },
-    {
-        pregunta: "¿Qué capa de TCP/IP agrupa las funciones de las capas Física y Enlace del modelo OSI?",
-        opciones: ["Aplicación", "Transporte", "Internet", "Acceso a la red"],
-        correcta: 3
-    },
-    {
-        pregunta: "¿En qué capa de TCP/IP se encuentran normalmente protocolos como HTTP, DNS y SMTP?",
-        opciones: ["Acceso a la red", "Internet", "Transporte", "Aplicación"],
-        correcta: 3
-    },
-    {
-        pregunta: "¿Qué protocolo se utiliza habitualmente para traducir nombres de dominio, como ejemplo.com, a direcciones IP?",
-        opciones: ["DNS", "FTP", "Ethernet", "ARP exclusivamente"],
-        correcta: 0
-    },
-    {
-        pregunta: "¿Qué diferencia general existe entre TCP y UDP?",
-        opciones: ["TCP es orientado a conexión y aporta fiabilidad; UDP tiene menos mecanismos de control", "UDP solo funciona en cables de fibra", "TCP se utiliza únicamente para direcciones MAC", "No existe ninguna diferencia"],
-        correcta: 0
-    },
-    {
-        pregunta: "¿Qué tipo de cable de red utiliza pares de hilos de cobre trenzados para reducir interferencias?",
-        opciones: ["Fibra óptica", "Par trenzado", "Cable coaxial de antena únicamente", "Cable de alimentación"],
-        correcta: 1
-    },
-    {
-        pregunta: "¿Qué diferencia al cable UTP del cable STP?",
-        opciones: ["UTP no tiene apantallamiento; STP incorpora apantallamiento para reducir interferencias", "UTP utiliza luz y STP utiliza ondas de radio", "STP no tiene conductores", "UTP solo sirve para televisión"],
-        correcta: 0
-    },
-    {
-        pregunta: "¿Para qué se utiliza habitualmente un cable de fibra óptica?",
-        opciones: ["Transmitir datos mediante pulsos de luz, con gran capacidad y resistencia a interferencias electromagnéticas", "Conectar directamente dos teclados PS/2", "Transportar corriente eléctrica para alimentar el ordenador", "Transmitir datos mediante pares de cobre sin aislamiento"],
-        correcta: 0
-    },
-    {
-        pregunta: "¿Qué partes caracterizan a un cable coaxial?",
-        opciones: ["Un núcleo conductor, aislamiento y una pantalla conductora", "Únicamente fibras de vidrio sin cubierta", "Cuatro pares trenzados sin ningún recubrimiento", "Dos conectores USB unidos sin cable"],
-        correcta: 0
-    },
-    {
-        pregunta: "¿Qué conector se utiliza habitualmente con el cable Ethernet de par trenzado en redes LAN?",
-        opciones: ["RJ-45 (8P8C)", "HDMI", "VGA", "Jack de audio de 3,5 mm"],
-        correcta: 0
-    },
-    {
-        pregunta: "¿Para qué sirve un cable Ethernet directo en una instalación tradicional?",
-        opciones: ["Conectar normalmente un equipo final a un switch o router", "Convertir una dirección IPv4 en IPv6", "Amplificar por sí solo una señal Wi-Fi", "Sustituir el protocolo TCP"],
-        correcta: 0
-    },
-    {
-        pregunta: "¿Para qué se utilizaba tradicionalmente un cable Ethernet cruzado?",
-        opciones: ["Para conectar directamente dispositivos del mismo tipo, como dos ordenadores, cuando no había auto-MDI-X", "Para conectar una pantalla al ordenador", "Para llevar alimentación de red eléctrica", "Para convertir fibra óptica en señal Wi-Fi sin equipo adicional"],
-        correcta: 0
-    },
-    {
-        pregunta: "¿Qué ventaja suele ofrecer la fibra óptica frente al cobre en enlaces largos?",
-        opciones: ["Mayor inmunidad a interferencias electromagnéticas y menor atenuación en muchos enlaces", "No necesita equipos de transmisión en ningún caso", "Siempre es más barata de instalar", "Permite transportar corriente eléctrica por el núcleo óptico"],
-        correcta: 0
-    },
-    {
-        pregunta: "¿Qué significa que un cable de par trenzado sea apantallado?",
-        opciones: ["Que incorpora una pantalla metálica para ayudar a proteger frente a interferencias", "Que no tiene cubierta exterior", "Que transmite los datos por luz", "Que no necesita conectores"],
-        correcta: 0
-    },
-    {
-        pregunta: "¿Qué problema puede causar una longitud excesiva o una instalación defectuosa de cable de cobre Ethernet?",
-        opciones: ["Atenuación, errores de transmisión o pérdida de conexión", "Que cambie automáticamente la dirección MAC", "Que TCP se convierta en UDP", "Que el cable asigne direcciones IP"],
-        correcta: 0
-    },
-
+    
 ];
 
 
 // ==================================================
-// VARIABLES DEL TEST
-// ==================================================
+// VARIABLES Y FUNCIONAMIENTO DEL TEST
 
 let preguntasTest = [];
-
 let preguntaActual = 0;
-
 let respuestasUsuario = [];
-
 let opcionesMezcladas = [];
-
-let modoAleatorioActual = false;
-
 let tiempo = 0;
-
 let intervalo = null;
-
-
-// ==================================================
-// ELEMENTOS HTML
-// ==================================================
+let modoActual = "normal";
+const DURACION_EXAMEN = 30 * 60;
 
 const seleccionModo = document.getElementById("seleccionModo");
-
 const test = document.getElementById("test");
-
 const resultado = document.getElementById("resultado");
-
 const botonNormal = document.getElementById("modoNormal");
-
 const botonAleatorio = document.getElementById("modoAleatorio");
-
+const botonExamen = document.getElementById("modoExamen");
 const preguntaElemento = document.getElementById("pregunta");
-
 const opcionesElemento = document.getElementById("opciones");
-
 const botonAnterior = document.getElementById("botonAnterior");
-
 const botonReiniciarTest = document.getElementById("botonReiniciarTest");
-
 const botonSiguiente = document.getElementById("botonSiguiente");
-
 const numeroPregunta = document.getElementById("numeroPregunta");
-
 const puntuacionElemento = document.getElementById("puntuacion");
-
 const contador = document.getElementById("contador");
-
 const barraProgreso = document.getElementById("barra-progreso");
-
 const nota = document.getElementById("nota");
-
 const mensajeResultado = document.getElementById("mensajeResultado");
-
 const tiempoFinal = document.getElementById("tiempoFinal");
-
 const botonReiniciar = document.getElementById("botonReiniciar");
 
-
-// ==================================================
-// MEZCLAR ARRAY
-// ==================================================
-
 function mezclar(array) {
-
-    return array.sort(() => Math.random() - 0.5);
-
+    const copia = [...array];
+    for (let i = copia.length - 1; i > 0; i--) {
+        const j = Math.floor(Math.random() * (i + 1));
+        [copia[i], copia[j]] = [copia[j], copia[i]];
+    }
+    return copia;
 }
 
-
-// ==================================================
-// INICIAR TEST
-// ==================================================
-
-function iniciarTest(aleatorio) {
-
-    modoAleatorioActual = aleatorio;
-
-    preguntasTest = [...preguntas];
-
-    if (aleatorio) {
-
-        preguntasTest = mezclar(preguntasTest);
-
-    }
-
+function iniciarTest(aleatorio, examen = false) {
+    clearInterval(intervalo);
+    modoActual = examen ? "examen" : (aleatorio ? "aleatorio" : "normal");
+    preguntasTest = aleatorio ? mezclar(preguntas) : [...preguntas];
     preguntaActual = 0;
-
-    respuestasUsuario =
-        new Array(preguntasTest.length).fill(null);
-
-    opcionesMezcladas =
-        new Array(preguntasTest.length);
-
-
-    // Mezclamos las respuestas una sola vez
-    // para cada pregunta.
-
-    preguntasTest.forEach((pregunta, indice) => {
-
-        let opciones = pregunta.opciones.map(
-            (texto, posicion) => {
-
-                return {
-                    texto: texto,
-                    indice: posicion
-                };
-
-            }
-        );
-
-        opcionesMezcladas[indice] = mezclar(opciones);
-
-    });
-
-
-    seleccionModo.classList.add("oculto");
-
-    resultado.classList.add("oculto");
-
-    test.classList.remove("oculto");
-
-
-    tiempo = 0;
-
-    actualizarCronometro();
-
-    iniciarCronometro();
-
-    mostrarPregunta();
-
-}
-
-
-// ==================================================
-// MOSTRAR PREGUNTA
-// ==================================================
-
-function mostrarPregunta() {
-
-    const pregunta =
-        preguntasTest[preguntaActual];
-
-    const opciones =
-        opcionesMezcladas[preguntaActual];
-
-
-    preguntaElemento.textContent =
-        pregunta.pregunta;
-
-
-    numeroPregunta.textContent =
-        `Pregunta ${preguntaActual + 1} de ${preguntasTest.length}`;
-
-
-    puntuacionElemento.textContent =
-        `Puntos: ${calcularPuntos()} `;
-
-
-    const progreso =
-        (preguntaActual / preguntasTest.length) * 100;
-
-
-    barraProgreso.style.width =
-        `${progreso}%`;
-
-
-    opcionesElemento.innerHTML = "";
-
-
-    opciones.forEach(opcion => {
-
-        const boton =
-            document.createElement("button");
-
-
-        boton.classList.add("opcion");
-
-        boton.textContent =
-            opcion.texto;
-
-
-        const respuestaGuardada =
-            respuestasUsuario[preguntaActual];
-
-
-        // Si ya había una respuesta seleccionada,
-        // mostramos su estado.
-
-        if (respuestaGuardada !== null) {
-
-            if (opcion.indice === pregunta.correcta) {
-
-                boton.classList.add("correcta");
-
-            }
-
-            if (
-                opcion.indice === respuestaGuardada &&
-                respuestaGuardada !== pregunta.correcta
-            ) {
-
-                boton.classList.add("incorrecta");
-
-            }
-
-            boton.disabled = true;
-
-        } else {
-
-            boton.addEventListener("click", () => {
-
-                seleccionarRespuesta(
-                    opcion.indice
-                );
-
-            });
-
-        }
-
-
-        opcionesElemento.appendChild(boton);
-
-    });
-
-
-    // Botón anterior
-
-    if (preguntaActual === 0) {
-
-        botonAnterior.disabled = true;
-
-    } else {
-
-        botonAnterior.disabled = false;
-
-    }
-
-
-    // Botón siguiente
-
-    if (respuestasUsuario[preguntaActual] === null) {
-
-        botonSiguiente.disabled = true;
-
-    } else {
-
-        botonSiguiente.disabled = false;
-
-    }
-
-
-    // En la última pregunta cambiamos el texto
-
-    if (
-        preguntaActual ===
-        preguntasTest.length - 1
-    ) {
-
-        botonSiguiente.textContent =
-            "Terminar ✓";
-
-    } else {
-
-        botonSiguiente.textContent =
-            "Siguiente →";
-
-    }
-
-}
-
-
-// ==================================================
-// SELECCIONAR RESPUESTA
-// ==================================================
-
-function seleccionarRespuesta(indiceSeleccionado) {
-
-    const pregunta =
-        preguntasTest[preguntaActual];
-
-
-    respuestasUsuario[preguntaActual] =
-        indiceSeleccionado;
-
-
-    mostrarPregunta();
-
-}
-
-
-// ==================================================
-// CALCULAR PUNTOS
-// ==================================================
-
-function calcularPuntos() {
-
-    let puntos = 0;
-
-
-    respuestasUsuario.forEach(
-        (respuesta, indice) => {
-
-            if (
-                respuesta !== null &&
-                respuesta ===
-                preguntasTest[indice].correcta
-            ) {
-
-                puntos++;
-
-            }
-
-        }
+    respuestasUsuario = new Array(preguntasTest.length).fill(null);
+    opcionesMezcladas = preguntasTest.map(p =>
+        mezclar(p.opciones.map((texto, indice) => ({ texto, indice })))
     );
 
+    seleccionModo.classList.add("oculto");
+    resultado.classList.add("oculto");
+    test.classList.remove("oculto");
 
-    return puntos;
-
+    tiempo = examen ? DURACION_EXAMEN : 0;
+    actualizarCronometro();
+    iniciarCronometro();
+    mostrarPregunta();
 }
 
+function mostrarPregunta() {
+    if (!preguntasTest.length) return;
+    const pregunta = preguntasTest[preguntaActual];
+    preguntaElemento.textContent = pregunta.pregunta;
+    numeroPregunta.textContent = `Pregunta ${preguntaActual + 1} de ${preguntasTest.length}`;
+    puntuacionElemento.textContent = modoActual === "examen"
+        ? `Respondidas: ${respuestasUsuario.filter(r => r !== null).length}/${preguntasTest.length}`
+        : `Puntos: ${calcularPuntos()}`;
+    barraProgreso.style.width = `${((preguntaActual + 1) / preguntasTest.length) * 100}%`;
+    opcionesElemento.innerHTML = "";
 
-// ==================================================
-// BOTÓN ANTERIOR
-// ==================================================
+    opcionesMezcladas[preguntaActual].forEach(opcion => {
+        const boton = document.createElement("button");
+        boton.classList.add("opcion");
+        boton.textContent = opcion.texto;
+        const respuestaGuardada = respuestasUsuario[preguntaActual];
+
+        if (modoActual !== "examen" && respuestaGuardada !== null) {
+            if (opcion.indice === pregunta.correcta) boton.classList.add("correcta");
+            if (opcion.indice === respuestaGuardada && respuestaGuardada !== pregunta.correcta) {
+                boton.classList.add("incorrecta");
+            }
+            boton.disabled = true;
+        } else {
+            if (respuestaGuardada === opcion.indice) boton.classList.add("seleccionada");
+            boton.addEventListener("click", () => {
+                respuestasUsuario[preguntaActual] = opcion.indice;
+                mostrarPregunta();
+            });
+        }
+        opcionesElemento.appendChild(boton);
+    });
+
+    botonAnterior.disabled = preguntaActual === 0;
+    // En modo examen se puede avanzar aunque la pregunta esté sin responder.
+    botonSiguiente.disabled = modoActual !== "examen" && respuestasUsuario[preguntaActual] === null;
+    botonSiguiente.textContent = preguntaActual === preguntasTest.length - 1
+        ? (modoActual === "examen" ? "Entregar examen ✓" : "Terminar test ✓")
+        : "Siguiente →";
+}
+
+function calcularPuntos() {
+    return respuestasUsuario.reduce((total, respuesta, indice) =>
+        total + (respuesta !== null && respuesta === preguntasTest[indice].correcta ? 1 : 0), 0);
+}
 
 botonAnterior.addEventListener("click", () => {
-
     if (preguntaActual > 0) {
-
         preguntaActual--;
-
         mostrarPregunta();
-
     }
-
 });
-
-
-// ==================================================
-// BOTÓN SIGUIENTE
-// ==================================================
 
 botonSiguiente.addEventListener("click", () => {
-
-    if (
-        preguntaActual <
-        preguntasTest.length - 1
-    ) {
-
+    if (modoActual !== "examen" && respuestasUsuario[preguntaActual] === null) return;
+    if (preguntaActual < preguntasTest.length - 1) {
         preguntaActual++;
-
         mostrarPregunta();
-
     } else {
-
-        terminarTest();
-
+        terminarTest(false);
     }
-
 });
 
+botonNormal.addEventListener("click", () => iniciarTest(false, false));
+botonAleatorio.addEventListener("click", () => iniciarTest(true, false));
+if (botonExamen) botonExamen.addEventListener("click", () => iniciarTest(true, true));
 
-// ==================================================
-// REINICIAR TEST
-// ==================================================
+botonReiniciarTest.addEventListener("click", () => volverSeleccionModo());
+botonReiniciar.addEventListener("click", () => volverSeleccionModo());
 
-botonReiniciarTest.addEventListener("click", () => {
-
+function volverSeleccionModo() {
     clearInterval(intervalo);
-
-
-    preguntasTest = [];
-
-    respuestasUsuario = [];
-
-    opcionesMezcladas = [];
-
-    preguntaActual = 0;
-
-    tiempo = 0;
-
-
+    intervalo = null;
     test.classList.add("oculto");
-
     resultado.classList.add("oculto");
-
     seleccionModo.classList.remove("oculto");
-
-
-    botonSiguiente.textContent =
-        "Siguiente →";
-
-
+    preguntasTest = [];
+    respuestasUsuario = [];
+    opcionesMezcladas = [];
+    preguntaActual = 0;
+    tiempo = 0;
+    modoActual = "normal";
+    botonSiguiente.textContent = "Siguiente →";
     botonSiguiente.disabled = true;
-
     botonAnterior.disabled = true;
-
-
     actualizarCronometro();
-
-});
-
-
-// ==================================================
-// CRONÓMETRO
-// ==================================================
+}
 
 function iniciarCronometro() {
-
     clearInterval(intervalo);
-
-
     intervalo = setInterval(() => {
-
-        tiempo++;
-
+        if (modoActual === "examen") {
+            tiempo--;
+            if (tiempo <= 0) {
+                tiempo = 0;
+                actualizarCronometro();
+                terminarTest(true);
+                return;
+            }
+        } else {
+            tiempo++;
+        }
         actualizarCronometro();
-
     }, 1000);
-
 }
-
 
 function actualizarCronometro() {
-
-    const minutos =
-        Math.floor(tiempo / 60);
-
-
-    const segundos =
-        tiempo % 60;
-
-
-    contador.textContent =
-        `⏱️ ${String(minutos).padStart(2, "0")}:${String(segundos).padStart(2, "0")}`;
-
+    const minutos = Math.floor(tiempo / 60);
+    const segundos = tiempo % 60;
+    contador.textContent = `⏱️ ${String(minutos).padStart(2, "0")}:${String(segundos).padStart(2, "0")}`;
+    if (modoActual === "examen" && tiempo <= 300) contador.classList.add("tiempo-urgente");
+    else contador.classList.remove("tiempo-urgente");
 }
 
-
-// ==================================================
-// TERMINAR TEST
-// ==================================================
-
-function terminarTest() {
-
+function terminarTest(porTiempo = false) {
+    if (resultado.classList.contains("oculto") === false) return;
     clearInterval(intervalo);
+    intervalo = null;
 
-
-    const puntos =
-        calcularPuntos();
-
-
-    const total =
-        preguntasTest.length;
-
-
-    const porcentaje =
-        (puntos / total) * 100;
-
-
-    const notaFinal =
-        (puntos / total) * 10;
-
+    const puntos = calcularPuntos();
+    const total = preguntasTest.length;
+    const respondidas = respuestasUsuario.filter(r => r !== null).length;
+    const sinResponder = total - respondidas;
+    const fallos = respondidas - puntos;
+    const porcentaje = total ? puntos / total * 100 : 0;
+    const notaFinal = total ? puntos / total * 10 : 0;
 
     test.classList.add("oculto");
-
     resultado.classList.remove("oculto");
-
-
-    barraProgreso.style.width =
-        "100%";
-
-
-    nota.textContent =
-        `${notaFinal.toFixed(2)}/10`;
-
+    barraProgreso.style.width = "100%";
+    nota.textContent = `${notaFinal.toFixed(2)}/10`;
 
     mensajeResultado.textContent =
-        `Has acertado ${puntos} de ${total} preguntas (${porcentaje.toFixed(1)}%).`;
+        `Aciertos: ${puntos} · Fallos: ${fallos} · Sin responder: ${sinResponder} · Total: ${total} (${porcentaje.toFixed(1)}% de aciertos).`;
 
-
-    const minutos =
-        Math.floor(tiempo / 60);
-
-
-    const segundos =
-        tiempo % 60;
-
-
-    tiempoFinal.textContent =
-        `⏱️ Tiempo empleado: ${String(minutos).padStart(2, "0")}:${String(segundos).padStart(2, "0")}`;
-
+    if (modoActual === "examen") {
+        tiempoFinal.textContent = porTiempo
+            ? "⏰ Tiempo agotado. El examen se ha entregado automáticamente."
+            : `📝 Examen entregado. Tiempo restante: ${String(Math.floor(tiempo / 60)).padStart(2, "0")}:${String(tiempo % 60).padStart(2, "0")}`;
+    } else {
+        tiempoFinal.textContent = `⏱️ Tiempo empleado: ${String(Math.floor(tiempo / 60)).padStart(2, "0")}:${String(tiempo % 60).padStart(2, "0")}`;
+    }
 }
-
-
-// ==================================================
-// MODO NORMAL
-// ==================================================
-
-botonNormal.addEventListener("click", () => {
-
-    iniciarTest(false);
-
-});
-
-
-// ==================================================
-// MODO ALEATORIO
-// ==================================================
-
-botonAleatorio.addEventListener("click", () => {
-
-    iniciarTest(true);
-
-});
-
-
-// ==================================================
-// VOLVER A HACER EL TEST
-// ==================================================
-
-botonReiniciar.addEventListener("click", () => {
-
-    clearInterval(intervalo);
-
-
-    resultado.classList.add("oculto");
-
-    test.classList.add("oculto");
-
-    seleccionModo.classList.remove("oculto");
-
-
-    preguntasTest = [];
-
-    respuestasUsuario = [];
-
-    opcionesMezcladas = [];
-
-    preguntaActual = 0;
-
-    tiempo = 0;
-
-
-    botonSiguiente.textContent =
-        "Siguiente →";
-
-
-    botonSiguiente.disabled = true;
-
-    botonAnterior.disabled = true;
-
-
-    actualizarCronometro();
-
-});
