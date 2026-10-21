@@ -444,3 +444,14 @@ body {
     }
 
 }
+
+
+/* Modo examen */
+#modoExamen { background: #7b2d26; }
+#modoExamen:hover { background: #9b3b32; }
+.opcion.seleccionada { border-color: #2c5364; background: #e2eef2; }
+#contador.tiempo-urgente { color: #c62828; }
+.botones-navegacion { display: flex; flex-wrap: wrap; gap: 10px; align-items: center; }
+@media (max-width: 600px) {
+    .botones-navegacion .boton { flex: 1 1 100%; }
+}
