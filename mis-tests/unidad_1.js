@@ -2693,10 +2693,137 @@ const preguntas = [
             "El mensaje se transmite sin ningún tipo de información de control"
         ],
         correcta: 0
-    }
-  
+    },
 
-    
+    // ==================================================
+    // AMPLIACIÓN: LAS SIETE CAPAS DEL MODELO OSI
+    // ==================================================
+    {
+        pregunta: "¿Qué función realiza la capa Física del modelo OSI?",
+        opciones: ["Transmitir bits como señales por el medio físico", "Asignar direcciones IP", "Controlar sesiones entre aplicaciones", "Cifrar los datos de una aplicación"],
+        correcta: 0
+    },
+    {
+        pregunta: "¿Qué función corresponde a la capa de Enlace de datos?",
+        opciones: ["Resolver nombres de dominio", "Organizar los bits en tramas y gestionar direcciones MAC", "Elegir rutas entre redes mediante direcciones IP", "Ofrecer servicios directamente a las aplicaciones"],
+        correcta: 1
+    },
+    {
+        pregunta: "¿Qué dispositivo trabaja principalmente en la capa de Red para encaminar paquetes entre redes?",
+        opciones: ["Hub", "Repetidor", "Router", "Conector RJ-45"],
+        correcta: 2
+    },
+    {
+        pregunta: "¿Qué función realiza la capa de Transporte del modelo OSI?",
+        opciones: ["Transmitir señales eléctricas", "Gestionar la entrega de datos entre procesos y, según el protocolo, su fiabilidad", "Definir la dirección MAC de una tarjeta", "Convertir los datos en señales luminosas"],
+        correcta: 1
+    },
+    {
+        pregunta: "¿Qué tarea se asocia a la capa de Sesión?",
+        opciones: ["Establecer, mantener y finalizar sesiones de comunicación", "Encaminar paquetes usando direcciones IP", "Transmitir bits por un cable", "Determinar la dirección MAC de destino"],
+        correcta: 0
+    },
+    {
+        pregunta: "¿Qué función puede realizar la capa de Presentación?",
+        opciones: ["Seleccionar la ruta del paquete", "Convertir formatos y realizar compresión o cifrado de datos", "Repetir una señal eléctrica", "Asignar puertos TCP"],
+        correcta: 1
+    },
+    {
+        pregunta: "¿Qué describe mejor la capa de Aplicación del modelo OSI?",
+        opciones: ["El medio físico de transmisión", "La comunicación directa con los servicios de red que utilizan las aplicaciones", "El direccionamiento MAC", "La señalización eléctrica del cable"],
+        correcta: 1
+    },
+    {
+        pregunta: "¿A qué capa del modelo OSI se asocia normalmente Ethernet cuando se habla de tramas y direcciones MAC?",
+        opciones: ["Aplicación", "Presentación", "Enlace de datos", "Sesión"],
+        correcta: 2
+    },
+    {
+        pregunta: "¿Qué protocolo de la capa de Transporte ofrece una comunicación fiable y orientada a conexión?",
+        opciones: ["IP", "TCP", "ARP", "Ethernet"],
+        correcta: 1
+    },
+    {
+        pregunta: "¿Qué protocolo de Transporte prioriza la sencillez y no garantiza por sí mismo la entrega de los datagramas?",
+        opciones: ["UDP", "TCP", "IP", "HTTP"],
+        correcta: 0
+    },
+    {
+        pregunta: "¿Cuál es la función principal de IP en la arquitectura TCP/IP?",
+        opciones: ["Mostrar páginas web", "Direccionar datagramas y permitir su encaminamiento entre redes", "Cifrar siempre todos los datos", "Comprobar el estado físico de un cable"],
+        correcta: 1
+    },
+    {
+        pregunta: "¿Qué capa de TCP/IP agrupa las funciones de las capas Física y Enlace del modelo OSI?",
+        opciones: ["Aplicación", "Transporte", "Internet", "Acceso a la red"],
+        correcta: 3
+    },
+    {
+        pregunta: "¿En qué capa de TCP/IP se encuentran normalmente protocolos como HTTP, DNS y SMTP?",
+        opciones: ["Acceso a la red", "Internet", "Transporte", "Aplicación"],
+        correcta: 3
+    },
+    {
+        pregunta: "¿Qué protocolo se utiliza habitualmente para traducir nombres de dominio, como ejemplo.com, a direcciones IP?",
+        opciones: ["DNS", "FTP", "Ethernet", "ARP exclusivamente"],
+        correcta: 0
+    },
+    {
+        pregunta: "¿Qué diferencia general existe entre TCP y UDP?",
+        opciones: ["TCP es orientado a conexión y aporta fiabilidad; UDP tiene menos mecanismos de control", "UDP solo funciona en cables de fibra", "TCP se utiliza únicamente para direcciones MAC", "No existe ninguna diferencia"],
+        correcta: 0
+    },
+    {
+        pregunta: "¿Qué tipo de cable de red utiliza pares de hilos de cobre trenzados para reducir interferencias?",
+        opciones: ["Fibra óptica", "Par trenzado", "Cable coaxial de antena únicamente", "Cable de alimentación"],
+        correcta: 1
+    },
+    {
+        pregunta: "¿Qué diferencia al cable UTP del cable STP?",
+        opciones: ["UTP no tiene apantallamiento; STP incorpora apantallamiento para reducir interferencias", "UTP utiliza luz y STP utiliza ondas de radio", "STP no tiene conductores", "UTP solo sirve para televisión"],
+        correcta: 0
+    },
+    {
+        pregunta: "¿Para qué se utiliza habitualmente un cable de fibra óptica?",
+        opciones: ["Transmitir datos mediante pulsos de luz, con gran capacidad y resistencia a interferencias electromagnéticas", "Conectar directamente dos teclados PS/2", "Transportar corriente eléctrica para alimentar el ordenador", "Transmitir datos mediante pares de cobre sin aislamiento"],
+        correcta: 0
+    },
+    {
+        pregunta: "¿Qué partes caracterizan a un cable coaxial?",
+        opciones: ["Un núcleo conductor, aislamiento y una pantalla conductora", "Únicamente fibras de vidrio sin cubierta", "Cuatro pares trenzados sin ningún recubrimiento", "Dos conectores USB unidos sin cable"],
+        correcta: 0
+    },
+    {
+        pregunta: "¿Qué conector se utiliza habitualmente con el cable Ethernet de par trenzado en redes LAN?",
+        opciones: ["RJ-45 (8P8C)", "HDMI", "VGA", "Jack de audio de 3,5 mm"],
+        correcta: 0
+    },
+    {
+        pregunta: "¿Para qué sirve un cable Ethernet directo en una instalación tradicional?",
+        opciones: ["Conectar normalmente un equipo final a un switch o router", "Convertir una dirección IPv4 en IPv6", "Amplificar por sí solo una señal Wi-Fi", "Sustituir el protocolo TCP"],
+        correcta: 0
+    },
+    {
+        pregunta: "¿Para qué se utilizaba tradicionalmente un cable Ethernet cruzado?",
+        opciones: ["Para conectar directamente dispositivos del mismo tipo, como dos ordenadores, cuando no había auto-MDI-X", "Para conectar una pantalla al ordenador", "Para llevar alimentación de red eléctrica", "Para convertir fibra óptica en señal Wi-Fi sin equipo adicional"],
+        correcta: 0
+    },
+    {
+        pregunta: "¿Qué ventaja suele ofrecer la fibra óptica frente al cobre en enlaces largos?",
+        opciones: ["Mayor inmunidad a interferencias electromagnéticas y menor atenuación en muchos enlaces", "No necesita equipos de transmisión en ningún caso", "Siempre es más barata de instalar", "Permite transportar corriente eléctrica por el núcleo óptico"],
+        correcta: 0
+    },
+    {
+        pregunta: "¿Qué significa que un cable de par trenzado sea apantallado?",
+        opciones: ["Que incorpora una pantalla metálica para ayudar a proteger frente a interferencias", "Que no tiene cubierta exterior", "Que transmite los datos por luz", "Que no necesita conectores"],
+        correcta: 0
+    },
+    {
+        pregunta: "¿Qué problema puede causar una longitud excesiva o una instalación defectuosa de cable de cobre Ethernet?",
+        opciones: ["Atenuación, errores de transmisión o pérdida de conexión", "Que cambie automáticamente la dirección MAC", "Que TCP se convierta en UDP", "Que el cable asigne direcciones IP"],
+        correcta: 0
+    },
+
 ];
 
 
