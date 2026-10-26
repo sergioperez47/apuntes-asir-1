@@ -940,721 +940,6 @@ const preguntas = [
             "Meter todos los procesos directamente en la CPU"
         ],
         correcta: 0
-    },
-{
-    pregunta: "¿Qué tipo de datos se utiliza en documentos y correos electrónicos?",
-    opciones: [
-        "Texto",
-        "Numéricos",
-        "Gráficos",
-        "Audio"
-    ],
-    correcta: 0
-},
-{
-    pregunta: "¿Qué tipo de datos se utiliza para realizar cálculos en hojas de Excel?",
-    opciones: [
-        "Texto",
-        "Numéricos",
-        "Gráficos",
-        "Vídeo"
-    ],
-    correcta: 1
-},
-{
-    pregunta: "¿Qué tipo de datos incluye imágenes y fotografías?",
-    opciones: [
-        "Audio",
-        "Texto",
-        "Gráficos",
-        "Numéricos"
-    ],
-    correcta: 2
-},
-{
-    pregunta: "¿Qué tipo de datos incluye música y grabaciones?",
-    opciones: [
-        "Vídeo",
-        "Gráficos",
-        "Texto",
-        "Audio"
-    ],
-    correcta: 3
-},
-{
-    pregunta: "¿Qué tipo de datos incluye películas y contenido en streaming?",
-    opciones: [
-        "Vídeo",
-        "Numéricos",
-        "Texto",
-        "Gráficos"
-    ],
-    correcta: 0
-},
-   {
-    pregunta: "¿Qué característica tiene la memoria RAM?",
-    opciones: [
-        "Es volátil y almacena datos temporalmente",
-        "Es permanente y contiene el firmware",
-        "Es un dispositivo de salida",
-        "Realiza operaciones matemáticas y lógicas"
-    ],
-    correcta: 0
-},
-{
-    pregunta: "¿Qué característica se asocia a la memoria ROM según los apuntes?",
-    opciones: [
-        "Es volátil y temporal",
-        "Es permanente y contiene firmware",
-        "Es un periférico de entrada",
-        "Es un bus de comunicación"
-    ],
-    correcta: 1
-},
-{
-    pregunta: "¿Cuáles son ejemplos de memoria secundaria?",
-    opciones: [
-        "RAM y ROM",
-        "Teclado y ratón",
-        "Discos duros (HDD) y discos sólidos (SSD)",
-        "Router y tarjeta de red"
-    ],
-    correcta: 2
-},
-{
-    pregunta: "¿Cuál de los siguientes es un ejemplo de almacenamiento externo?",
-    opciones: [
-        "Unidad de Control",
-        "Memoria USB",
-        "ALU",
-        "Bus de control"
-    ],
-    correcta: 1
-},
-{
-    pregunta: "¿Qué son los buses de un sistema informático?",
-    opciones: [
-        "Canales de comunicación que transportan datos",
-        "Dispositivos que muestran información",
-        "Memorias permanentes",
-        "Componentes que ejecutan instrucciones"
-    ],
-    correcta: 0
-},
-{
-    pregunta: "¿Cuáles son los tres tipos de buses indicados en los apuntes?",
-    opciones: [
-        "RAM, ROM y SSD",
-        "Entrada, salida y entrada/salida",
-        "Datos, direcciones y control",
-        "CPU, UC y ALU"
-    ],
-    correcta: 2
-},
-{
-    pregunta: "¿Cuál de estos grupos contiene únicamente periféricos de entrada?",
-    opciones: [
-        "Monitor, impresora y altavoces",
-        "Teclado, ratón y escáner",
-        "USB, monitor y router",
-        "Impresora, ratón y altavoces"
-    ],
-    correcta: 1
-},
-{
-    pregunta: "¿Cuál de estos grupos contiene únicamente periféricos de salida?",
-    opciones: [
-        "Teclado, ratón y escáner",
-        "USB, tarjeta SD y disco externo",
-        "Monitor, impresora y altavoces",
-        "Router, WiFi y Bluetooth"
-    ],
-    correcta: 2
-},
-{
-    pregunta: "¿Qué periféricos pueden realizar funciones de entrada y salida según los apuntes?",
-    opciones: [
-        "Teclado y escáner",
-        "Monitor e impresora",
-        "Memorias USB y discos externos",
-        "Altavoces y ratón"
-    ],
-    correcta: 2
-},
-{
-    pregunta: "¿Cuál de los siguientes grupos incluye dispositivos de comunicación?",
-    opciones: [
-        "Tarjeta de red, router, WiFi y Bluetooth",
-        "RAM, ROM, HDD y SSD",
-        "Teclado, ratón, monitor e impresora",
-        "UC, ALU y registros"
-    ],
-    correcta: 0
-},
-    {
-    pregunta: "¿Qué función del sistema operativo permite organizar y gestionar los archivos?",
-    opciones: [
-        "Administración de procesos",
-        "Sistema de archivos",
-        "Gestión de memoria",
-        "Interfaz de usuario"
-    ],
-    correcta: 1
-},
-{
-    pregunta: "¿Qué significan las siglas CLI y GUI?",
-    opciones: [
-        "Dos tipos de memoria",
-        "Dos tipos de procesador",
-        "Interfaz de línea de comandos e interfaz gráfica de usuario",
-        "Dos sistemas de almacenamiento"
-    ],
-    correcta: 2
-},
-{
-    pregunta: "¿Cuál de los siguientes grupos contiene ejemplos de sistemas operativos?",
-    opciones: [
-        "Windows, Linux, macOS y Android",
-        "Word, Excel, Photoshop y AutoCAD",
-        "Chrome, WhatsApp Desktop y Excel",
-        "RAM, ROM, HDD y SSD"
-    ],
-    correcta: 0
-},
-{
-    pregunta: "¿Cuál de los siguientes programas es un ejemplo de software de ofimática, además de Word?",
-    opciones: [
-        "AutoCAD",
-        "LibreOffice",
-        "Android",
-        "UEFI"
-    ],
-    correcta: 1
-},
-{
-    pregunta: "¿Cuál de los siguientes es un ejemplo de software de diseño mencionado en los apuntes?",
-    opciones: [
-        "Excel",
-        "Linux",
-        "AutoCAD",
-        "WhatsApp Desktop"
-    ],
-    correcta: 2
-},
-{
-    pregunta: "¿Cuál de los siguientes grupos contiene ejemplos de software de comunicación?",
-    opciones: [
-        "Navegadores web, clientes de correo y WhatsApp Desktop",
-        "Word, Excel y LibreOffice",
-        "Photoshop y AutoCAD",
-        "Windows, Linux y macOS"
-    ],
-    correcta: 0
-},
-{
-    pregunta: "¿Cuál de los siguientes es un ejemplo de software de juegos?",
-    opciones: [
-        "Un sistema de archivos",
-        "Un simulador o videojuego",
-        "Una interfaz de línea de comandos",
-        "Un controlador de memoria"
-    ],
-    correcta: 1
-},
-   
-    {
-        pregunta: "¿Qué componente del sistema operativo se carga en memoria al arrancar y gestiona el procesador y la memoria?",
-        opciones: [
-            "El kernel o núcleo",
-            "La interfaz gráfica",
-            "La aplicación de usuario",
-            "El sistema de archivos exclusivamente"
-        ],
-        correcta: 0
-    },
-    {
-        pregunta: "¿Cuál es la función de la capa de servicios de un sistema operativo?",
-        opciones: [
-            "Gestionar procesos, memoria y entrada/salida, entre otros servicios",
-            "Sustituir físicamente al procesador",
-            "Mostrar únicamente iconos en pantalla",
-            "Almacenar exclusivamente las contraseñas"
-        ],
-        correcta: 0
-    },
-    {
-        pregunta: "¿Qué es una shell?",
-        opciones: [
-            "Una interfaz mediante comandos",
-            "Un tipo de memoria RAM",
-            "Un componente físico de la CPU",
-            "Una licencia de software"
-        ],
-        correcta: 0
-    },
-    {
-        pregunta: "¿Cómo se caracteriza la arquitectura monolítica?",
-        opciones: [
-            "Gran parte de los componentes se ejecutan dentro del espacio del kernel",
-            "Todos los servicios se ejecutan exclusivamente como aplicaciones independientes",
-            "No dispone de gestión de memoria",
-            "Necesita siempre varios ordenadores conectados"
-        ],
-        correcta: 0
-    },
-    {
-        pregunta: "¿Cuál es una ventaja de la arquitectura monolítica?",
-        opciones: [
-            "La comunicación rápida entre sus componentes",
-            "Que un error nunca puede afectar al resto del sistema",
-            "Que todos sus servicios se ejecutan sin kernel",
-            "Que no necesita controladores"
-        ],
-        correcta: 0
-    },
-    {
-        pregunta: "¿Cuál es una desventaja de la arquitectura monolítica?",
-        opciones: [
-            "Un error en un servicio puede provocar la caída de todo el sistema",
-            "La comunicación entre componentes siempre es demasiado lenta",
-            "No permite gestionar procesos",
-            "Solo funciona con interfaces gráficas"
-        ],
-        correcta: 0
-    },
-    {
-        pregunta: "¿Qué caracteriza a la arquitectura microkernel?",
-        opciones: [
-            "Mantiene en el núcleo solo las funciones esenciales y ejecuta otros servicios como procesos independientes",
-            "Incluye todos los servicios en un único programa dentro del kernel",
-            "Elimina la comunicación entre procesos",
-            "Solo permite ejecutar una aplicación"
-        ],
-        correcta: 0
-    },
-    {
-        pregunta: "¿Qué ventaja de seguridad ofrece el microkernel según el PDF?",
-        opciones: [
-            "Los servidores en modo usuario tienen menos acceso directo al hardware",
-            "Todos los programas tienen permisos de administrador",
-            "Elimina la necesidad de proteger los procesos",
-            "Impide utilizar aplicaciones de red"
-        ],
-        correcta: 0
-    },
-    {
-        pregunta: "¿Qué inconveniente puede tener un microkernel?",
-        opciones: [
-            "La comunicación entre clientes y servidores puede introducir cambios de contexto y reducir el rendimiento",
-            "No permite separar los servicios",
-            "Todos los errores provocan necesariamente la caída del ordenador",
-            "No puede gestionar memoria"
-        ],
-        correcta: 0
-    },
-    {
-        pregunta: "¿Qué arquitectura combina características de los diseños monolítico y microkernel?",
-        opciones: [
-            "Híbrida",
-            "Distribuida",
-            "Monotarea",
-            "Centralizada"
-        ],
-        correcta: 0
-    },
-    {
-        pregunta: "¿Qué ventaja de la arquitectura híbrida se menciona en el PDF?",
-        opciones: [
-            "Combina rendimiento con flexibilidad y modularidad",
-            "Elimina completamente el kernel",
-            "Evita que se puedan cargar módulos",
-            "Obliga a ejecutar todos los servicios en un ordenador distinto"
-        ],
-        correcta: 0
-    },
-    {
-        pregunta: "¿Qué sistemas se citan como ejemplos de microkernel o que incorporan ideas de este diseño?",
-        opciones: [
-            "GNU Hurd, QNX y Minix",
-            "MS-DOS y Windows Me exclusivamente",
-            "Photoshop, Word y Excel",
-            "BIOS, UEFI y RAM"
-        ],
-        correcta: 0
-    },
-    
-    {
-        pregunta: "¿Qué caracterizaba a los ordenadores de la etapa sin sistema operativo (1940-1955)?",
-        opciones: [
-            "Programación directa en código máquina e interacción manual con el hardware",
-            "Uso generalizado de interfaces gráficas",
-            "Uso de teléfonos inteligentes",
-            "Virtualización masiva de servidores"
-        ],
-        correcta: 0
-    },
-    {
-        pregunta: "¿Qué tecnología sustituyó a las válvulas de vacío en la segunda generación?",
-        opciones: [
-            "Los transistores",
-            "Los circuitos integrados",
-            "Los microprocesadores modernos",
-            "Las pantallas táctiles"
-        ],
-        correcta: 0
-    },
-    {
-        pregunta: "¿Qué técnica de procesamiento aparece en los primeros sistemas operativos de la segunda generación?",
-        opciones: [
-            "Procesamiento por lotes o batch",
-            "Interfaz gráfica multitáctil",
-            "Computación móvil",
-            "Virtualización de escritorios en la nube"
-        ],
-        correcta: 0
-    },
-    {
-        pregunta: "¿Para qué se utilizaba el ordenador satélite en la segunda generación?",
-        opciones: [
-            "Para gestionar operaciones lentas de entrada/salida y liberar al ordenador principal",
-            "Para sustituir todos los transistores",
-            "Para ejecutar exclusivamente videojuegos",
-            "Para proporcionar una interfaz gráfica"
-        ],
-        correcta: 0
-    },
-    {
-        pregunta: "¿Qué avances caracterizaron a la tercera generación (1965-1980)?",
-        opciones: [
-            "Circuitos integrados, multiprogramación, tiempo compartido y memoria virtual",
-            "Ausencia total de sistemas operativos",
-            "Popularización de los teléfonos inteligentes",
-            "Aparición exclusiva de Windows 11"
-        ],
-        correcta: 0
-    },
-    {
-        pregunta: "¿Qué proyecto se considera precursor de UNIX en el PDF?",
-        opciones: [
-            "MULTICS",
-            "OS/2",
-            "MS-DOS",
-            "Android"
-        ],
-        correcta: 0
-    },
-    {
-        pregunta: "¿Qué avance tecnológico impulsó los ordenadores personales en la cuarta generación (1980-1990)?",
-        opciones: [
-            "La revolución del microprocesador",
-            "La sustitución de los ordenadores por teléfonos inteligentes",
-            "La desaparición de los sistemas operativos",
-            "La aparición de las tarjetas perforadas"
-        ],
-        correcta: 0
-    },
-    {
-        pregunta: "¿Qué sistema operativo aparece en la cuarta generación como precursor de la familia Windows 9x, según el PDF?",
-        opciones: [
-            "OS/2",
-            "MULTICS",
-            "QNX",
-            "GNU Hurd"
-        ],
-        correcta: 0
-    },
-    {
-        pregunta: "¿Qué cambio se popularizó durante la quinta generación (1990-2000)?",
-        opciones: [
-            "Los entornos gráficos de usuario y una experiencia más intuitiva",
-            "La programación exclusivamente en código máquina",
-            "La desaparición de Linux",
-            "El uso exclusivo de tarjetas perforadas"
-        ],
-        correcta: 0
-    },
-    {
-        pregunta: "¿Qué tendencias destaca el PDF para la sexta generación (2000-actualidad)?",
-        opciones: [
-            "Expansión de las redes y crecimiento de la computación móvil",
-            "Desaparición de las redes informáticas",
-            "Uso exclusivo de ordenadores sin sistema operativo",
-            "Regreso generalizado a las válvulas de vacío"
-        ],
-        correcta: 0
-    },
-    
-    {
-        pregunta: "¿Qué diferencia a un sistema operativo multiusuario de uno monousuario?",
-        opciones: [
-            "El multiusuario permite que varios usuarios utilicen el sistema simultáneamente",
-            "El multiusuario solo ejecuta una tarea",
-            "El monousuario siempre necesita Internet",
-            "No existe ninguna diferencia"
-        ],
-        correcta: 0
-    },
-    {
-        pregunta: "¿Qué diferencia existe entre un sistema monotarea y uno multitarea?",
-        opciones: [
-            "El monotarea ejecuta una tarea a la vez y el multitarea puede gestionar varias",
-            "El monotarea permite más usuarios que el multitarea",
-            "El multitarea no utiliza procesador",
-            "El monotarea solo funciona en teléfonos"
-        ],
-        correcta: 0
-    },
-    {
-        pregunta: "¿Qué caracteriza a un sistema operativo de tiempo compartido?",
-        opciones: [
-            "Alterna rápidamente entre tareas para compartir el sistema",
-            "Garantiza siempre plazos estrictos en aplicaciones críticas",
-            "Solo puede ejecutar una tarea durante toda la sesión",
-            "Gestiona exclusivamente recursos de varios ordenadores"
-        ],
-        correcta: 0
-    },
-    {
-        pregunta: "¿Qué caracteriza a un sistema operativo de tiempo real duro?",
-        opciones: [
-            "Debe cumplir los plazos estrictos sin excepciones",
-            "Puede incumplir los plazos sin consecuencias",
-            "Solo utiliza interfaces gráficas",
-            "Permite únicamente un usuario"
-        ],
-        correcta: 0
-    },
-    {
-        pregunta: "¿Qué diferencia al tiempo real blando del tiempo real duro?",
-        opciones: [
-            "El tiempo real blando admite cierta tolerancia en el cumplimiento de los plazos",
-            "El tiempo real blando no puede ejecutar procesos",
-            "El tiempo real duro solo funciona en ordenadores personales",
-            "No hay ninguna diferencia"
-        ],
-        correcta: 0
-    },
-    {
-        pregunta: "¿Qué diferencia existe entre sistemas centralizados y distribuidos según la gestión de recursos?",
-        opciones: [
-            "Los centralizados gestionan recursos de un ordenador y los distribuidos de varios ordenadores en red",
-            "Los centralizados no tienen memoria y los distribuidos sí",
-            "Los distribuidos solo permiten un usuario",
-            "Los centralizados siempre son móviles"
-        ],
-        correcta: 0
-    },
-    {
-        pregunta: "¿Cuál es un ejemplo de sistema operativo embebido según el PDF?",
-        opciones: [
-            "El sistema de un router o de un electrodoméstico inteligente",
-            "Un sistema exclusivamente para edición de textos",
-            "Una licencia Retail",
-            "Un programa de hojas de cálculo"
-        ],
-        correcta: 0
-    },
-
-    {
-        pregunta: "¿Qué define una licencia de software?",
-        opciones: [
-            "Las condiciones de uso y los derechos y obligaciones de las partes",
-            "La velocidad del procesador",
-            "La cantidad de memoria RAM",
-            "El tipo de interfaz gráfica"
-        ],
-        correcta: 0
-    },
-    {
-        pregunta: "¿Cuál es una característica habitual de un sistema operativo propietario según el PDF?",
-        opciones: [
-            "No se permite acceder al código fuente ni modificarlo libremente",
-            "Siempre debe distribuirse gratuitamente",
-            "Obliga a publicar todas las modificaciones",
-            "No necesita licencia de uso"
-        ],
-        correcta: 0
-    },
-    {
-        pregunta: "¿Qué caracteriza a una licencia OEM?",
-        opciones: [
-            "Suele venir preinstalada con un equipo y queda vinculada a ese dispositivo",
-            "Se puede transferir libremente a cualquier equipo",
-            "Está diseñada exclusivamente para publicar fotografías",
-            "Obliga a liberar todo el código modificado"
-        ],
-        correcta: 0
-    },
-    {
-        pregunta: "¿Qué diferencia principal tiene una licencia Retail frente a una OEM?",
-        opciones: [
-            "La Retail puede transferirse a otro equipo si se desinstala del anterior",
-            "La Retail solo puede utilizarse en el equipo con el que se compró",
-            "La Retail está destinada exclusivamente a desarrolladores",
-            "La Retail no permite instalar el sistema operativo"
-        ],
-        correcta: 0
-    },
-    {
-        pregunta: "¿Para quién está diseñada la licencia por volumen?",
-        opciones: [
-            "Para empresas y organizaciones que necesitan gestionar múltiples licencias",
-            "Exclusivamente para usuarios de teléfonos móviles",
-            "Para distribuir obras sin derechos de autor",
-            "Para sustituir el firmware del ordenador"
-        ],
-        correcta: 0
-    },
-    {
-        pregunta: "¿Cuál es la finalidad de las suscripciones para desarrolladores descritas en el PDF?",
-        opciones: [
-            "Probar, desarrollar y evaluar software",
-            "Utilizar cualquier software de evaluación en producción sin restricciones",
-            "Transferir automáticamente licencias OEM",
-            "Crear licencias Creative Commons"
-        ],
-        correcta: 0
-    },
-    {
-        pregunta: "¿Cuáles son las cuatro libertades del software libre descritas por Richard Stallman?",
-        opciones: [
-            "Uso, estudio, distribución y mejora",
-            "Compra, instalación, venta y eliminación",
-            "Lectura, escritura, ejecución y apagado",
-            "Copia, compresión, cifrado y borrado"
-        ],
-        correcta: 0
-    },
-    {
-        pregunta: "¿Qué exige la GPL para los trabajos derivados que se distribuyen?",
-        opciones: [
-            "Que se distribuyan bajo los mismos términos de la GPL",
-            "Que se conviertan en software propietario",
-            "Que no se puedan modificar",
-            "Que solo puedan utilizarse en ordenadores personales"
-        ],
-        correcta: 0
-    },
-    {
-        pregunta: "¿Qué permite la licencia MIT según el PDF?",
-        opciones: [
-            "Usar y modificar el código e integrarlo incluso en software propietario",
-            "Prohibir cualquier uso comercial",
-            "Obligar siempre a publicar el código del producto derivado",
-            "Distribuir únicamente copias sin modificaciones"
-        ],
-        correcta: 0
-    },
-    {
-        pregunta: "¿Qué característica adicional destaca la licencia Apache 2.0 frente a la MIT?",
-        opciones: [
-            "Incluye cláusulas explícitas sobre patentes",
-            "Prohíbe toda utilización comercial",
-            "Impide modificar el código fuente",
-            "Solo se aplica a fotografías"
-        ],
-        correcta: 0
-    },
-    
-    {
-        pregunta: "¿Qué significa BY en una licencia Creative Commons?",
-        opciones: [
-            "Atribución: hay que dar crédito al autor",
-            "No Comercial",
-            "Sin Obras Derivadas",
-            "Compartir Igual"
-        ],
-        correcta: 0
-    },
-    {
-        pregunta: "¿Qué significa SA en Creative Commons?",
-        opciones: [
-            "Compartir Igual",
-            "Atribución",
-            "No Comercial",
-            "Sin Obras Derivadas"
-        ],
-        correcta: 0
-    },
-    {
-        pregunta: "¿Qué significa NC en Creative Commons?",
-        opciones: [
-            "No Comercial",
-            "Compartir Igual",
-            "Atribución",
-            "Sin Obras Derivadas"
-        ],
-        correcta: 0
-    },
-    {
-        pregunta: "¿Qué significa ND en Creative Commons?",
-        opciones: [
-            "Sin Obras Derivadas",
-            "No Comercial",
-            "Compartir Igual",
-            "Atribución"
-        ],
-        correcta: 0
-    },
-    {
-        pregunta: "¿Qué permite la licencia CC BY según el PDF?",
-        opciones: [
-            "Usar la obra incluso comercialmente, siempre que se dé crédito al autor",
-            "Usar la obra solo con fines no comerciales",
-            "Compartir la obra únicamente sin modificaciones",
-            "No distribuir la obra"
-        ],
-        correcta: 0
-    },
-    {
-        pregunta: "¿Qué condición añade CC BY-SA?",
-        opciones: [
-            "Las obras derivadas distribuidas deben llevar la misma licencia",
-            "Se prohíbe cualquier uso comercial",
-            "No se permite modificar la obra",
-            "No es necesario reconocer al autor"
-        ],
-        correcta: 0
-    },
-    {
-        pregunta: "¿Qué permite CC BY-NC?",
-        opciones: [
-            "Modificar y compartir la obra, pero no utilizarla con fines comerciales",
-            "Utilizarla comercialmente sin atribución",
-            "Compartirla solo si no se modifica",
-            "Eliminar todos los derechos del autor"
-        ],
-        correcta: 0
-    },
-    {
-        pregunta: "¿Qué restricción tiene CC BY-ND?",
-        opciones: [
-            "No permite modificar la obra ni crear obras derivadas",
-            "Prohíbe toda distribución",
-            "Prohíbe siempre el uso comercial",
-            "Obliga a compartir igual todas las modificaciones"
-        ],
-        correcta: 0
-    },
-    {
-        pregunta: "¿Cuál es la licencia Creative Commons más restrictiva de las seis principales que aparecen en el PDF?",
-        opciones: [
-            "CC BY-NC-ND",
-            "CC BY",
-            "CC BY-SA",
-            "CC BY-NC"
-        ],
-        correcta: 0
-    },
-    {
-        pregunta: "¿Qué representa CC0?",
-        opciones: [
-            "La renuncia a los derechos hasta donde permite la ley para facilitar el uso como dominio público",
-            "La obligación de publicar una obra bajo GPL",
-            "La prohibición de distribuir una obra",
-            "Una licencia exclusiva para sistemas operativos propietarios"
-        ],
-        correcta: 0
     }
 
 ];
@@ -1665,14 +950,18 @@ const preguntas = [
 // ==================================================
 
 let preguntasTest = [];
+
 let preguntaActual = 0;
+
 let respuestasUsuario = [];
+
 let opcionesMezcladas = [];
+
 let modoAleatorioActual = false;
-let modoExamenActual = false;
+
 let tiempo = 0;
+
 let intervalo = null;
-const TIEMPO_LIMITE_EXAMEN = 30 * 60;
 
 
 // ==================================================
@@ -1680,29 +969,40 @@ const TIEMPO_LIMITE_EXAMEN = 30 * 60;
 // ==================================================
 
 const seleccionModo = document.getElementById("seleccionModo");
+
 const test = document.getElementById("test");
+
 const resultado = document.getElementById("resultado");
+
 const botonNormal = document.getElementById("modoNormal");
+
 const botonAleatorio = document.getElementById("modoAleatorio");
-const botonExamen = document.getElementById("modoExamen");
+
 const preguntaElemento = document.getElementById("pregunta");
+
 const opcionesElemento = document.getElementById("opciones");
+
 const botonAnterior = document.getElementById("botonAnterior");
+
 const botonReiniciarTest = document.getElementById("botonReiniciarTest");
+
 const botonSiguiente = document.getElementById("botonSiguiente");
+
 const numeroPregunta = document.getElementById("numeroPregunta");
+
 const puntuacionElemento = document.getElementById("puntuacion");
+
 const contador = document.getElementById("contador");
+
 const barraProgreso = document.getElementById("barra-progreso");
+
 const nota = document.getElementById("nota");
+
 const mensajeResultado = document.getElementById("mensajeResultado");
+
 const tiempoFinal = document.getElementById("tiempoFinal");
+
 const botonReiniciar = document.getElementById("botonReiniciar");
-const avisoExamen = document.getElementById("avisoExamen");
-const resumenExamen = document.getElementById("resumenExamen");
-const aciertosExamen = document.getElementById("aciertosExamen");
-const fallosExamen = document.getElementById("fallosExamen");
-const sinResponderExamen = document.getElementById("sinResponderExamen");
 
 
 // ==================================================
@@ -1710,7 +1010,9 @@ const sinResponderExamen = document.getElementById("sinResponderExamen");
 // ==================================================
 
 function mezclar(array) {
+
     return array.sort(() => Math.random() - 0.5);
+
 }
 
 
@@ -1718,45 +1020,63 @@ function mezclar(array) {
 // INICIAR TEST
 // ==================================================
 
-function iniciarTest(aleatorio, examen = false) {
-    clearInterval(intervalo);
+function iniciarTest(aleatorio) {
+
     modoAleatorioActual = aleatorio;
-    modoExamenActual = examen;
+
     preguntasTest = [...preguntas];
 
-    // En modo aleatorio y examen se mezclan las preguntas.
-    if (aleatorio || examen) {
+    if (aleatorio) {
+
         preguntasTest = mezclar(preguntasTest);
+
     }
 
     preguntaActual = 0;
-    respuestasUsuario = new Array(preguntasTest.length).fill(null);
-    opcionesMezcladas = new Array(preguntasTest.length);
 
-    // Mezclamos las respuestas una sola vez para cada pregunta.
+    respuestasUsuario =
+        new Array(preguntasTest.length).fill(null);
+
+    opcionesMezcladas =
+        new Array(preguntasTest.length);
+
+
+    // Mezclamos las respuestas una sola vez
+    // para cada pregunta.
+
     preguntasTest.forEach((pregunta, indice) => {
-        const opciones = pregunta.opciones.map((texto, posicion) => ({
-            texto: texto,
-            indice: posicion
-        }));
+
+        let opciones = pregunta.opciones.map(
+            (texto, posicion) => {
+
+                return {
+                    texto: texto,
+                    indice: posicion
+                };
+
+            }
+        );
+
         opcionesMezcladas[indice] = mezclar(opciones);
+
     });
 
+
     seleccionModo.classList.add("oculto");
+
     resultado.classList.add("oculto");
+
     test.classList.remove("oculto");
 
-    if (avisoExamen) {
-        avisoExamen.classList.toggle("oculto", !modoExamenActual);
-    }
-    if (resumenExamen) {
-        resumenExamen.classList.add("oculto");
-    }
 
-    tiempo = modoExamenActual ? TIEMPO_LIMITE_EXAMEN : 0;
+    tiempo = 0;
+
     actualizarCronometro();
+
     iniciarCronometro();
+
     mostrarPregunta();
+
 }
 
 
@@ -1765,52 +1085,136 @@ function iniciarTest(aleatorio, examen = false) {
 // ==================================================
 
 function mostrarPregunta() {
-    const pregunta = preguntasTest[preguntaActual];
-    const opciones = opcionesMezcladas[preguntaActual];
 
-    preguntaElemento.textContent = pregunta.pregunta;
-    numeroPregunta.textContent = `Pregunta ${preguntaActual + 1} de ${preguntasTest.length}`;
-    puntuacionElemento.textContent = modoExamenActual
-        ? "Modo examen: resultado al finalizar"
-        : `Puntos: ${calcularPuntos()}`;
+    const pregunta =
+        preguntasTest[preguntaActual];
 
-    const progreso = (preguntaActual / preguntasTest.length) * 100;
-    barraProgreso.style.width = `${progreso}%`;
+    const opciones =
+        opcionesMezcladas[preguntaActual];
+
+
+    preguntaElemento.textContent =
+        pregunta.pregunta;
+
+
+    numeroPregunta.textContent =
+        `Pregunta ${preguntaActual + 1} de ${preguntasTest.length}`;
+
+
+    puntuacionElemento.textContent =
+        `Puntos: ${calcularPuntos()} `;
+
+
+    const progreso =
+        (preguntaActual / preguntasTest.length) * 100;
+
+
+    barraProgreso.style.width =
+        `${progreso}%`;
+
+
     opcionesElemento.innerHTML = "";
 
-    opciones.forEach(opcion => {
-        const boton = document.createElement("button");
-        boton.classList.add("opcion");
-        boton.textContent = opcion.texto;
-        const respuestaGuardada = respuestasUsuario[preguntaActual];
 
-        if (modoExamenActual) {
-            // En el examen no se revela la respuesta correcta y se puede cambiar la elección.
-            if (respuestaGuardada === opcion.indice) {
-                boton.classList.add("seleccionada");
-            }
-            boton.addEventListener("click", () => seleccionarRespuesta(opcion.indice));
-        } else if (respuestaGuardada !== null) {
-            // En los modos habituales se conserva la corrección visual original.
+    opciones.forEach(opcion => {
+
+        const boton =
+            document.createElement("button");
+
+
+        boton.classList.add("opcion");
+
+        boton.textContent =
+            opcion.texto;
+
+
+        const respuestaGuardada =
+            respuestasUsuario[preguntaActual];
+
+
+        // Si ya había una respuesta seleccionada,
+        // mostramos su estado.
+
+        if (respuestaGuardada !== null) {
+
             if (opcion.indice === pregunta.correcta) {
+
                 boton.classList.add("correcta");
+
             }
-            if (opcion.indice === respuestaGuardada && respuestaGuardada !== pregunta.correcta) {
+
+            if (
+                opcion.indice === respuestaGuardada &&
+                respuestaGuardada !== pregunta.correcta
+            ) {
+
                 boton.classList.add("incorrecta");
+
             }
+
             boton.disabled = true;
+
         } else {
-            boton.addEventListener("click", () => seleccionarRespuesta(opcion.indice));
+
+            boton.addEventListener("click", () => {
+
+                seleccionarRespuesta(
+                    opcion.indice
+                );
+
+            });
+
         }
 
+
         opcionesElemento.appendChild(boton);
+
     });
 
-    botonAnterior.disabled = preguntaActual === 0;
-    botonSiguiente.disabled = !modoExamenActual && respuestasUsuario[preguntaActual] === null;
-    botonSiguiente.textContent = preguntaActual === preguntasTest.length - 1
-        ? "Terminar ✓"
-        : "Siguiente →";
+
+    // Botón anterior
+
+    if (preguntaActual === 0) {
+
+        botonAnterior.disabled = true;
+
+    } else {
+
+        botonAnterior.disabled = false;
+
+    }
+
+
+    // Botón siguiente
+
+    if (respuestasUsuario[preguntaActual] === null) {
+
+        botonSiguiente.disabled = true;
+
+    } else {
+
+        botonSiguiente.disabled = false;
+
+    }
+
+
+    // En la última pregunta cambiamos el texto
+
+    if (
+        preguntaActual ===
+        preguntasTest.length - 1
+    ) {
+
+        botonSiguiente.textContent =
+            "Terminar ✓";
+
+    } else {
+
+        botonSiguiente.textContent =
+            "Siguiente →";
+
+    }
+
 }
 
 
@@ -1819,8 +1223,17 @@ function mostrarPregunta() {
 // ==================================================
 
 function seleccionarRespuesta(indiceSeleccionado) {
-    respuestasUsuario[preguntaActual] = indiceSeleccionado;
+
+    const pregunta =
+        preguntasTest[preguntaActual];
+
+
+    respuestasUsuario[preguntaActual] =
+        indiceSeleccionado;
+
+
     mostrarPregunta();
+
 }
 
 
@@ -1829,13 +1242,29 @@ function seleccionarRespuesta(indiceSeleccionado) {
 // ==================================================
 
 function calcularPuntos() {
+
     let puntos = 0;
-    respuestasUsuario.forEach((respuesta, indice) => {
-        if (respuesta !== null && respuesta === preguntasTest[indice].correcta) {
-            puntos++;
+
+
+    respuestasUsuario.forEach(
+        (respuesta, indice) => {
+
+            if (
+                respuesta !== null &&
+                respuesta ===
+                preguntasTest[indice].correcta
+            ) {
+
+                puntos++;
+
+            }
+
         }
-    });
+    );
+
+
     return puntos;
+
 }
 
 
@@ -1844,10 +1273,15 @@ function calcularPuntos() {
 // ==================================================
 
 botonAnterior.addEventListener("click", () => {
+
     if (preguntaActual > 0) {
+
         preguntaActual--;
+
         mostrarPregunta();
+
     }
+
 });
 
 
@@ -1856,39 +1290,64 @@ botonAnterior.addEventListener("click", () => {
 // ==================================================
 
 botonSiguiente.addEventListener("click", () => {
-    if (preguntaActual < preguntasTest.length - 1) {
+
+    if (
+        preguntaActual <
+        preguntasTest.length - 1
+    ) {
+
         preguntaActual++;
+
         mostrarPregunta();
+
     } else {
+
         terminarTest();
+
     }
+
 });
 
 
 // ==================================================
-// REINICIAR TEST Y VOLVER AL MENÚ
+// REINICIAR TEST
 // ==================================================
 
-function volverAlMenuDeModos() {
-    clearInterval(intervalo);
-    preguntasTest = [];
-    respuestasUsuario = [];
-    opcionesMezcladas = [];
-    preguntaActual = 0;
-    tiempo = 0;
-    modoExamenActual = false;
-    test.classList.add("oculto");
-    resultado.classList.add("oculto");
-    seleccionModo.classList.remove("oculto");
-    botonSiguiente.textContent = "Siguiente →";
-    botonSiguiente.disabled = true;
-    botonAnterior.disabled = true;
-    if (avisoExamen) avisoExamen.classList.add("oculto");
-    if (resumenExamen) resumenExamen.classList.add("oculto");
-    actualizarCronometro();
-}
+botonReiniciarTest.addEventListener("click", () => {
 
-botonReiniciarTest.addEventListener("click", volverAlMenuDeModos);
+    clearInterval(intervalo);
+
+
+    preguntasTest = [];
+
+    respuestasUsuario = [];
+
+    opcionesMezcladas = [];
+
+    preguntaActual = 0;
+
+    tiempo = 0;
+
+
+    test.classList.add("oculto");
+
+    resultado.classList.add("oculto");
+
+    seleccionModo.classList.remove("oculto");
+
+
+    botonSiguiente.textContent =
+        "Siguiente →";
+
+
+    botonSiguiente.disabled = true;
+
+    botonAnterior.disabled = true;
+
+
+    actualizarCronometro();
+
+});
 
 
 // ==================================================
@@ -1896,29 +1355,34 @@ botonReiniciarTest.addEventListener("click", volverAlMenuDeModos);
 // ==================================================
 
 function iniciarCronometro() {
+
     clearInterval(intervalo);
+
+
     intervalo = setInterval(() => {
-        if (modoExamenActual) {
-            tiempo--;
-            if (tiempo <= 0) {
-                tiempo = 0;
-                actualizarCronometro();
-                terminarTest(true);
-                return;
-            }
-        } else {
-            tiempo++;
-        }
+
+        tiempo++;
+
         actualizarCronometro();
+
     }, 1000);
+
 }
 
+
 function actualizarCronometro() {
-    const minutos = Math.floor(tiempo / 60);
-    const segundos = tiempo % 60;
-    const formato = `${String(minutos).padStart(2, "0")}:${String(segundos).padStart(2, "0")}`;
-    contador.textContent = modoExamenActual ? `⏳ Tiempo restante: ${formato}` : `⏱️ ${formato}`;
-    contador.classList.toggle("tiempo-limite", modoExamenActual && tiempo <= 60);
+
+    const minutos =
+        Math.floor(tiempo / 60);
+
+
+    const segundos =
+        tiempo % 60;
+
+
+    contador.textContent =
+        `⏱️ ${String(minutos).padStart(2, "0")}:${String(segundos).padStart(2, "0")}`;
+
 }
 
 
@@ -1926,40 +1390,55 @@ function actualizarCronometro() {
 // TERMINAR TEST
 // ==================================================
 
-function terminarTest(porTiempo = false) {
+function terminarTest() {
+
     clearInterval(intervalo);
-    const puntos = calcularPuntos();
-    const total = preguntasTest.length;
-    const respondidas = respuestasUsuario.filter(respuesta => respuesta !== null).length;
-    const fallos = respondidas - puntos;
-    const sinResponder = total - respondidas;
-    const porcentaje = total > 0 ? (puntos / total) * 100 : 0;
-    const notaFinal = total > 0 ? (puntos / total) * 10 : 0;
+
+
+    const puntos =
+        calcularPuntos();
+
+
+    const total =
+        preguntasTest.length;
+
+
+    const porcentaje =
+        (puntos / total) * 100;
+
+
+    const notaFinal =
+        (puntos / total) * 10;
+
 
     test.classList.add("oculto");
+
     resultado.classList.remove("oculto");
-    barraProgreso.style.width = "100%";
-    nota.textContent = `${notaFinal.toFixed(2)}/10`;
 
-    if (modoExamenActual) {
-        mensajeResultado.textContent = porTiempo
-            ? "El tiempo se ha agotado. El examen se ha corregido automáticamente."
-            : "Examen finalizado. Aquí tienes el resultado.";
-        if (resumenExamen) resumenExamen.classList.remove("oculto");
-        if (aciertosExamen) aciertosExamen.textContent = `Aciertos: ${puntos}`;
-        if (fallosExamen) fallosExamen.textContent = `Fallos: ${fallos}`;
-        if (sinResponderExamen) sinResponderExamen.textContent = `Sin responder: ${sinResponder}`;
-    } else {
-        mensajeResultado.textContent = `Has acertado ${puntos} de ${total} preguntas (${porcentaje.toFixed(1)}%).`;
-        if (resumenExamen) resumenExamen.classList.add("oculto");
-    }
 
-    const tiempoTranscurrido = modoExamenActual ? TIEMPO_LIMITE_EXAMEN - tiempo : tiempo;
-    const minutos = Math.floor(tiempoTranscurrido / 60);
-    const segundos = tiempoTranscurrido % 60;
-    tiempoFinal.textContent = modoExamenActual
-        ? `⏱️ Tiempo empleado: ${String(minutos).padStart(2, "0")}:${String(segundos).padStart(2, "0")}`
-        : `⏱️ Tiempo empleado: ${String(minutos).padStart(2, "0")}:${String(segundos).padStart(2, "0")}`;
+    barraProgreso.style.width =
+        "100%";
+
+
+    nota.textContent =
+        `${notaFinal.toFixed(2)}/10`;
+
+
+    mensajeResultado.textContent =
+        `Has acertado ${puntos} de ${total} preguntas (${porcentaje.toFixed(1)}%).`;
+
+
+    const minutos =
+        Math.floor(tiempo / 60);
+
+
+    const segundos =
+        tiempo % 60;
+
+
+    tiempoFinal.textContent =
+        `⏱️ Tiempo empleado: ${String(minutos).padStart(2, "0")}:${String(segundos).padStart(2, "0")}`;
+
 }
 
 
@@ -1967,28 +1446,60 @@ function terminarTest(porTiempo = false) {
 // MODO NORMAL
 // ==================================================
 
-botonNormal.addEventListener("click", () => iniciarTest(false, false));
+botonNormal.addEventListener("click", () => {
+
+    iniciarTest(false);
+
+});
 
 
 // ==================================================
 // MODO ALEATORIO
 // ==================================================
 
-botonAleatorio.addEventListener("click", () => iniciarTest(true, false));
+botonAleatorio.addEventListener("click", () => {
 
+    iniciarTest(true);
 
-// ==================================================
-// MODO EXAMEN
-// ==================================================
-
-if (botonExamen) {
-    botonExamen.addEventListener("click", () => iniciarTest(true, true));
-}
+});
 
 
 // ==================================================
 // VOLVER A HACER EL TEST
 // ==================================================
 
-botonReiniciar.addEventListener("click", volverAlMenuDeModos);
+botonReiniciar.addEventListener("click", () => {
 
+    clearInterval(intervalo);
+
+
+    resultado.classList.add("oculto");
+
+    test.classList.add("oculto");
+
+    seleccionModo.classList.remove("oculto");
+
+
+    preguntasTest = [];
+
+    respuestasUsuario = [];
+
+    opcionesMezcladas = [];
+
+    preguntaActual = 0;
+
+    tiempo = 0;
+
+
+    botonSiguiente.textContent =
+        "Siguiente →";
+
+
+    botonSiguiente.disabled = true;
+
+    botonAnterior.disabled = true;
+
+
+    actualizarCronometro();
+
+});
