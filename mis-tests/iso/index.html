@@ -65,19 +65,6 @@
                 </button>
 
 
-                <!-- NUEVO: MODO EXAMEN -->
-
-                <button id="modoExamen" class="boton modo">
-
-                    📝 Modo examen
-
-                    <span>
-                        30 minutos y corrección al finalizar
-                    </span>
-
-                </button>
-
-
             </div>
 
 
@@ -115,6 +102,16 @@
 
                     <span>
                         VirtualBox y virtualización
+                    </span>
+
+                </button>
+
+                <button id="botonUnidad3" class="boton modo">
+
+                    🐧 Unidad 3 - Comandos Linux
+
+                    <span>
+                        Comandos, opciones y administración del sistema
                     </span>
 
                 </button>
@@ -158,16 +155,6 @@
 
 
             </div>
-
-
-            <!-- NUEVO: AVISO DEL MODO EXAMEN -->
-
-            <p id="avisoExamen" class="oculto">
-
-                📝 Modo examen: tienes 30 minutos.
-                Las respuestas se corregirán al finalizar.
-
-            </p>
 
 
 
@@ -285,19 +272,6 @@
             </p>
 
 
-            <!-- NUEVO: RESUMEN DEL MODO EXAMEN -->
-
-            <div id="resumenExamen" class="oculto">
-
-                <p id="aciertosExamen"></p>
-
-                <p id="fallosExamen"></p>
-
-                <p id="sinResponderExamen"></p>
-
-            </div>
-
-
             <button id="botonReiniciar" class="boton">
 
                 🔄 Volver a hacer el test
@@ -321,7 +295,7 @@
 
     <!-- ========================================= -->
     <!-- JAVASCRIPT -->
-    <!-- Se cargan ambos archivos, pero solo se inicia la unidad elegida -->
+    <!-- El selector carga únicamente la unidad elegida -->
     <!-- ========================================= -->
 
     <script src="selector_unidades.js"></script>
