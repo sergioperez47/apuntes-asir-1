@@ -11,6 +11,7 @@ document.addEventListener("DOMContentLoaded", () => {
     const botonUnidad1 = document.getElementById("botonUnidad1");
     const botonUnidad2 = document.getElementById("botonUnidad2");
     const botonUnidad3 = document.getElementById("botonUnidad3");
+    const botonExamen = document.getElementById("modoExamen");
     const tituloUnidad = document.getElementById("tituloUnidad");
 
     const seleccionModo = document.getElementById("seleccionModo");
@@ -73,6 +74,11 @@ document.addEventListener("DOMContentLoaded", () => {
     // Ya se ha elegido unidad: ocultar selector y mostrar los modos.
     selectorUnidades.classList.add("oculto");
     if (botonesModo) botonesModo.classList.remove("oculto");
+
+    // El modo examen está implementado en la Unidad 3. Se muestra solo allí.
+    if (botonExamen) {
+        botonExamen.classList.toggle("oculto", unidadElegida !== "3");
+    }
 
     if (tituloUnidad) {
         tituloUnidad.textContent = unidadElegida === "1"
