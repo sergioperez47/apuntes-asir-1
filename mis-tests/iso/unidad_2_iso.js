@@ -1,1001 +1,344 @@
 const preguntas = [
-    // ==================================================
-    // VIRTUALBOX
-    // ==================================================
-
     {
-        pregunta: "¿Qué es VirtualBox?",
+        pregunta: "¿Qué es la virtualización?",
         opciones: [
-            "Un software de virtualización que permite ejecutar sistemas operativos invitados dentro de otro sistema operativo",
-            "Un sistema operativo exclusivo para servidores",
-            "Un programa para editar discos físicos",
-            "Un protocolo de Internet"
-        ],
-        correcta: 0
-    },
-
-    {
-        pregunta: "¿Cómo se llama el sistema operativo físico en el que se ejecuta VirtualBox?",
-        opciones: [
-            "Guest o huésped",
-            "Host o anfitrión",
-            "Hipervisor invitado",
-            "Contenedor"
-        ],
-        correcta: 1
-    },
-
-    {
-        pregunta: "¿Cómo se llama el sistema operativo instalado dentro de una máquina virtual?",
-        opciones: [
-            "Host",
-            "Anfitrión",
-            "Guest o huésped",
-            "Servidor físico"
-        ],
-        correcta: 2
-    },
-
-    {
-        pregunta: "¿Qué ocurre con la tarjeta de red cuando se configura como No conectado?",
-        opciones: [
-            "Se conecta directamente a Internet",
-            "Se conecta a todas las máquinas virtuales",
-            "Utiliza automáticamente el adaptador puente",
-            "Está presente, pero no conectada, como si el cable estuviera desconectado"
+            "Instalar únicamente programas de oficina",
+            "Conectar físicamente dos ordenadores",
+            "Eliminar el sistema operativo anfitrión",
+            "Crear versiones virtuales de recursos informáticos mediante software",
         ],
         correcta: 3
     },
-
     {
-        pregunta: "¿Qué permite el modo NAT de VirtualBox?",
+        pregunta: "¿Qué es una máquina virtual (VM)?",
         opciones: [
-            "Que la máquina virtual acceda a Internet a través del anfitrión",
-            "Que la máquina virtual quede completamente aislada sin conexión",
-            "Que la máquina virtual sustituya al sistema anfitrión",
-            "Que todas las máquinas virtuales utilicen obligatoriamente la misma IP"
+            "Un entorno de software que emula un sistema informático",
+            "Un componente físico que sustituye a la CPU",
+            "Un tipo de cable de red",
+            "Una aplicación que solo funciona en móviles",
         ],
         correcta: 0
     },
-
     {
-        pregunta: "Según los apuntes, ¿qué rango de direcciones utiliza habitualmente el modo NAT de VirtualBox?",
+        pregunta: "¿Qué función tiene el hipervisor?",
         opciones: [
-            "192.168.1.x exclusivamente",
-            "10.0.0.x",
-            "172.0.0.x exclusivamente",
-            "8.8.8.x"
+            "Comprimir archivos de vídeo",
+            "Crear y gestionar máquinas virtuales",
+            "Editar documentos de texto",
+            "Asignar nombres de dominio públicos",
         ],
         correcta: 1
     },
-
     {
-        pregunta: "¿Qué característica diferencia a Red NAT del modo NAT básico según los apuntes?",
+        pregunta: "¿Qué caracteriza a un hipervisor de tipo 1?",
         opciones: [
-            "No permite acceder a Internet",
-            "Desactiva la tarjeta de red",
-            "Es similar a NAT, pero incorpora más características",
-            "Solo permite conectar el anfitrión con una máquina virtual sin Internet"
+            "Necesita obligatoriamente Windows como anfitrión",
+            "Solo sirve para ejecutar contenedores Docker",
+            "Se ejecuta directamente sobre el hardware",
+            "Se ejecuta siempre dentro de un navegador",
         ],
         correcta: 2
     },
-
     {
-        pregunta: "¿Qué hace el Adaptador Puente?",
+        pregunta: "¿Cuál es un ejemplo de hipervisor de tipo 2 según los apuntes?",
         opciones: [
-            "Aísla la máquina virtual de todas las redes",
-            "Desconecta la tarjeta de red",
-            "Crea una red exclusiva entre el anfitrión y la máquina virtual",
-            "Permite que la máquina virtual utilice el adaptador físico del anfitrión y se conecte a la misma red"
+            "VMware ESXi",
+            "Citrix XenServer",
+            "Un servidor DHCP",
+            "VirtualBox",
         ],
         correcta: 3
     },
-
     {
-        pregunta: "¿Qué rango de direcciones IP suele utilizar una máquina virtual con Adaptador Puente?",
+        pregunta: "¿Qué es el sistema anfitrión (host)?",
         opciones: [
-            "El rango de la red a la que está conectado el anfitrión",
-            "Siempre el rango 10.0.0.x",
-            "Siempre el rango 127.0.0.x",
-            "Únicamente direcciones públicas"
+            "El sistema operativo del equipo físico que aloja la virtualización",
+            "El sistema operativo instalado dentro de una VM",
+            "Una instantánea de la máquina virtual",
+            "El archivo de configuración de Docker",
         ],
         correcta: 0
     },
-
     {
-        pregunta: "¿Para qué sirve el modo Red Interna?",
+        pregunta: "¿Cuál es una desventaja de la virtualización?",
         opciones: [
-            "Para conectar la máquina virtual directamente a Internet",
-            "Para interconectar máquinas virtuales en una red aislada del exterior",
-            "Para conectar exclusivamente la máquina virtual con el anfitrión",
-            "Para desactivar todos los adaptadores de red"
+            "Siempre reduce la flexibilidad",
+            "El servidor físico puede convertirse en un único punto de fallo",
+            "Impide crear entornos de prueba",
+            "No permite ejecutar varios sistemas",
         ],
         correcta: 1
     },
-
     {
-        pregunta: "¿Qué permite el Adaptador Solo-Anfitrión?",
+        pregunta: "¿Para qué sirve una instantánea (snapshot) de una máquina virtual?",
         opciones: [
-            "Conectar la máquina virtual a Internet obligatoriamente",
-            "Conectar la máquina virtual a cualquier equipo de la red física",
-            "Establecer una conexión entre el anfitrión y la máquina virtual",
-            "Crear una red interna entre máquinas virtuales sin conexión con el anfitrión"
+            "Convertir una VM en un router físico",
+            "Eliminar el sistema operativo invitado",
+            "Guardar el estado de la máquina para poder volver a él",
+            "Aumentar físicamente la memoria RAM del equipo",
         ],
         correcta: 2
     },
-
-    // ==================================================
-    // DISCOS VIRTUALES Y FUNCIONES
-    // ==================================================
-
     {
-        pregunta: "¿Cuál es el formato de disco virtual nativo de VirtualBox?",
+        pregunta: "¿Qué formato de disco virtual es el nativo de VirtualBox?",
         opciones: [
             "VMDK",
             "VHD",
             "RAW",
-            "VDI"
+            "VDI",
         ],
         correcta: 3
     },
-
     {
-        pregunta: "¿Qué formato de disco virtual está asociado a VMware?",
+        pregunta: "¿Qué formato de disco virtual se asocia con VMware?",
         opciones: [
             "VMDK",
             "VDI",
             "VHD",
-            "OVA"
+            "ISO",
         ],
         correcta: 0
     },
-
     {
-        pregunta: "¿Qué formato de disco está asociado a Microsoft Virtual PC según los apuntes?",
+        pregunta: "¿Qué modo de red permite a una VM acceder a Internet a través del anfitrión y normalmente la oculta de la red física?",
         opciones: [
-            "VDI",
-            "VHD",
-            "VMDK",
-            "OVF"
+            "Solo-anfitrión",
+            "NAT",
+            "Adaptador puente",
+            "Red interna",
         ],
         correcta: 1
     },
-
     {
-        pregunta: "¿Qué representa el formato RAW en los discos virtuales?",
+        pregunta: "¿Qué modo de red conecta máquinas virtuales entre sí en una red aislada sin salida exterior?",
         opciones: [
-            "Un archivo exclusivo para guardar instantáneas",
-            "Un formato exclusivo de VMware",
-            "Una representación de disco sin un formato de contenedor virtual específico",
-            "Un formato de exportación de máquinas virtuales"
+            "NAT",
+            "No conectado",
+            "Red interna",
+            "Adaptador puente",
         ],
         correcta: 2
     },
-
     {
-        pregunta: "¿Para qué sirve una instantánea o snapshot de una máquina virtual?",
+        pregunta: "¿Qué hace el modo Adaptador puente?",
         opciones: [
-            "Para aumentar físicamente la memoria RAM del ordenador",
-            "Para convertir automáticamente una VM en un contenedor",
-            "Para cambiar el anfitrión por el huésped",
-            "Para guardar el estado de la máquina virtual y facilitar la vuelta a un estado anterior"
+            "Aísla completamente la VM de cualquier red",
+            "Permite conexión únicamente entre el host y la VM",
+            "Desactiva la tarjeta de red virtual",
+            "Conecta la VM a la red física como si fuera otro equipo de esa red",
         ],
         correcta: 3
     },
-
     {
-        pregunta: "¿Para qué sirve clonar una máquina virtual?",
+        pregunta: "¿Para qué sirven las Guest Additions?",
         opciones: [
-            "Para crear una copia de una máquina virtual",
-            "Para eliminar el sistema operativo huésped",
-            "Para desconectar todas las redes",
-            "Para convertir la máquina virtual en hardware físico"
+            "Mejorar la integración entre el sistema anfitrión y el invitado",
+            "Crear cuentas de correo electrónico",
+            "Reemplazar el hipervisor",
+            "Asignar direcciones IP públicas automáticamente",
         ],
         correcta: 0
     },
-
     {
-        pregunta: "¿Qué permiten las funciones de exportación e importación de máquinas virtuales?",
+        pregunta: "¿Qué permite una carpeta compartida de VirtualBox?",
         opciones: [
-            "Aumentar la velocidad física de la CPU",
-            "Empaquetar o trasladar máquinas virtuales entre entornos compatibles, por ejemplo mediante OVF u OVA",
-            "Convertir cualquier archivo en memoria RAM",
-            "Crear una conexión NAT automáticamente en cualquier red"
+            "Crear una red interna sin adaptadores",
+            "Intercambiar archivos entre el anfitrión y la máquina virtual",
+            "Compartir automáticamente la CPU con Internet",
+            "Convertir un disco VDI en una ISO",
         ],
         correcta: 1
     },
-
-    {
-        pregunta: "¿Para qué sirven las Guest Additions de VirtualBox?",
-        opciones: [
-            "Para sustituir el sistema operativo anfitrión",
-            "Para crear exclusivamente discos VMDK",
-            "Para mejorar la integración y las funciones de interacción entre el sistema huésped y VirtualBox",
-            "Para eliminar la necesidad de instalar un sistema operativo"
-        ],
-        correcta: 2
-    },
-
-    {
-        pregunta: "¿Qué permiten las carpetas compartidas de VirtualBox?",
-        opciones: [
-            "Compartir obligatoriamente la memoria RAM física",
-            "Convertir una carpeta en una dirección IP",
-            "Sustituir el disco virtual por un disco físico",
-            "Intercambiar archivos entre el anfitrión y la máquina virtual"
-        ],
-        correcta: 3
-    },
-
-    // ==================================================
-    // CONCEPTO DE VIRTUALIZACIÓN
-    // ==================================================
-
-    {
-        pregunta: "¿Qué es la virtualización?",
-        opciones: [
-            "Crear versiones virtuales de recursos tecnológicos mediante software especializado",
-            "Instalar siempre un sistema operativo en cada ordenador físico",
-            "Conectar todos los equipos a una misma red pública",
-            "Convertir todos los programas en archivos de texto"
-        ],
-        correcta: 0
-    },
-
-    {
-        pregunta: "¿Qué es una máquina virtual (VM)?",
-        opciones: [
-            "Un ordenador físico sin sistema operativo",
-            "Un ordenador virtual con sistema operativo y aplicaciones sobre hardware simulado",
-            "Un dispositivo que solo sirve para almacenar archivos",
-            "Un programa que únicamente funciona en Internet"
-        ],
-        correcta: 1
-    },
-
-    {
-        pregunta: "¿Cuál es la función principal de un hipervisor?",
-        opciones: [
-            "Crear páginas web",
-            "Gestionar exclusivamente archivos de texto",
-            "Permitir ejecutar varias máquinas virtuales y asignarles recursos",
-            "Sustituir todos los componentes físicos del ordenador"
-        ],
-        correcta: 2
-    },
-
-    {
-        pregunta: "¿Qué caracteriza a un hipervisor de tipo 1?",
-        opciones: [
-            "Se ejecuta únicamente dentro de un navegador",
-            "Necesita obligatoriamente VirtualBox como anfitrión",
-            "Se ejecuta como una aplicación convencional sobre un sistema operativo anfitrión",
-            "Se ejecuta directamente sobre el hardware físico"
-        ],
-        correcta: 3
-    },
-
-    {
-        pregunta: "¿Cuál de los siguientes es un ejemplo de hipervisor de tipo 1 mencionado en los apuntes?",
-        opciones: [
-            "VMware ESXi",
-            "VirtualBox",
-            "VMware Workstation",
-            "Parallels"
-        ],
-        correcta: 0
-    },
-
-    {
-        pregunta: "¿Qué caracteriza a un hipervisor de tipo 2?",
-        opciones: [
-            "Se ejecuta directamente sobre el hardware sin sistema anfitrión",
-            "Se ejecuta como un programa sobre el sistema operativo anfitrión",
-            "Solo puede ejecutar contenedores Docker",
-            "No permite crear máquinas virtuales"
-        ],
-        correcta: 1
-    },
-
-    {
-        pregunta: "¿Cuál de los siguientes es un ejemplo de hipervisor de tipo 2 mencionado en los apuntes?",
-        opciones: [
-            "Microsoft Hyper-V",
-            "VMware ESXi",
-            "VirtualBox",
-            "Citrix XenServer"
-        ],
-        correcta: 2
-    },
-
-    {
-        pregunta: "¿Cuál es una ventaja de la virtualización?",
-        opciones: [
-            "Elimina todos los posibles fallos del hardware",
-            "Hace innecesario disponer de memoria RAM",
-            "Evita cualquier consumo de recursos",
-            "Permite aprovechar mejor los recursos y crear entornos de prueba"
-        ],
-        correcta: 3
-    },
-
-    {
-        pregunta: "¿Cuál es una desventaja de la virtualización?",
-        opciones: [
-            "El servidor físico puede convertirse en un único punto de fallo",
-            "No permite ejecutar sistemas operativos",
-            "Impide crear entornos de prueba",
-            "Obliga a utilizar un ordenador físico distinto por aplicación"
-        ],
-        correcta: 0
-    },
-
-    // ==================================================
-    // DOCKER Y CONTENEDORES
-    // ==================================================
-
     {
         pregunta: "¿Qué es Docker?",
         opciones: [
-            "Un formato de disco virtual de VirtualBox",
-            "Una plataforma para crear y ejecutar aplicaciones en contenedores",
-            "Un tipo de memoria RAM",
-            "Un modo de red exclusivo de VirtualBox"
-        ],
-        correcta: 1
-    },
-
-    {
-        pregunta: "¿Qué es una imagen de Docker?",
-        opciones: [
-            "Una captura de pantalla de un contenedor",
-            "Una máquina virtual que siempre contiene un sistema operativo completo",
-            "Una plantilla utilizada para crear contenedores",
-            "Una dirección IP del anfitrión"
+            "Un tipo de hipervisor de tipo 1",
+            "Un protocolo de resolución de nombres",
+            "Una plataforma para ejecutar aplicaciones en contenedores",
+            "Un formato de disco virtual exclusivo de VirtualBox",
         ],
         correcta: 2
     },
-
     {
-        pregunta: "¿Qué es un contenedor?",
+        pregunta: "¿Qué es una imagen Docker?",
         opciones: [
-            "Un ordenador físico independiente",
-            "Un disco duro virtual de tipo VDI",
-            "Un hipervisor que se ejecuta directamente sobre el hardware",
-            "Un entorno aislado para ejecutar aplicaciones que utiliza el kernel del anfitrión"
+            "Un contenedor que siempre está en ejecución",
+            "Una captura de pantalla de una VM",
+            "Un sistema operativo anfitrión completo",
+            "Una plantilla a partir de la cual se crean contenedores",
         ],
         correcta: 3
     },
-
     {
-        pregunta: "¿Qué función tiene un Dockerfile?",
+        pregunta: "¿Qué diferencia principal hay entre una máquina virtual y un contenedor según los apuntes?",
         opciones: [
-            "Definir las instrucciones para construir una imagen de Docker",
-            "Configurar exclusivamente la BIOS de una máquina virtual",
-            "Crear una red física entre ordenadores",
-            "Convertir una imagen en un archivo VDI"
+            "La VM incluye un sistema operativo completo; el contenedor comparte el kernel del anfitrión",
+            "El contenedor necesita siempre más recursos que una VM",
+            "Las VM no pueden ejecutar aplicaciones",
+            "Los contenedores requieren un equipo físico independiente",
         ],
         correcta: 0
     },
-
     {
-        pregunta: "¿Qué es un repositorio de imágenes de Docker?",
+        pregunta: "¿Qué modelo cloud ofrece aplicaciones listas para utilizar?",
         opciones: [
-            "Una memoria virtual del sistema anfitrión",
-            "Un lugar donde se almacenan y distribuyen imágenes de contenedores",
-            "Un adaptador de red de VirtualBox",
-            "Un sistema de archivos exclusivo de Windows"
-        ],
-        correcta: 1
-    },
-
-    {
-        pregunta: "¿Cuál es una ventaja de Docker según los apuntes?",
-        opciones: [
-            "Cada contenedor necesita siempre un sistema operativo completo",
-            "Los contenedores no pueden ejecutarse de forma aislada",
-            "Los contenedores pueden arrancar rápidamente y consumir pocos recursos",
-            "Docker elimina la necesidad de un kernel"
-        ],
-        correcta: 2
-    },
-
-    {
-        pregunta: "¿Cuál es la diferencia clave entre una máquina virtual y un contenedor?",
-        opciones: [
-            "Una máquina virtual no puede ejecutar aplicaciones",
-            "Un contenedor necesita siempre más recursos que una máquina virtual",
-            "Ambos necesitan siempre un sistema operativo completo independiente",
-            "Una VM necesita un sistema operativo completo, mientras que el contenedor utiliza el kernel del anfitrión"
-        ],
-        correcta: 3
-    },
-
-    // ==================================================
-    // CLOUD COMPUTING
-    // ==================================================
-
-    {
-        pregunta: "¿Qué es el cloud computing?",
-        opciones: [
-            "Un modelo que ofrece recursos informáticos como servicios a través de Internet",
-            "Un programa que solo funciona sin conexión",
-            "Un formato de disco de VirtualBox",
-            "Un sistema para fabricar componentes físicos"
-        ],
-        correcta: 0
-    },
-
-    {
-        pregunta: "¿Qué significa la elasticidad en la computación en la nube?",
-        opciones: [
-            "Que los recursos siempre permanecen fijos",
-            "Que los recursos pueden aumentar o disminuir según la demanda",
-            "Que el usuario debe comprar todos los servidores",
-            "Que los servicios solo funcionan en un ordenador"
-        ],
-        correcta: 1
-    },
-
-    {
-        pregunta: "¿Qué significa el pago por uso en la nube?",
-        opciones: [
-            "Pagar siempre una cantidad fija independientemente del consumo",
-            "Comprar obligatoriamente el hardware físico",
-            "Pagar por los recursos que realmente se consumen",
-            "Utilizar los servicios únicamente de forma gratuita"
-        ],
-        correcta: 2
-    },
-
-    {
-        pregunta: "¿Qué modelo cloud ofrece aplicaciones listas para usar, normalmente desde el navegador?",
-        opciones: [
-            "IaaS",
+            "NAT",
+            "SaaS",
             "PaaS",
-            "Hipervisor de tipo 1",
-            "SaaS"
-        ],
-        correcta: 3
-    },
-
-    {
-        pregunta: "¿Cuál de los siguientes es un ejemplo de SaaS mencionado en los apuntes?",
-        opciones: [
-            "Gmail",
-            "VirtualBox",
-            "VMware ESXi",
-            "Dockerfile"
-        ],
-        correcta: 0
-    },
-
-    {
-        pregunta: "¿Qué ofrece PaaS (Platform as a Service)?",
-        opciones: [
-            "Únicamente hardware físico para comprar",
-            "Un entorno de desarrollo en la nube para desplegar aplicaciones sin gestionar directamente los servidores",
-            "Una aplicación de correo exclusivamente",
-            "Un disco virtual para máquinas virtuales"
+            "IaaS",
         ],
         correcta: 1
     },
-
     {
-        pregunta: "¿Cuál de los siguientes es un ejemplo de PaaS mencionado en los apuntes?",
+        pregunta: "¿Qué modelo cloud ofrece infraestructura virtualizada, como máquinas, redes y almacenamiento?",
         opciones: [
-            "Dropbox",
-            "Gmail",
-            "Heroku",
-            "VirtualBox"
+            "PaaS",
+            "Guest Additions",
+            "IaaS",
+            "SaaS",
         ],
         correcta: 2
     },
-
-    {
-        pregunta: "¿Qué ofrece IaaS (Infrastructure as a Service)?",
-        opciones: [
-            "Solo aplicaciones listas para usar",
-            "Únicamente un entorno para programar sin infraestructura",
-            "Un sistema operativo físico instalado obligatoriamente por el proveedor",
-            "Infraestructura virtualizada, como máquinas, redes y almacenamiento"
-        ],
-        correcta: 3
-    },
-
-    {
-        pregunta: "En el modelo IaaS, ¿qué debe gestionar y configurar el cliente según los apuntes?",
-        opciones: [
-            "El sistema operativo, las aplicaciones y la seguridad",
-            "La fabricación del hardware físico del proveedor",
-            "Toda la infraestructura física del centro de datos",
-            "Únicamente el navegador web"
-        ],
-        correcta: 0
-    },
-
-    {
-        pregunta: "¿Qué requisitos técnicos son necesarios para utilizar una máquina virtual?",
-        opciones: [
-            "Suficiente memoria RAM, soporte de virtualización en la CPU y espacio de almacenamiento",
-            "Una tarjeta gráfica dedicada y dos discos duros obligatoriamente",
-            "Conexión a Internet y una tarjeta de sonido específica",
-            "Un segundo ordenador conectado por cable"
-        ],
-        correcta: 0
-    },
-    {
-        pregunta: "¿Qué tecnologías de procesador permiten la virtualización por hardware?",
-        opciones: [
-            "Intel VT-x y AMD-V",
-            "Intel Hyper-Threading y AMD Radeon",
-            "BIOS y UEFI",
-            "SATA y NVMe"
-        ],
-        correcta: 0
-    },
-    {
-        pregunta: "¿Qué utilidad tiene utilizar una máquina virtual para ejecutar sistemas operativos antiguos?",
-        opciones: [
-            "Permite ejecutar aplicaciones antiguas incompatibles con el sistema actual",
-            "Aumenta automáticamente la velocidad del ordenador físico",
-            "Elimina la necesidad de instalar un sistema operativo",
-            "Convierte cualquier aplicación en una aplicación web"
-        ],
-        correcta: 0
-    },
-    {
-        pregunta: "¿Cómo se representa habitualmente un CD o DVD de instalación en una máquina virtual?",
-        opciones: [
-            "Mediante una imagen ISO",
-            "Mediante un archivo CSV",
-            "Mediante un archivo de registro del sistema",
-            "Mediante una carpeta compartida obligatoriamente"
-        ],
-        correcta: 0
-    },
-    {
-        pregunta: "¿Cómo se almacena normalmente un disco virtual de una máquina virtual?",
-        opciones: [
-            "Como un archivo en el equipo anfitrión",
-            "Únicamente en la memoria RAM",
-            "Siempre en un disco físico independiente",
-            "En una conexión de red obligatoriamente"
-        ],
-        correcta: 0
-    },
-    {
-        pregunta: "¿Qué característica puede tener un disco virtual de tamaño dinámico?",
-        opciones: [
-            "Puede aumentar su tamaño según las necesidades, dentro de los límites configurados",
-            "Ocupa siempre todo el espacio máximo desde el primer momento",
-            "No puede almacenar archivos del sistema operativo",
-            "Solo funciona con máquinas virtuales Linux"
-        ],
-        correcta: 0
-    },
-    {
-        pregunta: "¿Qué ventaja ofrece la virtualización relacionada con la disponibilidad?",
-        opciones: [
-            "Puede facilitar la alta disponibilidad y la migración en vivo",
-            "Elimina por completo cualquier fallo del hardware",
-            "Evita tener que realizar copias de seguridad",
-            "Impide que las máquinas virtuales se apaguen"
-        ],
-        correcta: 0
-    },
-    {
-        pregunta: "¿Qué inconveniente puede presentar la virtualización en un entorno empresarial?",
-        opciones: [
-            "El equipo físico puede convertirse en un único punto de fallo",
-            "No permite ejecutar varios sistemas operativos",
-            "Obliga a utilizar un ordenador físico por aplicación",
-            "Impide realizar pruebas de software"
-        ],
-        correcta: 0
-    },
-    {
-        pregunta: "¿Qué característica distingue a un hipervisor de tipo 1?",
-        opciones: [
-            "Se ejecuta directamente sobre el hardware físico",
-            "Necesita ejecutarse obligatoriamente dentro de VirtualBox",
-            "Solo permite ejecutar aplicaciones de oficina",
-            "Se instala exclusivamente como una aplicación de usuario"
-        ],
-        correcta: 0
-    },
-    {
-        pregunta: "¿Cuál de estos programas es un ejemplo de hipervisor de tipo 1 según los apuntes?",
-        opciones: [
-            "VMware ESXi",
-            "VirtualBox",
-            "VMware Workstation",
-            "Parallels Desktop"
-        ],
-        correcta: 0
-    },
-    {
-        pregunta: "¿Qué opción describe una operación de pausa de una máquina virtual?",
-        opciones: [
-            "Suspende temporalmente su ejecución para poder reanudarla después",
-            "Elimina definitivamente la máquina virtual",
-            "Borra todos los datos del disco virtual",
-            "Exporta automáticamente la máquina a un archivo OVA"
-        ],
-        correcta: 0
-    },
-    {
-        pregunta: "¿Qué diferencia hay entre apagar normalmente una máquina virtual y forzar su apagado?",
-        opciones: [
-            "El apagado forzado corta la ejecución sin seguir necesariamente el procedimiento normal del sistema invitado",
-            "El apagado forzado crea siempre una instantánea",
-            "El apagado normal elimina el disco virtual",
-            "No existe ninguna diferencia"
-        ],
-        correcta: 0
-    },
-    {
-        pregunta: "¿Para qué sirven los grupos de máquinas virtuales en VirtualBox?",
-        opciones: [
-            "Para organizar máquinas virtuales y facilitar su gestión conjunta",
-            "Para convertir varias máquinas virtuales en un único archivo ISO",
-            "Para aumentar automáticamente la memoria RAM de todas las máquinas",
-            "Para sustituir el sistema operativo anfitrión"
-        ],
-        correcta: 0
-    },
-    {
-        pregunta: "¿Qué permiten las operaciones por lotes en VirtualBox?",
-        opciones: [
-            "Realizar determinadas operaciones sobre varias máquinas virtuales conjuntamente",
-            "Ejecutar exclusivamente una máquina virtual cada vez",
-            "Eliminar la necesidad de configurar las máquinas",
-            "Convertir una máquina virtual en un contenedor Docker"
-        ],
-        correcta: 0
-    },
-  {
-        pregunta: "¿Qué permite hacer la función de captura de pantalla de VirtualBox?",
-        opciones: [
-            "Guardar una imagen de lo que se muestra en la máquina virtual",
-            "Crear automáticamente un disco duro nuevo",
-            "Cambiar el tipo de hipervisor",
-            "Modificar la dirección IP del anfitrión"
-        ],
-        correcta: 0
-    }
 ];
-
-
-// ==================================================
-// VARIABLES DEL TEST
-// ==================================================
-
 let preguntasTest = [];
-let preguntaActual = 0;
+let indiceActual = 0;
 let respuestasUsuario = [];
-let opcionesMezcladas = [];
-let modoAleatorioActual = false;
-let modoExamenActual = false;
-let tiempo = 0;
+let modoElegido = "normal";
+let segundos = 0;
 let intervalo = null;
-const TIEMPO_LIMITE_EXAMEN = 30 * 60;
-
-
-// ==================================================
-// ELEMENTOS HTML
-// ==================================================
+let testIniciado = false;
 
 const seleccionModo = document.getElementById("seleccionModo");
-const test = document.getElementById("test");
-const resultado = document.getElementById("resultado");
-const botonNormal = document.getElementById("modoNormal");
-const botonAleatorio = document.getElementById("modoAleatorio");
-const botonExamen = document.getElementById("modoExamen");
-const preguntaElemento = document.getElementById("pregunta");
-const opcionesElemento = document.getElementById("opciones");
-const botonAnterior = document.getElementById("botonAnterior");
-const botonReiniciarTest = document.getElementById("botonReiniciarTest");
-const botonSiguiente = document.getElementById("botonSiguiente");
+const seccionTest = document.getElementById("test");
+const seccionResultado = document.getElementById("resultado");
+const elementoPregunta = document.getElementById("pregunta");
+const elementoOpciones = document.getElementById("opciones");
 const numeroPregunta = document.getElementById("numeroPregunta");
-const puntuacionElemento = document.getElementById("puntuacion");
 const contador = document.getElementById("contador");
+const puntuacion = document.getElementById("puntuacion");
 const barraProgreso = document.getElementById("barra-progreso");
-const nota = document.getElementById("nota");
-const mensajeResultado = document.getElementById("mensajeResultado");
-const tiempoFinal = document.getElementById("tiempoFinal");
+const botonAnterior = document.getElementById("botonAnterior");
+const botonSiguiente = document.getElementById("botonSiguiente");
+const botonReiniciarTest = document.getElementById("botonReiniciarTest");
 const botonReiniciar = document.getElementById("botonReiniciar");
-const avisoExamen = document.getElementById("avisoExamen");
-const resumenExamen = document.getElementById("resumenExamen");
-const aciertosExamen = document.getElementById("aciertosExamen");
-const fallosExamen = document.getElementById("fallosExamen");
-const sinResponderExamen = document.getElementById("sinResponderExamen");
 
+document.getElementById("modoNormal").addEventListener("click", () => iniciarTest("normal"));
+document.getElementById("modoAleatorio").addEventListener("click", () => iniciarTest("aleatorio"));
+botonAnterior.addEventListener("click", anteriorPregunta);
+botonSiguiente.addEventListener("click", siguientePregunta);
+botonReiniciarTest.addEventListener("click", volverASeleccion);
+botonReiniciar.addEventListener("click", volverASeleccion);
 
-// ==================================================
-// MEZCLAR ARRAY
-// ==================================================
-
-function mezclar(array) {
-    return array.sort(() => Math.random() - 0.5);
-}
-
-
-// ==================================================
-// INICIAR TEST
-// ==================================================
-
-function iniciarTest(aleatorio, examen = false) {
-    clearInterval(intervalo);
-    modoAleatorioActual = aleatorio;
-    modoExamenActual = examen;
+function iniciarTest(modo) {
+    modoElegido = modo;
     preguntasTest = [...preguntas];
-
-    // En modo aleatorio y examen se mezclan las preguntas.
-    if (aleatorio || examen) {
-        preguntasTest = mezclar(preguntasTest);
+    if (modo === "aleatorio") {
+        preguntasTest.sort(() => Math.random() - 0.5);
     }
-
-    preguntaActual = 0;
+    indiceActual = 0;
     respuestasUsuario = new Array(preguntasTest.length).fill(null);
-    opcionesMezcladas = new Array(preguntasTest.length);
-
-    // Mezclamos las respuestas una sola vez para cada pregunta.
-    preguntasTest.forEach((pregunta, indice) => {
-        const opciones = pregunta.opciones.map((texto, posicion) => ({
-            texto: texto,
-            indice: posicion
-        }));
-        opcionesMezcladas[indice] = mezclar(opciones);
-    });
-
+    segundos = 0;
+    testIniciado = true;
+    clearInterval(intervalo);
+    intervalo = setInterval(actualizarContador, 1000);
     seleccionModo.classList.add("oculto");
-    resultado.classList.add("oculto");
-    test.classList.remove("oculto");
-
-    if (avisoExamen) {
-        avisoExamen.classList.toggle("oculto", !modoExamenActual);
-    }
-    if (resumenExamen) {
-        resumenExamen.classList.add("oculto");
-    }
-
-    tiempo = modoExamenActual ? TIEMPO_LIMITE_EXAMEN : 0;
-    actualizarCronometro();
-    iniciarCronometro();
+    seccionResultado.classList.add("oculto");
+    seccionTest.classList.remove("oculto");
     mostrarPregunta();
 }
-
-
-// ==================================================
-// MOSTRAR PREGUNTA
-// ==================================================
 
 function mostrarPregunta() {
-    const pregunta = preguntasTest[preguntaActual];
-    const opciones = opcionesMezcladas[preguntaActual];
-
-    preguntaElemento.textContent = pregunta.pregunta;
-    numeroPregunta.textContent = `Pregunta ${preguntaActual + 1} de ${preguntasTest.length}`;
-    puntuacionElemento.textContent = modoExamenActual
-        ? "Modo examen: resultado al finalizar"
-        : `Puntos: ${calcularPuntos()}`;
-
-    const progreso = (preguntaActual / preguntasTest.length) * 100;
-    barraProgreso.style.width = `${progreso}%`;
-    opcionesElemento.innerHTML = "";
-
-    opciones.forEach(opcion => {
+    const preguntaActual = preguntasTest[indiceActual];
+    numeroPregunta.textContent = `Pregunta ${indiceActual + 1} de ${preguntasTest.length}`;
+    elementoPregunta.textContent = preguntaActual.pregunta;
+    elementoOpciones.innerHTML = "";
+    preguntaActual.opciones.forEach((opcion, indice) => {
         const boton = document.createElement("button");
-        boton.classList.add("opcion");
-        boton.textContent = opcion.texto;
-        const respuestaGuardada = respuestasUsuario[preguntaActual];
-
-        if (modoExamenActual) {
-            // En el examen no se revela la respuesta correcta y se puede cambiar la elección.
-            if (respuestaGuardada === opcion.indice) {
-                boton.classList.add("seleccionada");
-            }
-            boton.addEventListener("click", () => seleccionarRespuesta(opcion.indice));
-        } else if (respuestaGuardada !== null) {
-            // En los modos habituales se conserva la corrección visual original.
-            if (opcion.indice === pregunta.correcta) {
+        boton.className = "opcion";
+        boton.textContent = opcion;
+        if (respuestasUsuario[indiceActual] !== null) {
+            boton.disabled = true;
+            if (indice === preguntaActual.correcta) {
                 boton.classList.add("correcta");
-            }
-            if (opcion.indice === respuestaGuardada && respuestaGuardada !== pregunta.correcta) {
+            } else if (indice === respuestasUsuario[indiceActual]) {
                 boton.classList.add("incorrecta");
             }
-            boton.disabled = true;
-        } else {
-            boton.addEventListener("click", () => seleccionarRespuesta(opcion.indice));
         }
-
-        opcionesElemento.appendChild(boton);
+        boton.addEventListener("click", () => seleccionarRespuesta(indice));
+        elementoOpciones.appendChild(boton);
     });
-
-    botonAnterior.disabled = preguntaActual === 0;
-    botonSiguiente.disabled = !modoExamenActual && respuestasUsuario[preguntaActual] === null;
-    botonSiguiente.textContent = preguntaActual === preguntasTest.length - 1
-        ? "Terminar ✓"
-        : "Siguiente →";
+    botonAnterior.disabled = indiceActual === 0;
+    botonSiguiente.disabled = respuestasUsuario[indiceActual] === null;
+    botonSiguiente.textContent = indiceActual === preguntasTest.length - 1 ? "Finalizar test →" : "Siguiente →";
+    barraProgreso.style.width = `${((indiceActual + 1) / preguntasTest.length) * 100}%`;
+    actualizarPuntuacion();
 }
 
-
-// ==================================================
-// SELECCIONAR RESPUESTA
-// ==================================================
-
-function seleccionarRespuesta(indiceSeleccionado) {
-    respuestasUsuario[preguntaActual] = indiceSeleccionado;
-    mostrarPregunta();
-}
-
-
-// ==================================================
-// CALCULAR PUNTOS
-// ==================================================
-
-function calcularPuntos() {
-    let puntos = 0;
-    respuestasUsuario.forEach((respuesta, indice) => {
-        if (respuesta !== null && respuesta === preguntasTest[indice].correcta) {
-            puntos++;
-        }
+function seleccionarRespuesta(indice) {
+    if (respuestasUsuario[indiceActual] !== null) return;
+    respuestasUsuario[indiceActual] = indice;
+    const preguntaActual = preguntasTest[indiceActual];
+    const botones = elementoOpciones.querySelectorAll("button");
+    botones.forEach((boton, i) => {
+        boton.disabled = true;
+        if (i === preguntaActual.correcta) boton.classList.add("correcta");
+        else if (i === indice) boton.classList.add("incorrecta");
     });
-    return puntos;
+    botonSiguiente.disabled = false;
+    actualizarPuntuacion();
 }
 
-
-// ==================================================
-// BOTÓN ANTERIOR
-// ==================================================
-
-botonAnterior.addEventListener("click", () => {
-    if (preguntaActual > 0) {
-        preguntaActual--;
-        mostrarPregunta();
-    }
-});
-
-
-// ==================================================
-// BOTÓN SIGUIENTE
-// ==================================================
-
-botonSiguiente.addEventListener("click", () => {
-    if (preguntaActual < preguntasTest.length - 1) {
-        preguntaActual++;
+function siguientePregunta() {
+    if (respuestasUsuario[indiceActual] === null) return;
+    if (indiceActual < preguntasTest.length - 1) {
+        indiceActual++;
         mostrarPregunta();
     } else {
-        terminarTest();
+        finalizarTest();
     }
-});
+}
 
+function anteriorPregunta() {
+    if (indiceActual > 0) {
+        indiceActual--;
+        mostrarPregunta();
+    }
+}
 
-// ==================================================
-// REINICIAR TEST Y VOLVER AL MENÚ
-// ==================================================
+function actualizarPuntuacion() {
+    let aciertos = 0;
+    respuestasUsuario.forEach((respuesta, i) => {
+        if (respuesta !== null && respuesta === preguntasTest[i].correcta) aciertos++;
+    });
+    puntuacion.textContent = `Puntos: ${aciertos}`;
+}
 
-function volverAlMenuDeModos() {
+function actualizarContador() {
+    segundos++;
+    const minutos = String(Math.floor(segundos / 60)).padStart(2, "0");
+    const segundosRestantes = String(segundos % 60).padStart(2, "0");
+    contador.textContent = `⏱️ ${minutos}:${segundosRestantes}`;
+}
+
+function finalizarTest() {
     clearInterval(intervalo);
-    preguntasTest = [];
-    respuestasUsuario = [];
-    opcionesMezcladas = [];
-    preguntaActual = 0;
-    tiempo = 0;
-    modoExamenActual = false;
-    test.classList.add("oculto");
-    resultado.classList.add("oculto");
+    seccionTest.classList.add("oculto");
+    seccionResultado.classList.remove("oculto");
+    const aciertos = respuestasUsuario.reduce((total, respuesta, i) =>
+        total + (respuesta === preguntasTest[i].correcta ? 1 : 0), 0);
+    document.getElementById("nota").textContent = `${aciertos}/${preguntasTest.length}`;
+    document.getElementById("mensajeResultado").textContent =
+        aciertos >= preguntasTest.length * 0.5 ? "¡Buen trabajo! Sigue repasando para afianzar los conceptos." : "Repasa los apuntes y vuelve a intentarlo.";
+    document.getElementById("tiempoFinal").textContent = `Tiempo empleado: ${contador.textContent.replace("⏱️ ", "")}`;
+}
+
+function volverASeleccion() {
+    clearInterval(intervalo);
+    testIniciado = false;
+    seccionTest.classList.add("oculto");
+    seccionResultado.classList.add("oculto");
     seleccionModo.classList.remove("oculto");
-    botonSiguiente.textContent = "Siguiente →";
-    botonSiguiente.disabled = true;
-    botonAnterior.disabled = true;
-    if (avisoExamen) avisoExamen.classList.add("oculto");
-    if (resumenExamen) resumenExamen.classList.add("oculto");
-    actualizarCronometro();
+    contador.textContent = "⏱️ 00:00";
+    barraProgreso.style.width = "0%";
+    puntuacion.textContent = "Puntos: 0";
 }
-
-botonReiniciarTest.addEventListener("click", volverAlMenuDeModos);
-
-
-// ==================================================
-// CRONÓMETRO
-// ==================================================
-
-function iniciarCronometro() {
-    clearInterval(intervalo);
-    intervalo = setInterval(() => {
-        if (modoExamenActual) {
-            tiempo--;
-            if (tiempo <= 0) {
-                tiempo = 0;
-                actualizarCronometro();
-                terminarTest(true);
-                return;
-            }
-        } else {
-            tiempo++;
-        }
-        actualizarCronometro();
-    }, 1000);
-}
-
-function actualizarCronometro() {
-    const minutos = Math.floor(tiempo / 60);
-    const segundos = tiempo % 60;
-    const formato = `${String(minutos).padStart(2, "0")}:${String(segundos).padStart(2, "0")}`;
-    contador.textContent = modoExamenActual ? `⏳ Tiempo restante: ${formato}` : `⏱️ ${formato}`;
-    contador.classList.toggle("tiempo-limite", modoExamenActual && tiempo <= 60);
-}
-
-
-// ==================================================
-// TERMINAR TEST
-// ==================================================
-
-function terminarTest(porTiempo = false) {
-    clearInterval(intervalo);
-    const puntos = calcularPuntos();
-    const total = preguntasTest.length;
-    const respondidas = respuestasUsuario.filter(respuesta => respuesta !== null).length;
-    const fallos = respondidas - puntos;
-    const sinResponder = total - respondidas;
-    const porcentaje = total > 0 ? (puntos / total) * 100 : 0;
-    const notaFinal = total > 0 ? (puntos / total) * 10 : 0;
-
-    test.classList.add("oculto");
-    resultado.classList.remove("oculto");
-    barraProgreso.style.width = "100%";
-    nota.textContent = `${notaFinal.toFixed(2)}/10`;
-
-    if (modoExamenActual) {
-        mensajeResultado.textContent = porTiempo
-            ? "El tiempo se ha agotado. El examen se ha corregido automáticamente."
-            : "Examen finalizado. Aquí tienes el resultado.";
-        if (resumenExamen) resumenExamen.classList.remove("oculto");
-        if (aciertosExamen) aciertosExamen.textContent = `Aciertos: ${puntos}`;
-        if (fallosExamen) fallosExamen.textContent = `Fallos: ${fallos}`;
-        if (sinResponderExamen) sinResponderExamen.textContent = `Sin responder: ${sinResponder}`;
-    } else {
-        mensajeResultado.textContent = `Has acertado ${puntos} de ${total} preguntas (${porcentaje.toFixed(1)}%).`;
-        if (resumenExamen) resumenExamen.classList.add("oculto");
-    }
-
-    const tiempoTranscurrido = modoExamenActual ? TIEMPO_LIMITE_EXAMEN - tiempo : tiempo;
-    const minutos = Math.floor(tiempoTranscurrido / 60);
-    const segundos = tiempoTranscurrido % 60;
-    tiempoFinal.textContent = modoExamenActual
-        ? `⏱️ Tiempo empleado: ${String(minutos).padStart(2, "0")}:${String(segundos).padStart(2, "0")}`
-        : `⏱️ Tiempo empleado: ${String(minutos).padStart(2, "0")}:${String(segundos).padStart(2, "0")}`;
-}
-
-
-// ==================================================
-// MODO NORMAL
-// ==================================================
-
-botonNormal.addEventListener("click", () => iniciarTest(false, false));
-
-
-// ==================================================
-// MODO ALEATORIO
-// ==================================================
-
-botonAleatorio.addEventListener("click", () => iniciarTest(true, false));
-
-
-// ==================================================
-// MODO EXAMEN
-// ==================================================
-
-if (botonExamen) {
-    botonExamen.addEventListener("click", () => iniciarTest(true, true));
-}
-
-
-// ==================================================
-// VOLVER A HACER EL TEST
-// ==================================================
-
-botonReiniciar.addEventListener("click", volverAlMenuDeModos);
-
